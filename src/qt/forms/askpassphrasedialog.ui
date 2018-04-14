@@ -119,7 +119,7 @@
        <property name="text">
         <string>Only for mixing via PrivateSend</string>
        </property>
-       <property name="visible">
+       <property name="viiltle">
         <bool>false</bool>
        </property>
       </widget>

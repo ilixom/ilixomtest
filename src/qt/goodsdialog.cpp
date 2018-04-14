@@ -7,7 +7,7 @@
 #include <iostream>
 
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "iltmodel.h"
 #include "goodsdialog.h"
 #include "ui_goodsdialog.h"
 
@@ -30,7 +30,7 @@ GoodsDialog::GoodsDialog(QWidget *parent) :
 GoodsDialog::~GoodsDialog()
 {
     // TODO:
-    //unsibscribeModelSignals();
+    //uniltscribeModelSignals();
     delete ui;
 }
 
@@ -39,12 +39,12 @@ void GoodsDialog::setModel(WalletModel *model)
     this->model = model;
 }
 
-void GoodsDialog::setSibModel(SibModel *sibModel)
+void GoodsDialog::setSibModel(SibModel *iltModel)
 {
-    this->sibModel = sibModel;
-    connect(sibModel, SIGNAL(resourceReady(std::string)), 
+    this->iltModel = iltModel;
+    connect(iltModel, SIGNAL(resourceReady(std::string)), 
             this, SLOT(on_resourceReady(std::string)));
-    sibModel->fetch();
+    iltModel->fetch();
 }
 
 void GoodsDialog::on_resourceReady(std::string res_root) 

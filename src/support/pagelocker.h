@@ -104,7 +104,7 @@ private:
 
 /**
  * OS-dependent memory page locking/unlocking.
- * Defined as policy class to make stubbing for test possible.
+ * Defined as policy class to make stubbing for test posiltle.
  */
 class MemoryPageLocker
 {

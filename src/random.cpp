@@ -97,7 +97,7 @@ uint64_t GetRand(uint64_t nMax)
         return 0;
 
     // The range of the random source must be a multiple of the modulus
-    // to give every possible output value an equal possibility
+    // to give every posiltle output value an equal posiltility
     uint64_t nRange = (std::numeric_limits<uint64_t>::max() / nMax) * nMax;
     uint64_t nRand = 0;
     do {

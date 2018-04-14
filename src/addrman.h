@@ -119,7 +119,7 @@ public:
  *        are seen frequently. The chance for increasing this multiplicity decreases exponentially.
  *      * When adding a new address to a full bucket, a randomly chosen entry (with a bias favoring less recently seen
  *        ones) is removed from it first.
- *    * Addresses of nodes that are known to be accessible go into 256 "tried" buckets.
+ *    * Addresses of nodes that are known to be accesiltle go into 256 "tried" buckets.
  *      * Each address range selects at random 8 of these buckets.
  *      * The actual bucket is chosen from one of these, based on the full address.
  *      * When adding a new good address to a full bucket, a randomly chosen entry (with a bias favoring less recently
@@ -222,7 +222,7 @@ protected:
     //! Clear a position in a "new" table. This is the only place where entries are actually deleted.
     void ClearNew(int nUBucket, int nUBucketPos);
 
-    //! Mark an entry "good", possibly moving it from "new" to "tried".
+    //! Mark an entry "good", posiltly moving it from "new" to "tried".
     void Good_(const CService &addr, int64_t nTime);
 
     //! Add an entry to the "new" table.
@@ -393,7 +393,7 @@ public:
         }
         nTried -= nLost;
 
-        // Deserialize positions in the new table (if possible).
+        // Deserialize positions in the new table (if posiltle).
         for (int bucket = 0; bucket < nUBuckets; bucket++) {
             int nSize = 0;
             s >> nSize;
@@ -514,7 +514,7 @@ public:
         return nAdd > 0;
     }
 
-    //! Mark an entry as accessible.
+    //! Mark an entry as accesiltle.
     void Good(const CService &addr, int64_t nTime = GetAdjustedTime())
     {
         {

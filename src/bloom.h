@@ -61,7 +61,7 @@ public:
     /**
      * Creates a new bloom filter which will provide the given fp rate when filled with the given number of elements
      * Note that if the given parameters will result in a filter outside the bounds of the protocol limits,
-     * the filter created will be as close to the given parameters as possible within the protocol limits.
+     * the filter created will be as close to the given parameters as posiltle within the protocol limits.
      * This will apply if nFPRate is very low or nElements is unreasonably high.
      * nTweak is a constant which is added to the seed value passed to the hash function
      * It should generally always be a random value (and is largely only exposed for unit testing)

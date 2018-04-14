@@ -55,15 +55,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += sibcoind
+  bin_PROGRAMS += ilixomtestd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += sibcoin-cli sibcoin-tx
+  bin_PROGRAMS += ilixomtest-cli ilixomtest-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# sibcoin core #
+# ilixomtest core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addressindex.h \
@@ -164,7 +164,7 @@ BITCOIN_CORE_H = \
   tinyformat.h \
   torcontrol.h \
   txdb.h \
-  sibdb.h \
+  iltdb.h \
   txmempool.h \
   ui_interface.h \
   uint256.h \
@@ -193,7 +193,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between sibcoind and sibcoin-qt
+# server: shared between ilixomtestd and ilixomtest-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -235,7 +235,7 @@ libbitcoin_server_a_SOURCES = \
   timedata.cpp \
   torcontrol.cpp \
   txdb.cpp \
-  sibdb.cpp \
+  iltdb.cpp \
   txmempool.cpp \
   validationinterface.cpp \
   versionbits.cpp \
@@ -253,7 +253,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between sibcoind and sibcoin-qt, but only linked
+# wallet: shared between ilixomtestd and ilixomtest-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -326,7 +326,7 @@ crypto_libbitcoin_crypto_a_SOURCES += \
   crypto/sph_skein.h \
   crypto/sph_types.h
 
-# common: shared between sibcoind, and sibcoin-qt and non-server tools
+# common: shared between ilixomtestd, and ilixomtest-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -383,7 +383,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between sibcoin-cli and sibcoin-qt
+# cli: shared between ilixomtest-cli and ilixomtest-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -394,16 +394,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-sibcoind_SOURCES = sibcoind.cpp
-sibcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-sibcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-sibcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ilixomtestd_SOURCES = ilixomtestd.cpp
+ilixomtestd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+ilixomtestd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ilixomtestd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-sibcoind_SOURCES += sibcoind-res.rc
+ilixomtestd_SOURCES += ilixomtestd-res.rc
 endif
 
-sibcoind_LDADD = \
+ilixomtestd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -414,50 +414,50 @@ sibcoind_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-sibcoind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+ilixomtestd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-sibcoind_LDADD += libbitcoin_wallet.a
+ilixomtestd_LDADD += libbitcoin_wallet.a
 endif
 
-sibcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+ilixomtestd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-# sibcoin-cli binary #
-sibcoin_cli_SOURCES = sibcoin-cli.cpp
-sibcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-sibcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-sibcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# ilixomtest-cli binary #
+ilixomtest_cli_SOURCES = ilixomtest-cli.cpp
+ilixomtest_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+ilixomtest_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ilixomtest_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-sibcoin_cli_SOURCES += sibcoin-cli-res.rc
+ilixomtest_cli_SOURCES += ilixomtest-cli-res.rc
 endif
 
-sibcoin_cli_LDADD = \
+ilixomtest_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL)
-sibcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+ilixomtest_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# sibcoin-tx binary #
-sibcoin_tx_SOURCES = sibcoin-tx.cpp
-sibcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-sibcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-sibcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# ilixomtest-tx binary #
+ilixomtest_tx_SOURCES = ilixomtest-tx.cpp
+ilixomtest_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+ilixomtest_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ilixomtest_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-sibcoin_tx_SOURCES += sibcoin-tx-res.rc
+ilixomtest_tx_SOURCES += ilixomtest-tx-res.rc
 endif
 
-sibcoin_tx_LDADD = \
+ilixomtest_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-sibcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+ilixomtest_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

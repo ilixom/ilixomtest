@@ -128,9 +128,9 @@ class RandomGenerator {
     Random rnd(301);
     std::string piece;
     while (data_.size() < 1048576) {
-      // Add a short fragment that is as compressible as specified
+      // Add a short fragment that is as compresiltle as specified
       // by FLAGS_compression_ratio.
-      test::CompressibleString(&rnd, FLAGS_compression_ratio, 100, &piece);
+      test::CompresiltleString(&rnd, FLAGS_compression_ratio, 100, &piece);
       data_.append(piece);
     }
     pos_ = 0;

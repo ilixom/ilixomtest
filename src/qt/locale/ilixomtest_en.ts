@@ -5,19 +5,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/ui_aboutdialog.h" line="+129"/>
-        <source>About Sibcoin Core</source>
-        <translation type="unfinished">About Sibcoin Core</translation>
+        <source>About Ilixomtest Core</source>
+        <translation type="unfinished">About Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>&lt;b&gt;Sibcoin Core&lt;/b&gt; version</source>
+        <source>&lt;b&gt;Ilixomtest Core&lt;/b&gt; version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copyright &amp;copy; 2009-2014 The Bitcoin Core developers.
 Copyright &amp;copy; 2014-YYYY The Dash Core developers.
-Copyright &amp;copy; 2015-YYYY The Sibcoin Core developers.</source>
+Copyright &amp;copy; 2015-YYYY The Ilixomtest Core developers.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -110,13 +110,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your Ilixomtest addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Ilixomtest addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your Ilixomtest addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your Ilixomtest addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -271,8 +271,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SIBCOINS&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SIBCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ILTCOINS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ILTCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="-72"/>
@@ -292,8 +292,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-57"/>
-        <source>Sibcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
-        <translation>Sibcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</translation>
+        <source>Ilixomtest will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ilixomtests from being stolen by malware infecting your computer.</source>
+        <translation>Ilixomtest will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ilixomtests from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -364,8 +364,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+111"/>
         <location line="+808"/>
-        <source>Sibcoin Core</source>
-        <translation>Sibcoin Core</translation>
+        <source>Ilixomtest Core</source>
+        <translation>Ilixomtest Core</translation>
     </message>
     <message>
         <location line="-799"/>
@@ -394,8 +394,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Sibcoin address</source>
-        <translation>Send coins to a Sibcoin address</translation>
+        <source>Send coins to a Ilixomtest address</source>
+        <translation>Send coins to a Ilixomtest address</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -404,8 +404,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and sibcoin: URIs)</source>
-        <translation>Request payments (generates QR codes and sibcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and ilixomtest: URIs)</source>
+        <translation>Request payments (generates QR codes and ilixomtest: URIs)</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -433,8 +433,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show links to services that accept sibcoins</source>
-        <translation type="unfinished">Show links to services that accept sibcoins</translation>
+        <source>Show links to services that accept ilixomtests</source>
+        <translation type="unfinished">Show links to services that accept ilixomtests</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -448,12 +448,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Sibcoin Core</source>
-        <translation>&amp;About Sibcoin Core</translation>
+        <source>&amp;About Ilixomtest Core</source>
+        <translation>&amp;About Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Sibcoin Core</source>
+        <source>Show information about Ilixomtest Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -472,8 +472,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Sibcoin</source>
-        <translation>Modify configuration options for Sibcoin</translation>
+        <source>Modify configuration options for Ilixomtest</source>
+        <translation>Modify configuration options for Ilixomtest</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -537,8 +537,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Sibcoin addresses to prove you own them</source>
-        <translation>Sign messages with your Sibcoin addresses to prove you own them</translation>
+        <source>Sign messages with your Ilixomtest addresses to prove you own them</source>
+        <translation>Sign messages with your Ilixomtest addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -547,8 +547,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Sibcoin addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Sibcoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Ilixomtest addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Ilixomtest addresses</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -642,8 +642,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Print sibcoins...</source>
-        <translation>&amp;Print sibcoins...</translation>
+        <source>&amp;Print ilixomtests...</source>
+        <translation>&amp;Print ilixomtests...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -652,13 +652,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Load sibcoins...</source>
-        <translation>&amp;Load sibcoins...</translation>
+        <source>&amp;Load ilixomtests...</source>
+        <translation>&amp;Load ilixomtests...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Load sibcoins from paper</source>
-        <translation>Load sibcoins from paper</translation>
+        <source>Load ilixomtests from paper</source>
+        <translation>Load ilixomtests from paper</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -667,8 +667,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a sibcoin: URI or payment request</source>
-        <translation>Open a sibcoin: URI or payment request</translation>
+        <source>Open a ilixomtest: URI or payment request</source>
+        <translation>Open a ilixomtest: URI or payment request</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -677,8 +677,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options</source>
-        <translation>Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options</translation>
+        <source>Show the Ilixomtest Core help message to get a list with posiltle Ilixomtest command-line options</source>
+        <translation>Show the Ilixomtest Core help message to get a list with posiltle Ilixomtest command-line options</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -687,8 +687,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>How to use Sibcoins</source>
-        <translation>How to use Sibcoins</translation>
+        <source>How to use Ilixomtests</source>
+        <translation>How to use Ilixomtests</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -717,7 +717,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+120"/>
-        <source>Sibcoin Core client</source>
+        <source>Ilixomtest Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
@@ -729,10 +729,10 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message numerus="yes">
         <location line="-35"/>
-        <source>%n active connection(s) to Sibcoin network</source>
+        <source>%n active connection(s) to Ilixomtest network</source>
         <translation>
-            <numerusform>%n active connection(s) to Sibcoin network</numerusform>
-            <numerusform>%n active connection(s) to Sibcoin network</numerusform>
+            <numerusform>%n active connection(s) to Ilixomtest network</numerusform>
+            <numerusform>%n active connection(s) to Ilixomtest network</numerusform>
         </translation>
     </message>
     <message>
@@ -790,8 +790,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+20"/>
-        <source>Show the Sibcoin Core help message to get a list with possible Sibcoin Core command-line options</source>
-        <translation>Show the Sibcoin Core help message to get a list with possible Sibcoin Core command-line options</translation>
+        <source>Show the Ilixomtest Core help message to get a list with posiltle Ilixomtest Core command-line options</source>
+        <translation>Show the Ilixomtest Core help message to get a list with posiltle Ilixomtest Core command-line options</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -855,8 +855,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transactions after this will not yet be visible.</translation>
+        <source>Transactions after this will not yet be viiltle.</source>
+        <translation>Transactions after this will not yet be viiltle.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -1278,27 +1278,27 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 SIB</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 ILT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 SIB</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 ILT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>This option is the quickest and will cost about ~0.025 SIB to anonymize 1000 SIB</source>
+        <source>This option is the quickest and will cost about ~0.025 ILT to anonymize 1000 ILT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 SIB to anonymize 1000 SIB</source>
+        <source>This option is moderately fast and will cost about 0.05 ILT to anonymize 1000 ILT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>0.1 SIB per 1000 SIB you anonymize.</source>
+        <source>0.1 ILT per 1000 ILT you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1320,18 +1320,18 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-29"/>
-        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
-        <translation>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</translation>
+        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</source>
+        <translation>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
-        <translation>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</translation>
+        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</source>
+        <translation>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
-        <translation>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</translation>
+        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</source>
+        <translation>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</translation>
     </message>
 </context>
 <context>
@@ -1383,8 +1383,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sibcoin address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Sibcoin address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Ilixomtest address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid Ilixomtest address.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1553,8 +1553,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+34"/>
-        <source>Sibcoin Core</source>
-        <translation>Sibcoin Core</translation>
+        <source>Ilixomtest Core</source>
+        <translation>Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1569,8 +1569,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+5"/>
-        <source>About Sibcoin Core</source>
-        <translation type="unfinished">About Sibcoin Core</translation>
+        <source>About Ilixomtest Core</source>
+        <translation type="unfinished">About Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1608,8 +1608,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>PrivateSend information</translation>
     </message>
     <message>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Sibcoin in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.1 SIB, 1 SIB, 10 SIB and 100 SIB -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;http://sibcoin.org/privatesend&quot;&gt;http://sibcoin.org/privatesend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Sibcoin in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.1 SIB, 1 SIB, 10 SIB and 100 SIB -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;http://sibcoin.org/en/privatesend&quot;&gt;http://sibcoin.org/en/privatesend&lt;/a&gt;         </translation>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Ilixomtest in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.1 ILT, 1 ILT, 10 ILT and 100 ILT -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;http://ilixomtest.org/privatesend&quot;&gt;http://ilixomtest.org/privatesend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Ilixomtest in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.1 ILT, 1 ILT, 10 ILT and 100 ILT -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;http://ilixomtest.org/en/privatesend&quot;&gt;http://ilixomtest.org/en/privatesend&lt;/a&gt;         </translation>
     </message>
     <message>
         <location line="-50"/>
@@ -1636,18 +1636,18 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Sibcoin Core.</source>
-        <translation>Welcome to Sibcoin Core.</translation>
+        <source>Welcome to Ilixomtest Core.</source>
+        <translation>Welcome to Ilixomtest Core.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Sibcoin Core will store its data.</source>
-        <translation>As this is the first time the program is launched, you can choose where Sibcoin Core will store its data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Ilixomtest Core will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where Ilixomtest Core will store its data.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Sibcoin Core will download and store a copy of the Sibcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Sibcoin Core will download and store a copy of the Sibcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+        <source>Ilixomtest Core will download and store a copy of the Ilixomtest block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Ilixomtest Core will download and store a copy of the Ilixomtest block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1661,8 +1661,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../intro.cpp" line="+82"/>
-        <source>Sibcoin Core</source>
-        <translation type="unfinished">Sibcoin Core</translation>
+        <source>Ilixomtest Core</source>
+        <translation type="unfinished">Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1749,8 +1749,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Sibcoin to keep anonymized</source>
-        <translation>Amount of Sibcoin to keep anonymized</translation>
+        <source>Amount of Ilixomtest to keep anonymized</source>
+        <translation>Amount of Ilixomtest to keep anonymized</translation>
     </message>
     <message>
         <source>All Masternodes</source>
@@ -1847,13 +1847,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically start Sibcoin after logging in to the system.</source>
-        <translation>Automatically start Sibcoin after logging in to the system.</translation>
+        <source>Automatically start Ilixomtest after logging in to the system.</source>
+        <translation>Automatically start Ilixomtest after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sibcoin on system login</source>
-        <translation>&amp;Start Sibcoin on system login</translation>
+        <source>&amp;Start Ilixomtest on system login</source>
+        <translation>&amp;Start Ilixomtest on system login</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -1877,8 +1877,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+155"/>
-        <source>Amount of Sibcoin to keep anonymized</source>
-        <translation>Amount of Sibcoin to keep anonymized</translation>
+        <source>Amount of Ilixomtest to keep anonymized</source>
+        <translation>Amount of Ilixomtest to keep anonymized</translation>
     </message>
     <message>
         <location line="-119"/>
@@ -1887,13 +1887,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-104"/>
-        <source>Automatically start Sibcoin Core after logging in to the system.</source>
-        <translation>Automatically start Sibcoin Core after logging in to the system.</translation>
+        <source>Automatically start Ilixomtest Core after logging in to the system.</source>
+        <translation>Automatically start Ilixomtest Core after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sibcoin Core on system login</source>
-        <translation>&amp;Start Sibcoin Core on system login</translation>
+        <source>&amp;Start Ilixomtest Core on system login</source>
+        <translation>&amp;Start Ilixomtest Core on system login</translation>
     </message>
     <message>
         <location line="+123"/>
@@ -1950,8 +1950,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sibcoin Core.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Sibcoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Ilixomtest Core.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting Ilixomtest Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items.&lt;br/&gt;%s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1984,8 +1984,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Ilixomtest client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Ilixomtest client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2033,8 +2033,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Sibcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connect to the Sibcoin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
+        <source>Connect to the Ilixomtest network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connect to the Ilixomtest network through a separate SOCKS5 proxy for Tor hidden services.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -2057,7 +2057,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sibcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Ilixomtest network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2100,15 +2100,15 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Ilixomtest.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting Ilixomtest.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</source>
+https://www.transifex.com/projects/p/ilixomtest/</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</translation>
+https://www.transifex.com/projects/p/ilixomtest/</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2208,8 +2208,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+53"/>
         <location line="+1021"/>
         <location line="+77"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sibcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Sibcoin network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ilixomtest network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Ilixomtest network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-849"/>
@@ -2327,8 +2327,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 SIB / 0 Rounds</source>
-        <translation>0 SIB / 0 Rounds</translation>
+        <source>0 ILT / 0 Rounds</source>
+        <translation>0 ILT / 0 Rounds</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2554,8 +2554,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-400"/>
-        <source>Cannot start sibcoin: click-to-pay handler</source>
-        <translation>Cannot start sibcoin: click-to-pay handler</translation>
+        <source>Cannot start ilixomtest: click-to-pay handler</source>
+        <translation>Cannot start ilixomtest: click-to-pay handler</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -2586,7 +2586,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Sibcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Ilixomtest address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2708,7 +2708,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+111"/>
-        <source>Enter a Sibcoin address (e.g. %1)</source>
+        <source>Enter a Ilixomtest address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2890,7 +2890,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+149"/>
-        <source>Open the Sibcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Ilixomtest debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2915,8 +2915,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+48"/>
-        <source>Open the Sibcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the Sibcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <source>Open the Ilixomtest Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the Ilixomtest Core debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -3165,8 +3165,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-35"/>
-        <source>Welcome to the Sibcoin RPC console.</source>
-        <translation>Welcome to the Sibcoin RPC console.</translation>
+        <source>Welcome to the Ilixomtest RPC console.</source>
+        <translation>Welcome to the Ilixomtest RPC console.</translation>
         <location line="-234"/>
         <source>&amp;Disconnect Node</source>
         <translation>&amp;Disconnect Node</translation>
@@ -3206,8 +3206,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+148"/>
-        <source>Welcome to the Sibcoin RPC console.</source>
-        <translation>Welcome to the Sibcoin RPC console.</translation>
+        <source>Welcome to the Ilixomtest RPC console.</source>
+        <translation>Welcome to the Ilixomtest RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3298,7 +3298,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Ilixomtest network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3314,7 +3314,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Ilixomtest network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3650,7 +3650,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+30"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for sibcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ilixomtest transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3694,7 +3694,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+38"/>
-        <source>Send as zero-fee transaction if possible</source>
+        <source>Send as zero-fee transaction if posiltle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3917,8 +3917,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Sibcoin address</source>
-        <translation>Warning: Invalid Sibcoin address</translation>
+        <source>Warning: Invalid Ilixomtest address</source>
+        <translation>Warning: Invalid Ilixomtest address</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3994,8 +3994,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-1046"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Sibcoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Sibcoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Ilixomtest than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Ilixomtest than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4009,8 +4009,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Sibcoin network.</source>
-        <translation>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Sibcoin network.</translation>
+        <source>A message that was attached to the ilixomtest: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Ilixomtest network.</source>
+        <translation>A message that was attached to the ilixomtest: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Ilixomtest network.</translation>
     </message>
     <message>
         <location line="+433"/>
@@ -4044,8 +4044,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+96"/>
-        <source>Sibcoin Core is shutting down...</source>
-        <translation>Sibcoin Core is shutting down...</translation>
+        <source>Ilixomtest Core is shutting down...</source>
+        <translation>Ilixomtest Core is shutting down...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4067,8 +4067,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Sibcoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive Sibcoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Ilixomtest sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive Ilixomtest sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4114,8 +4114,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sibcoin address</source>
-        <translation>Sign the message to prove you own this Sibcoin address</translation>
+        <source>Sign the message to prove you own this Ilixomtest address</source>
+        <translation>Sign the message to prove you own this Ilixomtest address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4145,13 +4145,13 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Sibcoin address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
+        <source>The Ilixomtest address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Sibcoin address</source>
-        <translation>Verify the message to ensure it was signed with the specified Sibcoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Ilixomtest address</source>
+        <translation>Verify the message to ensure it was signed with the specified Ilixomtest address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4239,8 +4239,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Sibcoin Core</source>
-        <translation>Sibcoin Core</translation>
+        <source>Ilixomtest Core</source>
+        <translation>Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4259,8 +4259,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Sibcoin Core developers</source>
-        <translation>The Sibcoin Core developers</translation>
+        <source>The Ilixomtest Core developers</source>
+        <translation>The Ilixomtest Core developers</translation>
     </message>
     <message>
         <location filename="../networkstyle.cpp" line="+19"/>
@@ -4923,8 +4923,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="-28"/>
         <location line="+12"/>
-        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
-        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</translation>
+        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 ILT.</source>
+        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 ILT.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4981,22 +4981,22 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+64"/>
-        <source>Before sending sibcoins to address please be sure
+        <source>Before sending ilixomtests to address please be sure
 that paper wallet has been printed successfully!</source>
-        <translation>Before sending sibcoins to address please be sure
+        <translation>Before sending ilixomtests to address please be sure
 that paper wallet has been printed successfully!</translation>
     </message>
 </context>
 <context>
-    <name>sibcoin-core</name>
+    <name>ilixomtest-core</name>
     <message>
         <location filename="../dashstrings.cpp" line="+34"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation type="obsolete">Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.</source>
-        <translation type="obsolete">Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s. Ilixomtest Core is probably already running.</source>
+        <translation type="obsolete">Cannot obtain a lock on data directory %s. Ilixomtest Core is probably already running.</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -5052,16 +5052,16 @@ that paper wallet has been printed successfully!</translation>
         <translation type="obsolete">This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Sibcoin Core is probably already running.</source>
-        <translation type="obsolete">Unable to bind to %s on this computer. Sibcoin Core is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. Ilixomtest Core is probably already running.</source>
+        <translation type="obsolete">Unable to bind to %s on this computer. Ilixomtest Core is probably already running.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
         <translation type="obsolete">Unable to locate enough Darksend denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SIB.</source>
-        <translation type="obsolete">Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SIB.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 ILT.</source>
+        <translation type="obsolete">Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 ILT.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -5271,8 +5271,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Sibcoin Core is shutting down.</source>
-        <translation>Initialization sanity check failed. Sibcoin Core is shutting down.</translation>
+        <source>Initialization sanity check failed. Ilixomtest Core is shutting down.</source>
+        <translation>Initialization sanity check failed. Ilixomtest Core is shutting down.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -5408,8 +5408,8 @@ that paper wallet has been printed successfully!</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 SIB.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 1000 SIB.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 ILT.</source>
+        <translation>Unable to locate enough funds for this transaction that are not equal 1000 ILT.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5478,8 +5478,8 @@ that paper wallet has been printed successfully!</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sibcoin Core</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of Sibcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Ilixomtest Core</source>
+        <translation>Error loading wallet.dat: Wallet requires newer version of Ilixomtest Core</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5613,8 +5613,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>Send trace/debug info to debug.log file (default: %u)</translation>
     </message>
     <message>
-        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
-        <translation>Send transactions as zero-fee transactions if possible (default: %u)</translation>
+        <source>Send transactions as zero-fee transactions if posiltle (default: %u)</source>
+        <translation>Send transactions as zero-fee transactions if posiltle (default: %u)</translation>
     </message>
     <message>
         <source>Set key pool size to &lt;n&gt; (default: %u)</source>
@@ -5737,8 +5737,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>Value more than PrivateSend pool maximum allows.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Sibcoin Core to complete</source>
-        <translation>Wallet needed to be rewritten: restart Sibcoin Core to complete</translation>
+        <source>Wallet needed to be rewritten: restart Ilixomtest Core to complete</source>
+        <translation>Wallet needed to be rewritten: restart Ilixomtest Core to complete</translation>
     </message>
     <message>
         <source>Will retry...</source>
@@ -5781,16 +5781,16 @@ that paper wallet has been printed successfully!</translation>
         <translation>KeePassHttp key for AES encrypted communication with KeePass</translation>
     </message>
     <message>
-        <source>Keep N SIB anonymized (default: %u)</source>
-        <translation>Keep N SIB anonymized (default: %u)</translation>
+        <source>Keep N ILT anonymized (default: %u)</source>
+        <translation>Keep N ILT anonymized (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</translation>
     </message>
     <message>
-        <source>Disable all Dash/Sibcoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
-        <translation>Disable all Dash/Sibcoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</translation>
+        <source>Disable all Dash/Ilixomtest specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
+        <translation>Disable all Dash/Ilixomtest specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Discover own IP addresses (default: 1 when listening and no -externalip or -proxy)</source>
@@ -5841,8 +5841,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>If &lt;category&gt; is not supplied or if &lt;category&gt; = 1, output all debugging information.</translation>
     </message>
     <message>
-        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
-        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</translation>
+        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 ILT.</source>
+        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 ILT.</translation>
     </message>
     <message>
         <source>InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again.</source>
@@ -5869,8 +5869,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>Maximum total fees (in %s) to use in a single wallet transaction; setting this too low may abort large transactions (default: %s)</translation>
     </message>
     <message>
-        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong Sibcoin Core will not work properly.</source>
-        <translation>Please check that your computer&apos;s date and time are correct! If your clock is wrong Sibcoin Core will not work properly.</translation>
+        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong Ilixomtest Core will not work properly.</source>
+        <translation>Please check that your computer&apos;s date and time are correct! If your clock is wrong Ilixomtest Core will not work properly.</translation>
     </message>
     <message>
         <source>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -5897,8 +5897,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, &gt;%u = target size in MiB to use for block files)</translation>
     </message>
     <message>
-        <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
-        <translation>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</translation>
+        <source>Rescans are not posiltle in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
+        <translation>Rescans are not posiltle in pruned mode. You will need to use -reindex which will download the whole blockchain again.</translation>
     </message>
     <message>
         <source>Specify full path to directory for automatic wallet backups (must exist)</source>
@@ -5929,12 +5929,12 @@ that paper wallet has been printed successfully!</translation>
         <translation>Unable to locate enough PrivateSend denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 SIB.</source>
-        <translation>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 SIB.</translation>
+        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 ILT.</source>
+        <translation>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 ILT.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</translation>
+        <source>Unsupported argument -socks found. Setting SOCKS version isn&apos;t posiltle anymore, only SOCKS5 proxies are supported.</source>
+        <translation>Unsupported argument -socks found. Setting SOCKS version isn&apos;t posiltle anymore, only SOCKS5 proxies are supported.</translation>
     </message>
     <message>
         <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
@@ -5969,8 +5969,8 @@ that paper wallet has been printed successfully!</translation>
         <translation>Wallet is locked, can&apos;t replenish keypool! Automatic backups and mixing are disabled, please unlock your wallet to replenish keypool.</translation>
     </message>
     <message>
-        <source>Warning: Unknown block versions being mined! It&apos;s possible unknown rules are in effect</source>
-        <translation>Warning: Unknown block versions being mined! It&apos;s possible unknown rules are in effect</translation>
+        <source>Warning: Unknown block versions being mined! It&apos;s posiltle unknown rules are in effect</source>
+        <translation>Warning: Unknown block versions being mined! It&apos;s posiltle unknown rules are in effect</translation>
     </message>
     <message>
         <source>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</source>

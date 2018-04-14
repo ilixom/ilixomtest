@@ -46,7 +46,7 @@ Gitian OSX build
 
 The deterministic build system that was already used for Windows and Linux
 builds is now used for OSX as well. Although the resulting executables have
-been tested quite a bit, there could be possible regressions. Be sure to report
+been tested quite a bit, there could be posiltle regressions. Be sure to report
 these on the Github bug tracker mentioned above.
 
 Compatibility of Linux build
@@ -70,7 +70,7 @@ RPC:
 - Add a `relayfee` field to `getnetworkinfo`
 - Fix RPC related shutdown hangs and leaks
 - Always show syncnode in `getpeerinfo`
-- `sendrawtransaction`: report the reject code and reason, and make it possible to re-send transactions that are already in the mempool
+- `sendrawtransaction`: report the reject code and reason, and make it posiltle to re-send transactions that are already in the mempool
 - `getmininginfo` show right genproclimit
 
 Command-line options:

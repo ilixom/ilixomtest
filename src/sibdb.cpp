@@ -1,8 +1,8 @@
-// Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2015 The Ilixomtest developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "sibdb.h"
+#include "iltdb.h"
 
 using namespace boost;
 using namespace std;

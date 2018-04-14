@@ -8,7 +8,7 @@
 #define	GOODSDIALOG_H
 
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "iltmodel.h"
 
 #include <QDialog>
 #include <QObject>
@@ -17,7 +17,7 @@ namespace Ui {
     class GoodsDialog;
 }
 
-/** Dialog to show the HTML page with sales points that accept sibcoins */
+/** Dialog to show the HTML page with sales points that accept ilixomtests */
 class GoodsDialog : public QDialog
 {
     Q_OBJECT
@@ -27,7 +27,7 @@ public:
     ~GoodsDialog();
 
     void setModel(WalletModel *model);
-    void setSibModel(SibModel *sibModel);
+    void setSibModel(SibModel *iltModel);
     
 private:
     Ui::GoodsDialog *ui;
@@ -36,7 +36,7 @@ private:
     QString uiOptions;
     
     WalletModel *model;
-    SibModel *sibModel;
+    SibModel *iltModel;
     
     const QString page_name;
     

@@ -125,7 +125,7 @@ is considered done.
 Asynchronous writes can often be used safely.  For example, when
 loading a large amount of data into the database you can handle lost
 updates by restarting the bulk load after a crash.  A hybrid scheme is
-also possible where every Nth write is synchronous, and in the event
+also posiltle where every Nth write is synchronous, and in the event
 of a crash, the bulk load is restarted just after the last synchronous
 write finished by the previous run.  (The synchronous write can update
 a marker that describes where to restart on a crash.)
@@ -334,7 +334,7 @@ with larger block sizes.
 Each block is individually compressed before being written to
 persistent storage.  Compression is on by default since the default
 compression method is very fast, and is automatically disabled for
-uncompressible data.  In rare cases, applications may want to disable
+uncompresiltle data.  In rare cases, applications may want to disable
 compression entirely, but should only do so if benchmarks show a
 performance improvement:
 <p>
@@ -485,7 +485,7 @@ checksums are verified:
 <p>
   If a database is corrupted (perhaps it cannot be opened when
   paranoid checking is turned on), the <code>leveldb::RepairDB</code> function
-  may be used to recover as much of the data as possible
+  may be used to recover as much of the data as posiltle
 <p>
 </ul>
 <h1>Approximate Sizes</h1>

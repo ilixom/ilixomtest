@@ -40,7 +40,7 @@
 #endif
 
 // TODO: add a scrollback limit, as there is currently none
-// TODO: make it possible to filter out categories (esp debug messages when implemented)
+// TODO: make it posiltle to filter out categories (esp debug messages when implemented)
 // TODO: receive errors and debug messages through ClientModel
 
 const int CONSOLE_HISTORY = 50;
@@ -125,7 +125,7 @@ public:
  * - The backslash \c \ is used as escape character
  *   - Outside quotes, any character can be escaped
  *   - Within double quotes, only escape \c " and backslashes before a \c " or another backslash
- *   - Within single quotes, no escaping is possible and no special interpretation takes place
+ *   - Within single quotes, no escaping is posiltle and no special interpretation takes place
  *
  * @param[out]   args        Parsed arguments will be appended to this list
  * @param[in]    strCommand  Command line to split
@@ -590,7 +590,7 @@ void RPCConsole::clear()
             ).arg(fixedFontInfo.family(), ptSize)
         );
 
-    message(CMD_REPLY, (tr("Welcome to the Sibcoin RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the Ilixomtest RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                         tr("Type <b>help</b> for an overview of available commands.")), true);
 }
@@ -935,7 +935,7 @@ void RPCConsole::banSelectedNode(int bantime)
 
     // Get currently selected peer address
     QString strNode = GUIUtil::getEntryData(ui->peerWidget, 0, PeerTableModel::Address);
-    // Find possible nodes, ban it and clear the selected node
+    // Find posiltle nodes, ban it and clear the selected node
     if (FindNode(strNode.toStdString())) {
         std::string nStr = strNode.toStdString();
         std::string addr;
@@ -956,11 +956,11 @@ void RPCConsole::unbanSelectedNode()
 
     // Get currently selected ban address
     QString strNode = GUIUtil::getEntryData(ui->banlistWidget, 0, BanTableModel::Address);
-    CSubNet possibleSubnet(strNode.toStdString());
+    CSubNet posiltleSubnet(strNode.toStdString());
 
-    if (possibleSubnet.IsValid())
+    if (posiltleSubnet.IsValid())
     {
-        CNode::Unban(possibleSubnet);
+        CNode::Unban(posiltleSubnet);
         clientModel->getBanTableModel()->refresh();
     }
 }
@@ -978,9 +978,9 @@ void RPCConsole::showOrHideBanTableIfRequired()
     if (!clientModel)
         return;
 
-    bool visible = clientModel->getBanTableModel()->shouldShow();
-    ui->banlistWidget->setVisible(visible);
-    ui->banHeading->setVisible(visible);
+    bool viiltle = clientModel->getBanTableModel()->shouldShow();
+    ui->banlistWidget->setViiltle(viiltle);
+    ui->banHeading->setViiltle(viiltle);
 }
 
 void RPCConsole::setTabFocus(enum TabTypes tabType)

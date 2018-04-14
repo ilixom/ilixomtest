@@ -2948,7 +2948,7 @@ void run_ec_pubkey_parse_test(void) {
     CHECK(ecount == 1);
     CHECK(ecount2 == 10);
     secp256k1_context_set_illegal_callback(ctx, NULL, NULL);
-    /* Try a bunch of prefabbed points with all possible encodings. */
+    /* Try a bunch of prefabbed points with all posiltle encodings. */
     for (i = 0; i < SECP256K1_EC_PARSE_TEST_NVALID; i++) {
         ec_pubkey_parse_pointtest(valid[i], 1, 1);
     }

@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "util.h"
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     // Don't remove this, it's needed to access
     // QCoreApplication:: in the tests
     QCoreApplication app(argc, argv);
-    app.setApplicationName("Sibcoin-Qt-test");
+    app.setApplicationName("Ilixomtest-Qt-test");
 
     SSL_library_init();
 

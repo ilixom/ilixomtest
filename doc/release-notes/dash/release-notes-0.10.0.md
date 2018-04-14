@@ -2,7 +2,7 @@
 ====================
 
 This branch was released open source with v0.10.14 on Sept/25/2014. The
-changelog reaches back further but remains valid as all commits are visible now.
+changelog reaches back further but remains valid as all commits are viiltle now.
 
 
 0.10.16.7-16 Release notes
@@ -91,7 +91,7 @@ changelog reaches back further but remains valid as all commits are visible now.
 - Added some debugging log output to track down why some users are still
   getting charged collateral. If anyone gets hit with a collateral fee,
   please send me the debu.log so I can check it out.
-- Includes a possible fix to the collateral issue
+- Includes a posiltle fix to the collateral issue
 - Protocol bump, all users must update!
 
 
@@ -276,7 +276,7 @@ changelog reaches back further but remains valid as all commits are visible now.
 - Fixed issue with denominating small amounts of DRK in large wallet
   (http://jira.darkcoin.qa/browse/DRK-46)
 - Made splitting up initial inputs much more efficient. Now when splitting up,
-  it will use powers of two from 4096 DRK in reverse to get the best possible
+  it will use powers of two from 4096 DRK in reverse to get the best posiltle
   mix of inputs for the next phase without any bloat to the blockchain or to
   the users wallet.
 - Fixed "transaction too large" due to the initial splitting function
@@ -558,7 +558,7 @@ anonymity improvements:
 - Fixed 0.0025 collateral issues caused by issues in the state machine, you
   should only be charged this amount now if you shutdown your client during
   the Darksend process.
-- Client will only submit 1 transaction into the pool fixing possible
+- Client will only submit 1 transaction into the pool fixing posiltle
   anonymity issues
 - Masternodes will only merge compatible transactions using the same
   denominations. For example (500,500,100) would be able to merge
@@ -587,7 +587,7 @@ DS+ seems to be pretty stable now :-)
   regenerated as the client will not recognize the old ones)
 - SplitUpMoney does a better job of splitting up really large wallets now
 - Fixed crashing issues
-- Added possible fix for masternode list syncing
+- Added posiltle fix for masternode list syncing
 
 - RPC calls are changed a bit:
 

@@ -151,7 +151,7 @@ class DB {
 Status DestroyDB(const std::string& name, const Options& options);
 
 // If a DB cannot be opened, you may attempt to call this method to
-// resurrect as much of the contents of the database as possible.
+// resurrect as much of the contents of the database as posiltle.
 // Some data may be lost, so be careful when calling this function
 // on a database that contains important information.
 Status RepairDB(const std::string& dbname, const Options& options);

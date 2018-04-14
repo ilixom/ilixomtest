@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "bitcoingui.h"
@@ -26,7 +26,7 @@
 #ifdef ENABLE_WALLET
 #include "paymentserver.h"
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "iltmodel.h"
 #endif
 #include "masternodeconfig.h"
 
@@ -64,10 +64,10 @@ Q_IMPORT_PLUGIN(qcncodecs)
 Q_IMPORT_PLUGIN(qjpcodecs)
 Q_IMPORT_PLUGIN(qtwcodecs)
 Q_IMPORT_PLUGIN(qkrcodecs)
-Q_IMPORT_PLUGIN(qtaccessiblewidgets)
+Q_IMPORT_PLUGIN(qtaccesiltlewidgets)
 #else
 #if QT_VERSION < 0x050400
-Q_IMPORT_PLUGIN(AccessibleFactory)
+Q_IMPORT_PLUGIN(AccesiltleFactory)
 #endif
 #if defined(QT_QPA_PLATFORM_XCB)
 Q_IMPORT_PLUGIN(QXcbIntegrationPlugin);
@@ -99,7 +99,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("sibcoin-core", psz).toStdString();
+    return QCoreApplication::translate("ilixomtest-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -149,11 +149,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in sibcoin.qrc)
+    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in ilixomtest.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in sibcoin.qrc)
+    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in ilixomtest.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -174,7 +174,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Sibcoin Core startup and shutdown.
+/** Class encapsulating Ilixomtest Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
 class BitcoinCore: public QObject
@@ -204,7 +204,7 @@ private:
     void handleRunawayException(const std::exception *e);
 };
 
-/** Main Sibcoin application object */
+/** Main Ilixomtest application object */
 class BitcoinApplication: public QApplication
 {
     Q_OBJECT
@@ -258,7 +258,7 @@ private:
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
     WalletModel *walletModel;
-    SibModel *sibModel;
+    SibModel *iltModel;
 #endif
     int returnValue;
     const PlatformStyle *platformStyle;
@@ -266,7 +266,7 @@ private:
     void startThread();
 };
 
-#include "sibcoin.moc"
+#include "ilixomtest.moc"
 
 BitcoinCore::BitcoinCore():
     QObject()
@@ -346,7 +346,7 @@ BitcoinApplication::BitcoinApplication(int &argc, char **argv):
 #ifdef ENABLE_WALLET
     paymentServer(0),
     walletModel(0),
-    sibModel(0),
+    iltModel(0),
 #endif
     returnValue(0)
 {
@@ -470,8 +470,8 @@ void BitcoinApplication::requestShutdown()
     window->removeAllWallets();
     delete walletModel;
     walletModel = 0;
-    delete sibModel;
-    sibModel = 0;
+    delete iltModel;
+    iltModel = 0;
 #endif
     delete clientModel;
     clientModel = 0;
@@ -502,10 +502,10 @@ void BitcoinApplication::initializeResult(int retval)
 #ifdef ENABLE_WALLET
         if(pwalletMain)
         {
-            sibModel = new SibModel(psibDB);            
+            iltModel = new SibModel(piltDB);            
             walletModel = new WalletModel(platformStyle, pwalletMain, optionsModel);
             
-            window->setSibModel(sibModel);
+            window->setSibModel(iltModel);
             window->addWallet(BitcoinGUI::DEFAULT_WALLET, walletModel);
             window->setCurrentWallet(BitcoinGUI::DEFAULT_WALLET);
 
@@ -527,7 +527,7 @@ void BitcoinApplication::initializeResult(int retval)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // sibcoin: URIs or payment requests:
+        // ilixomtest: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -549,7 +549,7 @@ void BitcoinApplication::shutdownResult(int retval)
 
 void BitcoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Sibcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Ilixomtest can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(1);
 }
 
@@ -579,8 +579,8 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
     
-    Q_INIT_RESOURCE(sibcoin);
-    Q_INIT_RESOURCE(sibcoin_locale);
+    Q_INIT_RESOURCE(ilixomtest);
+    Q_INIT_RESOURCE(ilixomtest_locale);
 
     BitcoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
@@ -613,7 +613,7 @@ int main(int argc, char *argv[])
     GUIUtil::SubstituteFonts(GetLangTerritory());
 
     /// 4. Initialization of translations, so that intro dialog is in user's language
-    // Now that QSettings are accessible, initialize translations
+    // Now that QSettings are accesiltle, initialize translations
     QTranslator qtTranslatorBase, qtTranslator, translatorBase, translator;
     initTranslations(qtTranslatorBase, qtTranslator, translatorBase, translator);
     translationInterface.Translate.connect(Translate);
@@ -631,18 +631,18 @@ int main(int argc, char *argv[])
     // User language is set up: pick a data directory
     Intro::pickDataDirectory();
 
-    /// 6. Determine availability of data directory and parse sibcoin.conf
+    /// 6. Determine availability of data directory and parse ilixomtest.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"),
+        QMessageBox::critical(0, QObject::tr("Ilixomtest"),
                               QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return EXIT_FAILURE;
     }
     try {
         ReadConfigFile(mapArgs, mapMultiArgs);
     } catch (const std::exception& e) {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"),
+        QMessageBox::critical(0, QObject::tr("Ilixomtest"),
                               QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
         return EXIT_FAILURE;
     }
@@ -657,7 +657,7 @@ int main(int argc, char *argv[])
     try {
         SelectParams(ChainNameFromCommandLine());
     } catch(std::exception &e) {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"), QObject::tr("Error: %1").arg(e.what()));
+        QMessageBox::critical(0, QObject::tr("Ilixomtest"), QObject::tr("Error: %1").arg(e.what()));
         return EXIT_FAILURE;
     }
 #ifdef ENABLE_WALLET
@@ -676,7 +676,7 @@ int main(int argc, char *argv[])
     /// 7a. parse masternode.conf
     std::string strErr;
     if(!masternodeConfig.read(strErr)) {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"),
+        QMessageBox::critical(0, QObject::tr("Ilixomtest"),
                               QObject::tr("Error reading masternode configuration file: %1").arg(strErr.c_str()));
         return EXIT_FAILURE;
     }
@@ -691,7 +691,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // sibcoin: links repeatedly have their payment requests routed to this process:
+    // ilixomtest: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 
@@ -725,7 +725,7 @@ int main(int argc, char *argv[])
         app.createWindow(networkStyle.data());
         app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
-        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("Sibcoin Core didn't yet exit safely..."), (HWND)app.getMainWinId());
+        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("Ilixomtest Core didn't yet exit safely..."), (HWND)app.getMainWinId());
 #endif
         app.exec();
         app.requestShutdown();

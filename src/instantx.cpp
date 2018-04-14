@@ -163,7 +163,7 @@ void CInstantSend::Vote(CTxLockCandidate& txLockCandidate)
 
     uint256 txHash = txLockCandidate.GetHash();
     // check if we need to vote on this candidate's outpoints,
-    // it's possible that we need to vote for several of them
+    // it's posiltle that we need to vote for several of them
     std::map<COutPoint, COutPointLock>::iterator itOutpointLock = txLockCandidate.mapOutPointLocks.begin();
     while(itOutpointLock != txLockCandidate.mapOutPointLocks.end()) {
 

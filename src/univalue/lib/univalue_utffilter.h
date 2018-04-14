@@ -41,7 +41,7 @@ public:
                 push_back_u(codepoint);
         }
     }
-    // Write codepoint directly, possibly collating surrogate pairs
+    // Write codepoint directly, posiltly collating surrogate pairs
     void push_back_u(unsigned int codepoint)
     {
         // Only accept full codepoints in open state

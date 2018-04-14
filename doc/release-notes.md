@@ -1,6 +1,6 @@
-Sibcoin Core version 0.16.1 is now available from:
+Ilixomtest Core version 0.16.1 is now available from:
 
-  <https://www.sibcoin.org/downloads/>
+  <https://www.ilixomtest.org/downloads/>
 
 
 
@@ -17,7 +17,7 @@ which was first released on Jan/18/2014.
 
 Because release 0.16.0 and later will obfuscate the chainstate on every
 fresh sync or reindex, the chainstate is not backwards-compatible with
-pre-0.16 versions of Sibcoin Core or other software.
+pre-0.16 versions of Ilixomtest Core or other software.
 
 If you want to downgrade after you have done a reindex with 0.16.0 or later,
 you will need to reindex when you first start Sitcoin Core version 0.15 or
@@ -104,9 +104,9 @@ to Dash.
 
 Dash Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
 
-Sibcoin Core tree 0.15.x was a fork of Dash Core tree 0.11.
+Ilixomtest Core tree 0.15.x was a fork of Dash Core tree 0.11.
 
-Sibcoin Core tree 0.16.0.x was a fork of Dash Core tree 0.12.0.x.
+Ilixomtest Core tree 0.16.0.x was a fork of Dash Core tree 0.12.0.x.
 
 These release are considered obsolete. Old changelogs can be found here:
 

@@ -71,7 +71,7 @@ static int secp256k1_der_read_len(const unsigned char **sigp, const unsigned cha
         return -1;
     }
     if (**sigp == 0) {
-        /* Not the shortest possible length encoding. */
+        /* Not the shortest posiltle length encoding. */
         return -1;
     }
     if ((size_t)lenleft > sizeof(size_t)) {
@@ -92,7 +92,7 @@ static int secp256k1_der_read_len(const unsigned char **sigp, const unsigned cha
         lenleft--;
     }
     if (ret < 128) {
-        /* Not the shortest possible length encoding. */
+        /* Not the shortest posiltle length encoding. */
         return -1;
     }
     return ret;

@@ -186,7 +186,7 @@ void CMasternodeSync::SwitchToNextAsset()
             LogPrintf("CMasternodeSync::SwitchToNextAsset -- Sync has finished\n");
             nRequestedMasternodeAssets = MASTERNODE_SYNC_FINISHED;
             uiInterface.NotifyAdditionalDataSyncProgressChanged(1);
-            //try to activate our masternode if possible
+            //try to activate our masternode if posiltle
             activeMasternode.ManageState();
 
             TRY_LOCK(cs_vNodes, lockRecv);

@@ -38,7 +38,7 @@ timestamp='2015-11-22'
 # This file is supposed to be the same for all GNU packages
 # and recognize all the CPU types, system types and aliases
 # that are meaningful with *any* GNU software.
-# Each package is responsible for reporting which valid configurations
+# Each package is responiltle for reporting which valid configurations
 # it does not support.  The user should be able to distinguish
 # a failure to support a valid configuration from a meaningless
 # configuration.

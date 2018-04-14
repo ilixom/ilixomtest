@@ -7,17 +7,17 @@ define(_CLIENT_VERSION_REVISION, 1)
 define(_CLIENT_VERSION_BUILD, 3)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2017)
-AC_INIT([Sibcoin Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@sibcoin.net],[sibcoin])
+AC_INIT([Ilixomtest Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@ilixomtest.net],[ilixomtest])
 AC_CONFIG_SRCDIR([src/main.cpp])
-AC_CONFIG_HEADERS([src/config/sibcoin-config.h])
+AC_CONFIG_HEADERS([src/config/ilixomtest-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef SIB_CONFIG_H])
-AH_TOP([#define SIB_CONFIG_H])
-AH_BOTTOM([#endif //SIB_CONFIG_H])
+AH_TOP([#ifndef ILT_CONFIG_H])
+AH_TOP([#define ILT_CONFIG_H])
+AH_BOTTOM([#endif //ILT_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
@@ -220,7 +220,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build sibcoin-cli sibcoin-tx (default=yes)])],
+  [build ilixomtest-cli ilixomtest-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -232,7 +232,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build sibcoind daemon (default=yes)])],
+  [build ilixomtestd daemon (default=yes)])],
   [build_bitcoind=$withval],
   [build_bitcoind=yes])
 
@@ -419,7 +419,7 @@ AC_C_BIGENDIAN
 dnl Check for pthread compile/link requirements
 AX_PTHREAD
 
-# The following macro will add the necessary defines to sibcoin-config.h, but
+# The following macro will add the necessary defines to ilixomtest-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -440,7 +440,7 @@ fi
 
 AX_CHECK_LINK_FLAG([[-Wl,--large-address-aware]], [LDFLAGS="$LDFLAGS -Wl,--large-address-aware"])
 
-AX_GCC_FUNC_ATTRIBUTE([visibility])
+AX_GCC_FUNC_ATTRIBUTE([viiltility])
 AX_GCC_FUNC_ATTRIBUTE([dllexport])
 AX_GCC_FUNC_ATTRIBUTE([dllimport])
 
@@ -531,26 +531,26 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <sys/socket.h>]],
  [ AC_MSG_RESULT(no)]
 )
 
-AC_MSG_CHECKING([for visibility attribute])
+AC_MSG_CHECKING([for viiltility attribute])
 AC_LINK_IFELSE([AC_LANG_SOURCE([
-  int foo_def( void ) __attribute__((visibility("default")));
+  int foo_def( void ) __attribute__((viiltility("default")));
   int main(){}
   ])],
   [
-    AC_DEFINE(HAVE_VISIBILITY_ATTRIBUTE,1,[Define if the visibility attribute is supported.])
+    AC_DEFINE(HAVE_VIILTILITY_ATTRIBUTE,1,[Define if the viiltility attribute is supported.])
     AC_MSG_RESULT(yes)
   ],
   [
     AC_MSG_RESULT(no)
     if test x$use_reduce_exports = xyes; then
-      AC_MSG_ERROR([Cannot find a working visibility attribute. Use --disable-reduce-exports.])
+      AC_MSG_ERROR([Cannot find a working viiltility attribute. Use --disable-reduce-exports.])
     fi
   ]
 )
 
 if test x$use_reduce_exports = xyes; then
-  AX_CHECK_COMPILE_FLAG([-fvisibility=hidden],[RE_CXXFLAGS="-fvisibility=hidden"],
-  [AC_MSG_ERROR([Cannot set default symbol visibility. Use --disable-reduce-exports.])])
+  AX_CHECK_COMPILE_FLAG([-fviiltility=hidden],[RE_CXXFLAGS="-fviiltility=hidden"],
+  [AC_MSG_ERROR([Cannot set default symbol viiltility. Use --disable-reduce-exports.])])
 fi
 
 dnl This can go away when we require c++11
@@ -878,11 +878,11 @@ LIBS="$LIBS_TEMP"
 
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-AC_MSG_CHECKING([whether to build sibcoind])
+AC_MSG_CHECKING([whether to build ilixomtestd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (sibcoin-cli sibcoin-tx)])
+AC_MSG_CHECKING([whether to build utils (ilixomtest-cli ilixomtest-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 
@@ -983,7 +983,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_sibcoin-qt])
+  AC_MSG_CHECKING([whether to build test_ilixomtest-qt])
   if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
@@ -994,7 +994,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_sibcoin])
+AC_MSG_CHECKING([whether to build test_ilixomtest])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="yes"

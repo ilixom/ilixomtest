@@ -1,15 +1,15 @@
-// Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2015 The Ilixomtest developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SIBDB_H
-#define	SIBDB_H
+#ifndef ILTDB_H
+#define	ILTDB_H
 
 #include "wallet/db.h"
 
 #include <string>
 
-/** Access to the wallet database (sib.dat) */
+/** Access to the wallet database (ilt.dat) */
 class CSibDB : public CDB
 {
 public:
@@ -22,5 +22,5 @@ public:
     bool EraseName(const std::string& key);
     
 };
-#endif	/* SIBDB_H */
+#endif	/* ILTDB_H */
 

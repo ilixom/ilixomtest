@@ -23,7 +23,7 @@ extern std::string RandomKey(Random* rnd, int len);
 // Store in *dst a string of length "len" that will compress to
 // "N*compressed_fraction" bytes and return a Slice that references
 // the generated data.
-extern Slice CompressibleString(Random* rnd, double compressed_fraction,
+extern Slice CompresiltleString(Random* rnd, double compressed_fraction,
                                 size_t len, std::string* dst);
 
 // A wrapper that allows injection of errors.

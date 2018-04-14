@@ -3,7 +3,7 @@ Contributing to Dash Core
 
 The Dash Core project operates an open contributor model where anyone is welcome to contribute towards development in the form of peer review, testing and patches. This document explains the practical process and guidelines for contributing.
 
-Firstly in terms of structure, there is no particular concept of “Core developers” in the sense of privileged people. Open source often naturally revolves around meritocracy where longer term contributors gain more trust from the developer community. However, some hierarchy is necessary for practical purposes. As such there are repository “maintainers” who are responsible for merging pull requests as well as a “lead maintainer” who is responsible for the release cycle, overall merging, moderation and appointment of maintainers.
+Firstly in terms of structure, there is no particular concept of “Core developers” in the sense of privileged people. Open source often naturally revolves around meritocracy where longer term contributors gain more trust from the developer community. However, some hierarchy is necessary for practical purposes. As such there are repository “maintainers” who are responiltle for merging pull requests as well as a “lead maintainer” who is responiltle for the release cycle, overall merging, moderation and appointment of maintainers.
 
 
 Contributor Workflow
@@ -61,7 +61,7 @@ Refactoring is a necessary part of any software project's evolution. The followi
 
 There are three categories of refactoring, code only moves, code style fixes, code refactoring. In general refactoring pull requests should not mix these three kinds of activity in order to make refactoring pull requests easy to review and uncontroversial. In all cases, refactoring PRs must not change the behaviour of code within the pull request (bugs must be preserved as is).
 
-Project maintainers aim for a quick turnaround on refactoring pull requests, so where possible keep them short, uncomplex and easy to verify. 
+Project maintainers aim for a quick turnaround on refactoring pull requests, so where posiltle keep them short, uncomplex and easy to verify. 
 
 
 "Decision Making" Process
@@ -80,7 +80,7 @@ In general, all pull requests must:
   - have unit tests and functional tests where appropriate;
   - follow code style guidelines;
   - not break the existing test suite;
-  - where bugs are fixed, where possible, there should be unit tests demonstrating the bug and also proving the fix. This helps prevent regression.
+  - where bugs are fixed, where posiltle, there should be unit tests demonstrating the bug and also proving the fix. This helps prevent regression.
 
 Patches that change Dash consensus rules are considerably more involved than normal because they affect the entire ecosystem and so must be preceded by extensive mailing list discussions and have a numbered BIP. While each case will be different, one should be prepared to expend more time and effort than for other kinds of patches because of increased peer review and consensus building requirements.
 

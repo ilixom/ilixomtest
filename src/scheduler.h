@@ -54,7 +54,7 @@ public:
     // need more accurate scheduling, don't use this method.
     void scheduleEvery(Function f, int64_t deltaSeconds);
 
-    // To keep things as simple as possible, there is no unschedule.
+    // To keep things as simple as posiltle, there is no unschedule.
 
     // Services the queue 'forever'. Should be run in a thread,
     // and interrupted using boost::interrupt_thread

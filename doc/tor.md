@@ -1,7 +1,7 @@
-TOR SUPPORT IN SIBCOIN
+TOR SUPPORT IN ILTCOIN
 =======================
 
-It is possible to run Sibcoin as a Tor hidden service, and connect to such services.
+It is posiltle to run Ilixomtest as a Tor hidden service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many
 distributions default to having a SOCKS proxy listening on port 9050, but others
@@ -10,11 +10,11 @@ port. See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.htm
 for how to properly configure Tor.
 
 
-1. Run sibcoin behind a Tor proxy
+1. Run ilixomtest behind a Tor proxy
 ----------------------------------
 
-The first step is running Sibcoin behind a Tor proxy. This will already make all
-outgoing connections be anonymized, but more is possible.
+The first step is running Ilixomtest behind a Tor proxy. This will already make all
+outgoing connections be anonymized, but more is posiltle.
 
 	-proxy=ip:port  Set the proxy server. If SOCKS5 is selected (default), this proxy
 	                server will be used to try to reach .onion addresses as well.
@@ -37,31 +37,31 @@ outgoing connections be anonymized, but more is possible.
 An example how to start the client if the Tor proxy is running on local host on
 port 9050 and only allows .onion nodes to connect:
 
-	./sibcoind -onion=127.0.0.1:9050 -onlynet=tor -listen=0 -addnode=ssapp53tmftyjmjb.onion
+	./ilixomtestd -onion=127.0.0.1:9050 -onlynet=tor -listen=0 -addnode=ssapp53tmftyjmjb.onion
 
 In a typical situation, this suffices to run behind a Tor proxy:
 
-	./sibcoind -proxy=127.0.0.1:9050
+	./ilixomtestd -proxy=127.0.0.1:9050
 
 
-2. Run a sibcoin hidden server
+2. Run a ilixomtest hidden server
 -------------------------------
 
-If you configure your Tor system accordingly, it is possible to make your node also
+If you configure your Tor system accordingly, it is posiltle to make your node also
 reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equivalent
 config file):
 
-	HiddenServiceDir /var/lib/tor/sibcoin-service/
+	HiddenServiceDir /var/lib/tor/ilixomtest-service/
 	HiddenServicePort 1945 127.0.0.1:1945
 	HiddenServicePort 11945 127.0.0.1:11945
 
 The directory can be different of course, but (both) port numbers should be equal to
-your sibcoind's P2P listen port (1945 by default).
+your ilixomtestd's P2P listen port (1945 by default).
 
-	-externalip=X   You can tell sibcoin about its publicly reachable address using
+	-externalip=X   You can tell ilixomtest about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
 	                configuration, you can find your onion address in
-	                /var/lib/tor/sibcoin-service/hostname. Onion addresses are given
+	                /var/lib/tor/ilixomtest-service/hostname. Onion addresses are given
 	                preference for your node to advertize itself with, for connections
 	                coming from unroutable addresses (such as 127.0.0.1, where the
 	                Tor proxy typically runs).
@@ -78,28 +78,28 @@ your sibcoind's P2P listen port (1945 by default).
 
 In a typical situation, where you're only reachable via Tor, this should suffice:
 
-	./sibcoind -proxy=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -listen
+	./ilixomtestd -proxy=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -listen
 
 (obviously, replace the Onion address with your own). It should be noted that you still
 listen on all devices and another node could establish a clearnet connection, when knowing
 your address. To mitigate this, additionally bind the address of your Tor proxy:
 
-	./sibcoind ... -bind=127.0.0.1
+	./ilixomtestd ... -bind=127.0.0.1
 
 If you don't care too much about hiding your node, and want to be reachable on IPv4
 as well, use `discover` instead:
 
-	./sibcoind ... -discover
+	./ilixomtestd ... -discover
 
 and open port 1945 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
 
-	./sibcoind -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
+	./ilixomtestd -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
 
 
-3. List of known sibcoin Tor relays
+3. List of known ilixomtest Tor relays
 ------------------------------------
 
 * [darkcoinie7ghp67.onion](http://darkcoinie7ghp67.onion/)
@@ -118,16 +118,16 @@ for normal IPv4/IPv6 communication, use:
 4. Automatically listen on Tor
 --------------------------------
 
-Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
+Starting with Tor version 0.2.7.1 it is posiltle, through Tor's control socket
 API, to create and destroy 'ephemeral' hidden services programmatically.
-Sibcoin Core has been updated to make use of this.
+Ilixomtest Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authorization is available),
-Sibcoin Core automatically creates a hidden service to listen on, without
+Ilixomtest Core automatically creates a hidden service to listen on, without
 manual configuration. This will positively affect the number of available
 .onion nodes.
 
-This new feature is enabled by default if Sibcoin Core is listening, and
+This new feature is enabled by default if Ilixomtest Core is listening, and
 a connection to Tor can be made. It can be configured with the `-listenonion`,
 `-torcontrol` and `-torpassword` settings. To show verbose debugging
 information, pass `-debug=tor`.

@@ -75,8 +75,8 @@ AC_COMPILE_IFELSE([AC_LANG_SOURCE([[char foo;]])],
     ])
 
 saved_CFLAGS="$CFLAGS"
-CFLAGS="$CFLAGS -fvisibility=hidden"
-AC_MSG_CHECKING([if ${CC} supports -fvisibility=hidden])
+CFLAGS="$CFLAGS -fviiltility=hidden"
+AC_MSG_CHECKING([if ${CC} supports -fviiltility=hidden])
 AC_COMPILE_IFELSE([AC_LANG_SOURCE([[char foo;]])],
     [ AC_MSG_RESULT([yes]) ],
     [ AC_MSG_RESULT([no])

@@ -110,7 +110,7 @@ private:
 
     // Mempool counts of outstanding transactions
     // For each bucket X, track the number of transactions in the mempool
-    // that are unconfirmed for each possible confirmation value Y
+    // that are unconfirmed for each posiltle confirmation value Y
     std::vector<std::vector<int> > unconfTxs;  //unconfTxs[Y][X]
     // transactions still unconfirmed after MAX_CONFIRMS for each bucket
     std::vector<int> oldUnconfTxs;

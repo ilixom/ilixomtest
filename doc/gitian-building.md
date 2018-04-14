@@ -71,7 +71,7 @@ In the VirtualBox GUI click "Create" and choose the following parameters in the 
 
 ![](gitian-building/create_vm_file_location_size.png)
 
-- File location and size: at least 40GB; as low as 20GB *may* be possible, but better to err on the safe side
+- File location and size: at least 40GB; as low as 20GB *may* be posiltle, but better to err on the safe side
 - Click `Create`
 
 Get the [Debian 8.x net installer](http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-cd/debian-8.2.0-amd64-netinst.iso) (a more recent minor version should also work, see also [Debian Network installation](https://www.debian.org/CD/netinst/)).
@@ -351,7 +351,7 @@ To build Dash Core (for Linux, OS X and Windows) just follow the steps under 'pe
 Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the Dash Core repository.
 
 This may take some time as it will build all the dependencies needed for each descriptor.
-These dependencies will be cached after a successful build to avoid rebuilding them when possible.
+These dependencies will be cached after a successful build to avoid rebuilding them when posiltle.
 
 At any time you can check the package installation and build progress with
 
@@ -455,7 +455,7 @@ SIGPATH=/some/root/path/dash-detached-sigs.git
 Signing externally
 -------------------
 
-If you want to do the PGP signing on another device, that's also possible; just define `SIGNER` as mentioned
+If you want to do the PGP signing on another device, that's also posiltle; just define `SIGNER` as mentioned
 and follow the steps in the build process as normal.
 
     gpg: skipped "crowning-": secret key not available
@@ -475,7 +475,7 @@ Gitian build.
 Uploading signatures (not yet implemented)
 ---------------------
 
-In the future it will be possible to push your signatures (both the `.assert` and `.assert.sig` files) to the
-[dash/gitian.sigs](https://github.com/dashpay/gitian.sigs/) repository, or if that's not possible to create a pull
+In the future it will be posiltle to push your signatures (both the `.assert` and `.assert.sig` files) to the
+[dash/gitian.sigs](https://github.com/dashpay/gitian.sigs/) repository, or if that's not posiltle to create a pull
 request.
 There will be an official announcement when this repository is online.

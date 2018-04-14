@@ -547,7 +547,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
     LOCK(cs_vecPayees);
 
     int nMaxSignatures = 0;
-    std::string strPayeesPossible = "";
+    std::string strPayeesPosiltle = "";
 
     CAmount nMasternodePayment = GetMasternodePayment(nBlockHeight, txNew.GetValueOut());
 
@@ -575,15 +575,15 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
             ExtractDestination(payee.GetPayee(), address1);
             CBitcoinAddress address2(address1);
 
-            if(strPayeesPossible == "") {
-                strPayeesPossible = address2.ToString();
+            if(strPayeesPosiltle == "") {
+                strPayeesPosiltle = address2.ToString();
             } else {
-                strPayeesPossible += "," + address2.ToString();
+                strPayeesPosiltle += "," + address2.ToString();
             }
         }
     }
 
-    LogPrintf("CMasternodeBlockPayees::IsTransactionValid -- ERROR: Missing required payment, possible payees: '%s', amount: %f DASH\n", strPayeesPossible, (float)nMasternodePayment/COIN);
+    LogPrintf("CMasternodeBlockPayees::IsTransactionValid -- ERROR: Missing required payment, posiltle payees: '%s', amount: %f DASH\n", strPayeesPosiltle, (float)nMasternodePayment/COIN);
     return false;
 }
 

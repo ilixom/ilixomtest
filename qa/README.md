@@ -25,9 +25,9 @@ Or you can run any combination of tests by calling `qa/pull-tester/rpc-tests.py 
 
 Run the regression test suite with `qa/pull-tester/rpc-tests.py`
 
-Run all possible tests with `qa/pull-tester/rpc-tests.py -extended`
+Run all posiltle tests with `qa/pull-tester/rpc-tests.py -extended`
 
-Possible options:
+Posiltle options:
 
 ```
   -h, --help            show this help message and exit

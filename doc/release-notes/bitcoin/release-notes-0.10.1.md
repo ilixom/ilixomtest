@@ -37,7 +37,7 @@ stored on disk, which earlier versions won't support.
 
 If you want to be able to downgrade smoothly, make a backup of your entire data
 directory. Without this your node will need start syncing (or importing from
-bootstrap.dat) anew afterwards. It is possible that the data from a completely
+bootstrap.dat) anew afterwards. It is posiltle that the data from a completely
 synchronised 0.10 node may be usable in older versions as-is, but this is not
 supported and may break as soon as the older version attempts to reindex.
 
@@ -63,7 +63,7 @@ RPC:
 Block (database) and transaction handling:
 - `1d2cdd2` Fix InvalidateBlock to add chainActive.Tip to setBlockIndexCandidates
 - `c91c660` fix InvalidateBlock to repopulate setBlockIndexCandidates
-- `002c8a2` fix possible block db breakage during re-index
+- `002c8a2` fix posiltle block db breakage during re-index
 - `a1f425b` Add (optional) consistency check for the block chain data structures
 - `1c62e84` Keep mempool consistent during block-reorgs
 - `57d1f46` Fix CheckBlockIndex for reindex

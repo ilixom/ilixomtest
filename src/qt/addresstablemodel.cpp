@@ -441,7 +441,7 @@ static CKeyID getKeyID(const QString &addr)
 
 	CBitcoinAddress address;
 	if (!address.SetString(strAddress))
-		throw std::runtime_error("Invalid Sibcoin address");
+		throw std::runtime_error("Invalid Ilixomtest address");
 	CKeyID keyID;
 	address.GetKeyID(keyID);
 

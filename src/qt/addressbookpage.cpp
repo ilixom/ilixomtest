@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 
 #endif
 
@@ -71,12 +71,12 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode mode, 
     switch(tab)
     {
     case SendingTab:
-        ui->labelExplanation->setText(tr("These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins."));
-        ui->deleteAddress->setVisible(true);
+        ui->labelExplanation->setText(tr("These are your Ilixomtest addresses for sending payments. Always check the amount and the receiving address before sending coins."));
+        ui->deleteAddress->setViiltle(true);
         break;
     case ReceivingTab:
-        ui->labelExplanation->setText(tr("These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction."));
-        ui->deleteAddress->setVisible(false);
+        ui->labelExplanation->setText(tr("These are your Ilixomtest addresses for receiving payments. It is recommended to use a new receiving address for each transaction."));
+        ui->deleteAddress->setViiltle(false);
         break;
     }
 
@@ -301,13 +301,13 @@ void AddressBookPage::selectionChanged()
         case SendingTab:
             // In sending tab, allow deletion of selection
             ui->deleteAddress->setEnabled(true);
-            ui->deleteAddress->setVisible(true);
+            ui->deleteAddress->setViiltle(true);
             deleteAction->setEnabled(true);
             break;
         case ReceivingTab:
             // Deleting receiving addresses, however, is not allowed
             ui->deleteAddress->setEnabled(false);
-            ui->deleteAddress->setVisible(false);
+            ui->deleteAddress->setViiltle(false);
             deleteAction->setEnabled(false);
             break;
         }

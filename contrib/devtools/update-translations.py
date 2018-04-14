@@ -88,7 +88,7 @@ def check_format_specifiers(source, translation, errors, numerus):
     else:
         if source_f != translation_f:
             if numerus and source_f == (set(), ['n']) and translation_f == (set(), []) and translation.find('%') == -1:
-                # Allow numerus translations to omit %n specifier (usually when it only has one possible value)
+                # Allow numerus translations to omit %n specifier (usually when it only has one posiltle value)
                 return True
             errors.append("Mismatch between '%s' and '%s'" % (sanitize_string(source), sanitize_string(translation)))
             return False

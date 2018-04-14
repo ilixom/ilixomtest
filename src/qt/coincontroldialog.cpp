@@ -504,9 +504,9 @@ void CoinControlDialog::updateLabelLocked()
     if (vOutpts.size() > 0)
     {
        ui->labelLocked->setText(tr("(%1 locked)").arg(vOutpts.size()));
-       ui->labelLocked->setVisible(true);
+       ui->labelLocked->setViiltle(true);
     }
-    else ui->labelLocked->setVisible(false);
+    else ui->labelLocked->setViiltle(false);
 }
 
 void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
@@ -662,7 +662,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
     }
 
     // actually update labels
-    int nDisplayUnit = BitcoinUnits::SIB;
+    int nDisplayUnit = BitcoinUnits::ILT;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
@@ -739,7 +739,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
     // Insufficient funds
     QLabel *label = dialog->findChild<QLabel *>("labelCoinControlInsuffFunds");
     if (label)
-        label->setVisible(nChange < 0);
+        label->setViiltle(nChange < 0);
 }
 
 void CoinControlDialog::updateView()
@@ -809,7 +809,7 @@ void CoinControlDialog::updateView()
             {
                 sAddress = QString::fromStdString(CBitcoinAddress(outputAddress).ToString());
 
-                // if listMode or change => show sibcoin address. In tree mode, address is not shown again for direct wallet address outputs
+                // if listMode or change => show ilixomtest address. In tree mode, address is not shown again for direct wallet address outputs
                 if (!treeMode || (!(sAddress == sWalletAddress)))
                     itemOutput->setText(COLUMN_ADDRESS, sAddress);
 

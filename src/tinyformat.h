@@ -31,8 +31,8 @@
 // tinyformat.h is a type safe printf replacement library in a single C++
 // header file.  Design goals include:
 //
-// * Type safety and extensibility for user defined types.
-// * C99 printf() compatibility, to the extent possible using std::ostream
+// * Type safety and exteniltility for user defined types.
+// * C99 printf() compatibility, to the extent posiltle using std::ostream
 // * Simplicity and minimalism.  A single header file to include and distribute
 //   with your projects.
 // * Augment rather than replace the standard stream formatting mechanism
@@ -53,7 +53,7 @@
 //   tfm::printf("%s, %s %d, %.2d:%.2d\n", weekday, month, day, hour, min);
 //
 // The strange types here emphasize the type safety of the interface; it is
-// possible to print a std::string using the "%s" conversion, and a
+// posiltle to print a std::string using the "%s" conversion, and a
 // size_t using the "%d" conversion.  A similar result could be achieved
 // using either of the tfm::format() functions.  One prints on a user provided
 // stream:
@@ -240,7 +240,7 @@ struct convertToInt
         return 0;
     }
 };
-// Specialization for convertToInt when conversion is possible
+// Specialization for convertToInt when conversion is posiltle
 template<typename T>
 struct convertToInt<T,true>
 {
@@ -323,7 +323,7 @@ TINYFORMAT_DEFINE_FORMATVALUE_CHAR(unsigned char)
 #define TINYFORMAT_PASSARGS(n) TINYFORMAT_PASSARGS_ ## n
 #define TINYFORMAT_PASSARGS_TAIL(n) TINYFORMAT_PASSARGS_TAIL_ ## n
 
-// To keep it as transparent as possible, the macros below have been generated
+// To keep it as transparent as posiltle, the macros below have been generated
 // using python via the excellent cog.py code generation script.  This avoids
 // the need for a bunch of complex (but more general) preprocessor tricks as
 // used in boost.preprocessor.

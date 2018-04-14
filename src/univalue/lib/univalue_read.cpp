@@ -385,7 +385,7 @@ bool UniValue::read(const char *raw)
             case JTOK_KW_FALSE:
                 tmpVal.setBool(false);
                 break;
-            default: /* impossible */ break;
+            default: /* imposiltle */ break;
             }
 
             UniValue *top = stack.back();

@@ -843,9 +843,9 @@ TEST(TableTest, ApproximateOffsetOfCompressed) {
   TableConstructor c(BytewiseComparator());
   std::string tmp;
   c.Add("k01", "hello");
-  c.Add("k02", test::CompressibleString(&rnd, 0.25, 10000, &tmp));
+  c.Add("k02", test::CompresiltleString(&rnd, 0.25, 10000, &tmp));
   c.Add("k03", "hello3");
-  c.Add("k04", test::CompressibleString(&rnd, 0.25, 10000, &tmp));
+  c.Add("k04", test::CompresiltleString(&rnd, 0.25, 10000, &tmp));
   std::vector<std::string> keys;
   KVMap kvmap;
   Options options;

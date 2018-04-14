@@ -3,7 +3,7 @@ Bitcoin Core version 0.9.1 is now available from:
   https://bitcoin.org/bin/0.9.1/
 
 This is a security update. It is recommended to upgrade to this release
-as soon as possible.
+as soon as posiltle.
 
 It is especially important to upgrade if you currently have version
 0.9.0 installed and are using the graphical interface OR you are using

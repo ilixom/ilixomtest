@@ -5,22 +5,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/ui_aboutdialog.h" line="+129"/>
-        <source>About Sibcoin Core</source>
-        <translation>О программе: &quot;Сибирский Червонец&quot; (SIB)</translation>
+        <source>About Ilixomtest Core</source>
+        <translation>О программе: &quot;Сибирский Червонец&quot; (ILT)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>&lt;b&gt;Sibcoin Core&lt;/b&gt; version</source>
+        <source>&lt;b&gt;Ilixomtest Core&lt;/b&gt; version</source>
         <translation>&lt;b&gt;Сибирский Червонец&lt;/b&gt; версия</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copyright &amp;copy; 2009-2014 The Bitcoin Core developers.
 Copyright &amp;copy; 2014-YYYY The Dash Core developers.
-Copyright &amp;copy; 2015-YYYY The Sibcoin Core developers.</source>
+Copyright &amp;copy; 2015-YYYY The Ilixomtest Core developers.</source>
         <translation>Copyright &amp;copy; 2009-2014 Разработчики Bitcoin Core.
 Copyright &amp;copy; 2014-YYYY Разработчики Dash Core.
-Copyright &amp;copy; 2015-YYYY Разработчики Sibcoin Core.</translation>
+Copyright &amp;copy; 2015-YYYY Разработчики Ilixomtest Core.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -116,12 +116,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Ilixomtest addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Это ваши адреса сети &quot;Червонца&quot; для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Ilixomtest addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Это ваши адреса сети &quot;Червонца&quot; для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
     </message>
     <message>
@@ -287,7 +287,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SIBCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ILTCOINS&lt;/b&gt;!</source>
         <translation>Внимание: если Вы зашифруете бумажник и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ ЧЕРВОНЦЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -303,7 +303,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-57"/>
-        <source>Sibcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
+        <source>Ilixomtest will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ilixomtests from being stolen by malware infecting your computer.</source>
         <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши червонцы от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
@@ -375,8 +375,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+111"/>
         <location line="+808"/>
-        <source>Sibcoin Core</source>
-        <translation>Сибирский Червонец (SIB)</translation>
+        <source>Ilixomtest Core</source>
+        <translation>Сибирский Червонец (ILT)</translation>
     </message>
     <message>
         <location line="-799"/>
@@ -405,7 +405,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Sibcoin address</source>
+        <source>Send coins to a Ilixomtest address</source>
         <translation>Отправить червонцы на указанный адрес</translation>
     </message>
     <message>
@@ -415,8 +415,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and sibcoin: URIs)</source>
-        <translation>Запросить платежи (создать QR-коды и sibcoin: URI)</translation>
+        <source>Request payments (generates QR codes and ilixomtest: URIs)</source>
+        <translation>Запросить платежи (создать QR-коды и ilixomtest: URI)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -443,7 +443,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show links to services that accept sibcoins</source>
+        <source>Show links to services that accept ilixomtests</source>
         <translation type="unfinished">Где принимают червонцы</translation>
     </message>
     <message>
@@ -458,12 +458,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Sibcoin Core</source>
-        <translation>О &amp;кошельке &quot;Сибирского Червонца&quot; (SIB)</translation>
+        <source>&amp;About Ilixomtest Core</source>
+        <translation>О &amp;кошельке &quot;Сибирского Червонца&quot; (ILT)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Sibcoin Core</source>
+        <source>Show information about Ilixomtest Core</source>
         <translation>Показать информацию о кошельке &quot;Сибирский Червонец&quot;</translation>
     </message>
     <message>
@@ -484,7 +484,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Sibcoin</source>
+        <source>Modify configuration options for Ilixomtest</source>
         <translation>Изменить параметры конфигурации &quot;Сибирского Червонца&quot;</translation>
     </message>
     <message>
@@ -549,7 +549,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Sibcoin addresses to prove you own them</source>
+        <source>Sign messages with your Ilixomtest addresses to prove you own them</source>
         <translation>Подписать сообщения вашими адресами &quot;Червонца&quot;, чтобы доказать, что вы ими владеете</translation>
     </message>
     <message>
@@ -559,7 +559,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Sibcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Ilixomtest addresses</source>
         <translation>Проверить сообщения, чтобы удостовериться, что они были подписаны определёнными адресами сети &quot;Червонца&quot;</translation>
     </message>
     <message>
@@ -654,7 +654,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Print sibcoins...</source>
+        <source>&amp;Print ilixomtests...</source>
         <translation>&amp;Распечатать червонцы...</translation>
     </message>
     <message>
@@ -664,12 +664,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Load sibcoins...</source>
+        <source>&amp;Load ilixomtests...</source>
         <translation>&amp;Загрузить червонцы...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Load sibcoins from paper</source>
+        <source>Load ilixomtests from paper</source>
         <translation>Загрузить червонцы с бумажного носителя</translation>
     </message>
     <message>
@@ -679,8 +679,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a sibcoin: URI or payment request</source>
-        <translation>Открыть sibcoin: URI или запрос платежа</translation>
+        <source>Open a ilixomtest: URI or payment request</source>
+        <translation>Открыть ilixomtest: URI или запрос платежа</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -689,7 +689,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options</source>
+        <source>Show the Ilixomtest Core help message to get a list with posiltle Ilixomtest command-line options</source>
         <translation>Показать помощь о кошельке &quot;Червонца&quot; со списком возможных параметров командной строки</translation>
     </message>
     <message>
@@ -699,7 +699,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>How to use Sibcoins</source>
+        <source>How to use Ilixomtests</source>
         <translation>Как пользоваться Червонцами</translation>
     </message>
     <message>
@@ -729,7 +729,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+120"/>
-        <source>Sibcoin Core client</source>
+        <source>Ilixomtest Core client</source>
         <translation type="unfinished">Сибирский Червонец</translation>
     </message>
     <message numerus="yes">
@@ -743,7 +743,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message numerus="yes">
         <location line="-35"/>
-        <source>%n active connection(s) to Sibcoin network</source>
+        <source>%n active connection(s) to Ilixomtest network</source>
         <translation>
             <numerusform>%n активное соединение с сетью &quot;Червонца&quot;</numerusform>
             <numerusform>%n активных соединений с сетью &quot;Червонца&quot;</numerusform>
@@ -863,7 +863,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
+        <source>Transactions after this will not yet be viiltle.</source>
         <translation>Транзакции после этого времени пока видны не будут.</translation>
     </message>
     <message>
@@ -1295,28 +1295,28 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 SIB</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 ILT</source>
         <translation>Использовать 2 отдельных мастерноды для перемешивания средств вплоть до 1000 червонцев</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 SIB</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 ILT</source>
         <translation>Использовать 8 отдельных мастерноды для перемешивания средств вплоть до 1000 червонцев</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>This option is the quickest and will cost about ~0.025 SIB to anonymize 1000 SIB</source>
-        <translation>Эта опция наиболее быстрая и будет стоить примерно ~0.025 SIB для анонимизации 1000 SIB</translation>
+        <source>This option is the quickest and will cost about ~0.025 ILT to anonymize 1000 ILT</source>
+        <translation>Эта опция наиболее быстрая и будет стоить примерно ~0.025 ILT для анонимизации 1000 ILT</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 SIB to anonymize 1000 SIB</source>
-        <translation>Эта опция более быстрая и будет стоить примерно ~0.05 SIB для анонимизации 1000 SIB</translation>
+        <source>This option is moderately fast and will cost about 0.05 ILT to anonymize 1000 ILT</source>
+        <translation>Эта опция более быстрая и будет стоить примерно ~0.05 ILT для анонимизации 1000 ILT</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>0.1 SIB per 1000 SIB you anonymize.</source>
-        <translation>0.1 SIB для анонимизации 1000 SIB.</translation>
+        <source>0.1 ILT per 1000 ILT you anonymize.</source>
+        <translation>0.1 ILT для анонимизации 1000 ILT.</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -1337,17 +1337,17 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
+        <source>PrivateSend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</source>
         <translation>Анонимизация червонцев успешно установлена в режим обычной приватности (%1 и 2 раунда). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
+        <source>PrivateSend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</source>
         <translation>Анонимизация червонцев успешно установлена в режим высокой приватности (%1 и 8 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
+        <source>PrivateSend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Ilixomtest&apos;s configuration screen.</source>
         <translation>Анонимизация червонцев успешно установлена в режим максимально приватности (%1 и 16 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
 </context>
@@ -1400,7 +1400,7 @@ Address: %4
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sibcoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Ilixomtest address.</source>
         <translation>Введённый адрес &quot;%1&quot; не является правильным адресом сети &quot;Червонца&quot;.</translation>
     </message>
     <message>
@@ -1570,8 +1570,8 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+34"/>
-        <source>Sibcoin Core</source>
-        <translation>&quot;Сибирский Червонец&quot;(SIB)</translation>
+        <source>Ilixomtest Core</source>
+        <translation>&quot;Сибирский Червонец&quot;(ILT)</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1586,8 +1586,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>About Sibcoin Core</source>
-        <translation>О программе: &quot;Сибирский Червонец&quot; (SIB)</translation>
+        <source>About Ilixomtest Core</source>
+        <translation>О программе: &quot;Сибирский Червонец&quot; (ILT)</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1625,8 +1625,8 @@ Address: %4
         <translation>Информация о PrivateSend</translation>
     </message>
     <message>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Sibcoin in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.1 SIB, 1 SIB, 10 SIB and 100 SIB -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="http://sibcoin.org/privatesend"&gt;http://sibcoin.org/privatesend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;Основы PrivateSend&lt;/h3&gt;PrivateSend позволяет Вам получить настоящую финансовую конфиденциальность за счет скрытия источников Ваших средств. Все червонцы в  Вашем кошельке состоят из различных ""входов", Вы можете думать о них как об отдельных монетах.&lt;br&gt;PrivateSend использует инновационный процесс для перемешивания Ваших входов со входами еще двоих человек, но при этом Ваши монеты никогда не покидают Ваш кошелек. Вы сохраняете контроль над Вашими деньгами на протяжении всего времени.&lt;hr&gt; &lt;b&gt;PrivateSend работает так:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend начинается с разбиения Ваших входов транзакций на стандартные номиналы. Такими номиналами являются 0.1 Ч, 1 Ч, 10 Ч и 100 Ч -- что-то вроде купюр, которыми вы пользуетесь каждый день.&lt;/li&gt; &lt;li&gt;Ваш кошелек затем отправляет запросы к особым образом настроенным сетевым узлам, называемым "мастернодами". Эти мастерноды знают только то, что Вы хотите перемешать определенные номиналы. Никакой идентифицирующей информации мастернодам не отравляется, так что они не знают "кто" Вы конкретно.&lt;/li&gt; &lt;li&gt;Сессия перемешивания начинается тогда, когда еще двое человек отправляют схожее сообщение, подтверждающее, что они хотят перемешать точно такой же номинал. Мастернода перемешивает входы и просит кошельки всех пользователей осуществить платежи по ним. Ваш кошелек осуществляет выплату самому себе, но на другой адрес (тоже из вашего кошелька).&lt;/li&gt; &lt;li&gt;Для скрытия Ваших средств кошелек должен повторить этот процесс несколько раз с каждым номиналом. Каждый раз, когда такой процесс завершается, называется "раундом". С каждым раундом PrivateSend становится экспоненциально сложнее определить откуда поступили средства.&lt;/li&gt; &lt;li&gt;Процесс перемешивания выполняется в фоне, без участия пользователя. Когда Вы захотите провести транзакцию, средства уже будут анонимизированы. Дополнительно ждать не требуется.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;ВАЖНО:&lt;/b&gt; Ваш кошелек содержит 1000 адресов. Каждое перемешивание использует до 9 из этих адресов. Это означает, что 1000 адресов хватит примерно на 100 перемешиваний. Когда 900 адресов будут уже использованы, Ваш кошелек должен создать новые адреса. Однако, он может сделать это, только если у Вас включены автоматические резервные копии.&lt;br&gt;Соответственно, пользователям с отключенным резервным копированием PrivateSend не доступен. &lt;hr&gt;Дополнительная информация доступна по ссылке &lt;a href="http://sibcoin.org/privatesend"&gt;http://sibcoin.org/privatesend&lt;/a&gt;         </translation>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the Ilixomtest in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.1 ILT, 1 ILT, 10 ILT and 100 ILT -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="http://ilixomtest.org/privatesend"&gt;http://ilixomtest.org/privatesend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;Основы PrivateSend&lt;/h3&gt;PrivateSend позволяет Вам получить настоящую финансовую конфиденциальность за счет скрытия источников Ваших средств. Все червонцы в  Вашем кошельке состоят из различных ""входов", Вы можете думать о них как об отдельных монетах.&lt;br&gt;PrivateSend использует инновационный процесс для перемешивания Ваших входов со входами еще двоих человек, но при этом Ваши монеты никогда не покидают Ваш кошелек. Вы сохраняете контроль над Вашими деньгами на протяжении всего времени.&lt;hr&gt; &lt;b&gt;PrivateSend работает так:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend начинается с разбиения Ваших входов транзакций на стандартные номиналы. Такими номиналами являются 0.1 Ч, 1 Ч, 10 Ч и 100 Ч -- что-то вроде купюр, которыми вы пользуетесь каждый день.&lt;/li&gt; &lt;li&gt;Ваш кошелек затем отправляет запросы к особым образом настроенным сетевым узлам, называемым "мастернодами". Эти мастерноды знают только то, что Вы хотите перемешать определенные номиналы. Никакой идентифицирующей информации мастернодам не отравляется, так что они не знают "кто" Вы конкретно.&lt;/li&gt; &lt;li&gt;Сессия перемешивания начинается тогда, когда еще двое человек отправляют схожее сообщение, подтверждающее, что они хотят перемешать точно такой же номинал. Мастернода перемешивает входы и просит кошельки всех пользователей осуществить платежи по ним. Ваш кошелек осуществляет выплату самому себе, но на другой адрес (тоже из вашего кошелька).&lt;/li&gt; &lt;li&gt;Для скрытия Ваших средств кошелек должен повторить этот процесс несколько раз с каждым номиналом. Каждый раз, когда такой процесс завершается, называется "раундом". С каждым раундом PrivateSend становится экспоненциально сложнее определить откуда поступили средства.&lt;/li&gt; &lt;li&gt;Процесс перемешивания выполняется в фоне, без участия пользователя. Когда Вы захотите провести транзакцию, средства уже будут анонимизированы. Дополнительно ждать не требуется.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;ВАЖНО:&lt;/b&gt; Ваш кошелек содержит 1000 адресов. Каждое перемешивание использует до 9 из этих адресов. Это означает, что 1000 адресов хватит примерно на 100 перемешиваний. Когда 900 адресов будут уже использованы, Ваш кошелек должен создать новые адреса. Однако, он может сделать это, только если у Вас включены автоматические резервные копии.&lt;br&gt;Соответственно, пользователям с отключенным резервным копированием PrivateSend не доступен. &lt;hr&gt;Дополнительная информация доступна по ссылке &lt;a href="http://ilixomtest.org/privatesend"&gt;http://ilixomtest.org/privatesend&lt;/a&gt;         </translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1658,17 +1658,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Sibcoin Core.</source>
-        <translation>Добро пожаловать в кошелёк сети &quot;Сибирский Червонец&quot; (SIB).</translation>
+        <source>Welcome to Ilixomtest Core.</source>
+        <translation>Добро пожаловать в кошелёк сети &quot;Сибирский Червонец&quot; (ILT).</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Sibcoin Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Ilixomtest Core will store its data.</source>
         <translation>Вы впервые запустили программу и можете выбрать, где она будет хранить данные.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Sibcoin Core will download and store a copy of the Sibcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Ilixomtest Core will download and store a copy of the Ilixomtest block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation>Кошелёк скачает и сохранит копию цепочки блоков. Как минимум %1ГБ данных будет храниться в этом каталоге и размер данных будет со временем расти. В этом же каталоге будет сохранён бумажник.</translation>
     </message>
     <message>
@@ -1683,7 +1683,7 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+82"/>
-        <source>Sibcoin Core</source>
+        <source>Ilixomtest Core</source>
         <translation>Сибирский Червонец</translation>
     </message>
     <message>
@@ -1868,12 +1868,12 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically start Sibcoin after logging in to the system.</source>
+        <source>Automatically start Ilixomtest after logging in to the system.</source>
         <translation>Автоматически запускать &quot;Червонец&quot; после входа в систему.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sibcoin on system login</source>
+        <source>&amp;Start Ilixomtest on system login</source>
         <translation>&amp;Запускать &quot;Червонец&quot; при входе в систему</translation>
     </message>
     <message>
@@ -1908,7 +1908,7 @@ Address: %4
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Sibcoin to keep anonymized</source>
+        <source>Amount of Ilixomtest to keep anonymized</source>
         <translation>Сумма постоянно анонимизированных червонцев</translation>
     </message>
     <message>
@@ -1990,7 +1990,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Ilixomtest client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Автоматически открыть порт для клиента &quot;Червонца&quot; на роутере. Работает только в том случае, если Ваш роутер поддерживает UPnP и данная функция включена.</translation>
     </message>
     <message>
@@ -2039,7 +2039,7 @@ Address: %4
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Sibcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Ilixomtest network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Подключаться к сети червонца через отдельный прокси SOCKS5 для скрытых сервисов Tor.</translation>
     </message>
     <message>
@@ -2063,7 +2063,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sibcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Ilixomtest network through a SOCKS5 proxy.</source>
         <translation>Подключаться к сети червонца через SOCKS5 прокси.</translation>
     </message>
     <message>
@@ -2103,15 +2103,15 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Ilixomtest.</source>
         <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска  кошелька &quot;Червонца&quot;.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</source>
+https://www.transifex.com/projects/p/ilixomtest/</source>
         <translation>Нет Вашего языка или перевод неполон? Помогите нам сделать перевод лучше:
-https://www.transifex.com/projects/p/sibcoin/</translation>
+https://www.transifex.com/projects/p/ilixomtest/</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2217,7 +2217,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+53"/>
         <location line="+1021"/>
         <location line="+77"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sibcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ilixomtest network after a connection is established, but this process has not completed yet.</source>
         <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью &quot;Червонца&quot; после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
@@ -2313,7 +2313,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 SIB / 0 Rounds</source>
+        <source>0 ILT / 0 Rounds</source>
         <translation>0 червонцев / 0 раундов</translation>
     </message>
     <message>
@@ -2556,7 +2556,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-400"/>
-        <source>Cannot start sibcoin: click-to-pay handler</source>
+        <source>Cannot start ilixomtest: click-to-pay handler</source>
         <translation>Не удаётся запустить обработчик &quot;Червонца&quot; click-to-pay</translation>
     </message>
     <message>
@@ -2586,7 +2586,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Sibcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Ilixomtest address or malformed URI parameters.</source>
         <translation>URI не распознан! Это могло произойти из-за некорректного адреса или направильных параметров URI.</translation>
     </message>
     <message>
@@ -2701,7 +2701,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+111"/>
-        <source>Enter a Sibcoin address (e.g. %1)</source>
+        <source>Enter a Ilixomtest address (e.g. %1)</source>
         <translation>Введите адрес сети червонца (напр. %1)</translation>
     </message>
     <message>
@@ -2884,7 +2884,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+149"/>
-        <source>Open the Sibcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Ilixomtest Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Открыть отладочный лог файл из текущей директории кошелька. Может занять несколько секунд для больших файлов.</translation>
     </message>
     <message>
@@ -3138,7 +3138,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-35"/>
-        <source>Welcome to the Sibcoin RPC console.</source>
+        <source>Welcome to the Ilixomtest RPC console.</source>
         <translation>Добро пожаловать в RPC-консоль &quot;Сибирского Червонца&quot;.</translation>
     </message>
     <message>
@@ -3256,7 +3256,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Ilixomtest network.</source>
         <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса. Это сообщение не будет отправлено вместе с платежом по сети червонца.</translation>
     </message>
     <message>
@@ -3272,7 +3272,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Ilixomtest network.</source>
         <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса.&lt;br&gt;Обратите внимание: Это сообщение не будет отправлено вместе с платежом по сети червонца.</translation>
     </message>
     <message>
@@ -3604,7 +3604,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+30"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for sibcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ilixomtest transactions than the network can process.</source>
         <translation>Оплата минимальной комиссии это нормально, но только до тех пор пока объем транзакций невелик. &lt;br /&gt;Имейте ввиду, что в случае роста количества транзакций это может привести к очень длительному времени подтверждения, например несколько дней или вообще никогда.</translation>
     </message>
     <message>
@@ -3648,7 +3648,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+38"/>
-        <source>Send as zero-fee transaction if possible</source>
+        <source>Send as zero-fee transaction if posiltle</source>
         <translation>Отправить без комиссии если возможно</translation>
     </message>
     <message>
@@ -3862,7 +3862,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Sibcoin address</source>
+        <source>Warning: Invalid Ilixomtest address</source>
         <translation>Внимание: неверный адрес сети &quot;Червонца&quot;</translation>
     </message>
     <message>
@@ -3938,7 +3938,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <translation>Ко&amp;личество:</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Sibcoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Ilixomtest than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Комиссия будет вычтена из отправляемой суммы. Получателю придет меньше червонцев, сем указано в поле "Сумма". Если указано несколько получателей, то комиссия будет разделена между ними поровну.</translation>
     </message>
     <message>
@@ -3951,8 +3951,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Sibcoin network.</source>
-        <translation>К sibcoin: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть &quot;Червонца&quot;.</translation>
+        <source>A message that was attached to the ilixomtest: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Ilixomtest network.</source>
+        <translation>К ilixomtest: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть &quot;Червонца&quot;.</translation>
     </message>
     <message>
         <source>This is an unauthenticated payment request.</source>
@@ -3983,7 +3983,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+96"/>
-        <source>Sibcoin Core is shutting down...</source>
+        <source>Ilixomtest Core is shutting down...</source>
         <translation>&quot;Червонец&quot; выключается...</translation>
     </message>
     <message>
@@ -4006,7 +4006,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Sibcoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Ilixomtest sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Вы можете подписывать сообщения/договора своими адресами, чтобы доказать, что Вы можете получать червонцы на них. Будьте осторожны, не подписывайте что-то неопределённое или случайное, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
@@ -4053,7 +4053,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sibcoin address</source>
+        <source>Sign the message to prove you own this Ilixomtest address</source>
         <translation>Подписать сообщение, чтобы доказать владение этим адресом сети &quot;Червонца&quot;</translation>
     </message>
     <message>
@@ -4084,12 +4084,12 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Sibcoin address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
+        <source>The Ilixomtest address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
         <translation>Адрес, которым было подписано сообщение (например, SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Sibcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Ilixomtest address</source>
         <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом сети &quot;Червонца&quot;</translation>
     </message>
     <message>
@@ -4178,8 +4178,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Sibcoin Core</source>
-        <translation>&quot;Сибирский Червонец&quot; (SIB)</translation>
+        <source>Ilixomtest Core</source>
+        <translation>&quot;Сибирский Червонец&quot; (ILT)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4198,8 +4198,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Sibcoin Core developers</source>
-        <translation>Разработчики Sibcoin Core</translation>
+        <source>The Ilixomtest Core developers</source>
+        <translation>Разработчики Ilixomtest Core</translation>
     </message>
     <message>
         <location filename="../networkstyle.cpp" line="+19"/>
@@ -4867,8 +4867,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <translation>Отправка червонцев</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
-        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 SIB.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 ILT.</source>
+        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 ILT.</translation>
     </message>
     <message>
         <source>Used way too many inputs (&gt;%1) for this InstantSend transaction, fees could be huge.</source>
@@ -4924,21 +4924,21 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+64"/>
-        <source>Before sending sibcoins to address please be sure
+        <source>Before sending ilixomtests to address please be sure
 that paper wallet has been printed successfully!</source>
         <translation>Перед переводом червонцев на сгенерированный адрес убедитесь,
 что бумажный кошелек успешно распечатан!</translation>
     </message>
 </context>
 <context>
-    <name>sibcoin-core</name>
+    <name>ilixomtest-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Привязаться к указанному адресу и всегда прослушивать только его. Используйте [хост]:порт для IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.</source>
-        <translation>Не удалось установить блокировку на каталог данных %s. Возможно, Sibcoin Core уже запущен.</translation>
+        <source>Cannot obtain a lock on data directory %s. Ilixomtest Core is probably already running.</source>
+        <translation>Не удалось установить блокировку на каталог данных %s. Возможно, Ilixomtest Core уже запущен.</translation>
     </message>
     <message>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
@@ -4977,8 +4977,8 @@ that paper wallet has been printed successfully!</source>
         <translation>Это пре-релизная тестовая сборка - используйте на свой страх и риск - не используйте для добычи или торговых приложений</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Sibcoin Core is probably already running.</source>
-        <translation>Не удалось привязаться к %s на этом компьютере. Возможно, Sibcoin Core уже запущен.</translation>
+        <source>Unable to bind to %s on this computer. Ilixomtest Core is probably already running.</source>
+        <translation>Не удалось привязаться к %s на этом компьютере. Возможно, Ilixomtest Core уже запущен.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -5177,16 +5177,16 @@ that paper wallet has been printed successfully!</source>
         <translation>Включить автоматическое перемешивание PrivateSend для средств, хранящихся в этом кошельке (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t posiltle anymore, only SOCKS5 proxies are supported.</source>
         <translation>Ошибка: Обнаружен неподдерживаемый аргумент -socks. Выбор версии SOCKS больше невозможен, поддерживаются только прокси версии SOCKS5.</translation>
     </message>
     <message>
-        <source>Fees (in SIB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Комиссии (в SIB/Kb) меньше этого значения считаются нулевой для ретранслирования транзакции (по умолчанию: %s)</translation>
+        <source>Fees (in ILT/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Комиссии (в ILT/Kb) меньше этого значения считаются нулевой для ретранслирования транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Fees (in SIB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Комиссии (в SIB/Kb) меньше этого значения считаются нулевой (для создания транзакции) (по умолчанию: %s)</translation>
+        <source>Fees (in ILT/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Комиссии (в ILT/Kb) меньше этого значения считаются нулевой (для создания транзакции) (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5249,32 +5249,32 @@ that paper wallet has been printed successfully!</source>
         <translation>Этот продукт включает ПО, разработанное проектом OpenSSL Project для использования в OpenSSL Toolkit &lt;https://www.openssl.org/&gt;, криптографическое ПО, написанное Eric Young и ПО для работы с UPnP, написанное Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use sibcoind, or the -server option to sibcoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use ilixomtestd, or the -server option to ilixomtest-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=sibcoinrpc
+rpcuser=ilixomtestrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Sibcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Ilixomtest Alert&quot; admin@foo.com
 </source>
-        <translation>Для использования sibcoind или опции -server с sibcoin-qt, вы должны установить опцию rpcpassword в конфигурационном файле:
+        <translation>Для использования ilixomtestd или опции -server с ilixomtest-qt, вы должны установить опцию rpcpassword в конфигурационном файле:
 %s
 Рекомендуется использовать следующий случайный пароль:
-rpcuser=sibcoinrpc
+rpcuser=ilixomtestrpc
 rpcpassword=%s
 (вам не нужно запоминать этот пароль)
 Имя и пароль ДОЛЖНЫ различаться.
 Если файл не существует, то создайте его и оставьте права на чтение только для владельца.
 Также рекомендуется включить alertnotify для оповещения о проблемах;
-Например: alertnotify=echo %%s | mail -s &quot;Sibcoin Alert&quot; admin@foo.com
+Например: alertnotify=echo %%s | mail -s &quot;Ilixomtest Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 SIB.</source>
-        <translation>Не удалось обнаружить достаточных для выполнения этой транзакции средств, отличающихся от 1000 SIB.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 ILT.</source>
+        <translation>Не удалось обнаружить достаточных для выполнения этой транзакции средств, отличающихся от 1000 ILT.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5285,8 +5285,8 @@ rpcpassword=%s
         <translation>Внимание: установлено очень большое значение -paytxfee! Комиссия такого размера может быть уплачена при проведении одельной транзакции.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Sibcoin Core will not work properly.</source>
-        <translation>Внимание: пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Sibcoin Core не сможет работать корректно, если часы настроены неверно.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Ilixomtest Core will not work properly.</source>
+        <translation>Внимание: пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Ilixomtest Core не сможет работать корректно, если часы настроены неверно.</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
@@ -5329,8 +5329,8 @@ rpcpassword=%s
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Sibcoin Core Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики Sibcoin Core</translation>
+        <source>Copyright (C) 2015-%i The Ilixomtest Core Developers</source>
+        <translation>Copyright (C) 2015-%i Разработчики Ilixomtest Core</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
@@ -5341,8 +5341,8 @@ rpcpassword=%s
         <translation>Ошибка соединения с мастернодой.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sibcoin Core</source>
-        <translation>Ошибка загрузки wallet.dat: кошелёк требует более новой версии Sibcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Ilixomtest Core</source>
+        <translation>Ошибка загрузки wallet.dat: кошелёк требует более новой версии Ilixomtest Core</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -5357,8 +5357,8 @@ rpcpassword=%s
         <translation>Ошибка: Обнаружен неподдерживаемый параметр -tor, используйте -onion вместо него.</translation>
     </message>
     <message>
-        <source>Fee (in SIB/kB) to add to transactions you send (default: %s)</source>
-        <translation>Комиссии (в SIB/kB), добавляемая к отправляемым Вами транзакциям (по умолчанию: %s)</translation>
+        <source>Fee (in ILT/kB) to add to transactions you send (default: %s)</source>
+        <translation>Комиссии (в ILT/kB), добавляемая к отправляемым Вами транзакциям (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5409,8 +5409,8 @@ rpcpassword=%s
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Sibcoin Core is shutting down.</source>
-        <translation>Проверка на непротиворечивость закончилась неудачно. Sibcoin Core выключается.</translation>
+        <source>Initialization sanity check failed. Ilixomtest Core is shutting down.</source>
+        <translation>Проверка на непротиворечивость закончилась неудачно. Ilixomtest Core выключается.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -5517,7 +5517,7 @@ rpcpassword=%s
         <translation>Выводить информацию трассировки/отладки в файл debug.log (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <source>Send transactions as zero-fee transactions if posiltle (default: %u)</source>
         <translation>По возможности отправлять транзакции с нулевой комиссией (по умолчанию: %u)</translation>
     </message>
     <message>
@@ -5633,8 +5633,8 @@ rpcpassword=%s
         <translation>Использовать UPnP для проброса порта (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Sibcoin Core to complete</source>
-        <translation>Необходимо перезаписать кошелёк: перезапустите Sibcoin Core для завершения операции</translation>
+        <source>Wallet needed to be rewritten: restart Ilixomtest Core to complete</source>
+        <translation>Необходимо перезаписать кошелёк: перезапустите Ilixomtest Core для завершения операции</translation>
     </message>
     <message>
         <source>User Agent comment (%s) contains unsafe characters.</source>
@@ -5689,16 +5689,16 @@ rpcpassword=%s
         <translation>Ключ KeePassHttp для зашифрованной коммуникации с KeePass</translation>
     </message>
     <message>
-        <source>Keep N SIB anonymized (default: %u)</source>
-        <translation>Держать N SIB анонимизированными (по умолчанию: %u)</translation>
+        <source>Keep N ILT anonymized (default: %u)</source>
+        <translation>Держать N ILT анонимизированными (по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Держать в памяти до &lt;n&gt; несвязных транзакций (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Disable all Dash/Sibcoin specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
-        <translation>Отключить всю функциональность, относящуюся к Dash/Sibcoin (Мастерноды, PrivateSend, InstantSend, Governance) (0-1, по умолчанию: %u)</translation>
+        <source>Disable all Dash/Ilixomtest specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
+        <translation>Отключить всю функциональность, относящуюся к Dash/Ilixomtest (Мастерноды, PrivateSend, InstantSend, Governance) (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Discover own IP addresses (default: 1 when listening and no -externalip or -proxy)</source>
@@ -5749,8 +5749,8 @@ rpcpassword=%s
         <translation>Если &lt;category&gt; не указана или &lt;category&gt; = 1, выводит всю отладочную информацию.</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
-        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 SIB.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 ILT.</source>
+        <translation>InstantSend пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 ILT.</translation>
     </message>
     <message>
         <source>InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again.</source>
@@ -5777,8 +5777,8 @@ rpcpassword=%s
         <translation>Максимальная сумма комиссии (в %s), допустимая в одной транзакции. Установка слишком низкого значения может привести к невозможности отправить большие транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong Sibcoin Core will not work properly.</source>
-        <translation>Пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Sibcoin Core не сможет работать корректно, если часы настроены неверно.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong Ilixomtest Core will not work properly.</source>
+        <translation>Пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Ilixomtest Core не сможет работать корректно, если часы настроены неверно.</translation>
     </message>
     <message>
         <source>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -5801,7 +5801,7 @@ rpcpassword=%s
         <translation>Уменьшить требования к размеру хранилища путем урезания (удаления) старых блоков. Этот режим несовместим с -txindex и -rescan. Внимание: отмена этой настройки потребует повторного скачивания всей цепочки блоков. (по умолчанию: 0 = отключить удаление блоков, &gt;%u = целевой размер в MiB, который будут займут файлы блоков)</translation>
     </message>
     <message>
-        <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
+        <source>Rescans are not posiltle in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
         <translation>Повторное сканирование невозможно в режиме удаления блоков. Вам надо будет использовать -reindex, что приведет к повторной загрузке всей цепи блоков.</translation>
     </message>
     <message>
@@ -5833,11 +5833,11 @@ rpcpassword=%s
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции номиналов PrivateSend.</translation>
     </message>
     <message>
-        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 SIB.</source>
-        <translation>Не удалось обнаружить достаточных для выполнения этой транзакции неденоминированных средств, отличающихся от 1000 SIB.</translation>
+        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 ILT.</source>
+        <translation>Не удалось обнаружить достаточных для выполнения этой транзакции неденоминированных средств, отличающихся от 1000 ILT.</translation>
     </message>
     <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
+        <source>Unsupported argument -socks found. Setting SOCKS version isn't posiltle anymore, only SOCKS5 proxies are supported.</source>
         <translation>Обнаружен неподдерживаемый аргумент -socks. Выбор версии SOCKS больше невозможен, поддерживаются только прокси версии SOCKS5.</translation>
     </message>
     <message>
@@ -5873,7 +5873,7 @@ rpcpassword=%s
         <translation>Кошелек заблокирован, невозможно пополнить пул ключей! Автоматические резервные копии и перемешивание отключены. Пожалуйста, разблокируйте кошелек для пополнения пула ключей.</translation>
     </message>
     <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
+        <source>Warning: Unknown block versions being mined! It's posiltle unknown rules are in effect</source>
         <translation>Внимание: создаются блоки неизвестной версии! Возможно активированы неизвестные правила</translation>
     </message>
     <message>

@@ -22,7 +22,7 @@
 #ifdef ENABLE_WALLET
 #include "walletframe.h"
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "iltmodel.h"
 #endif // ENABLE_WALLET
 
 #ifdef Q_OS_MAC
@@ -79,7 +79,7 @@ const QString BitcoinGUI::DEFAULT_WALLET = "~Default";
 BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
     QMainWindow(parent),
     clientModel(0),
-    sibModel(0),
+    iltModel(0),
     walletFrame(0),
     unitDisplayControl(0),
     labelEncryptionIcon(0),
@@ -128,7 +128,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 
     GUIUtil::restoreWindowGeometry("nWindow", QSize(850, 550), this);
 
-    QString windowTitle = tr("Sibcoin Core") + " - ";
+    QString windowTitle = tr("Ilixomtest Core") + " - ";
 #ifdef ENABLE_WALLET
     /* if compiled with wallet support, -disablewallet can still disable the wallet */
     enableWallet = !GetBoolArg("-disablewallet", false);
@@ -228,10 +228,10 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 
     // Progress bar and label for blocks download
     progressBarLabel = new QLabel();
-    progressBarLabel->setVisible(true);
+    progressBarLabel->setViiltle(true);
     progressBar = new GUIUtil::ProgressBar();
     progressBar->setAlignment(Qt::AlignCenter);
-    progressBar->setVisible(true);
+    progressBar->setViiltle(true);
 
     // Override style sheet for progress bar for styles that have a segmented progress bar,
     // as they make the text unreadable (workaround for issue #1071)
@@ -289,7 +289,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/" + theme + "/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Sibcoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Ilixomtest address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -304,7 +304,7 @@ void BitcoinGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(QIcon(":/icons/" + theme + "/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and sibcoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and ilixomtest: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -330,7 +330,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(historyAction);
 
     goodsAction = new QAction(QIcon(":/icons/shopping_cart"), tr("&Goods&&&Services"), this);
-    goodsAction->setStatusTip(tr("Show links to services that accept sibcoins"));
+    goodsAction->setStatusTip(tr("Show links to services that accept ilixomtests"));
     goodsAction->setToolTip(goodsAction->statusTip());
     goodsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -379,15 +379,15 @@ void BitcoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&About Sibcoin Core"), this);
-    aboutAction->setStatusTip(tr("Show information about Sibcoin Core"));
+    aboutAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&About Ilixomtest Core"), this);
+    aboutAction->setStatusTip(tr("Show information about Ilixomtest Core"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutAction->setEnabled(false);
     aboutQtAction = new QAction(QIcon(":/icons/" + theme + "/about_qt"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/" + theme + "/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Sibcoin Core"));
+    optionsAction->setStatusTip(tr("Modify configuration options for Ilixomtest Core"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     optionsAction->setEnabled(false);
     toggleHideAction = new QAction(QIcon(":/icons/" + theme + "/about"), tr("&Show / Hide"), this);
@@ -404,9 +404,9 @@ void BitcoinGUI::createActions()
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/" + theme + "/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Sibcoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Ilixomtest addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/" + theme + "/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Sibcoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Ilixomtest addresses"));
 
     openInfoAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Information"), this);
     openInfoAction->setStatusTip(tr("Show diagnostic information"));
@@ -436,27 +436,27 @@ void BitcoinGUI::createActions()
     usedReceivingAddressesAction = new QAction(QIcon(":/icons/" + theme + "/address-book"), tr("&Receiving addresses..."), this);
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
-    genAndPrintAddressesAction = new QAction(QIcon(":/icons/cash_icon"), tr("&Print sibcoins..."), this);
-    genAndPrintAddressesAction->setIconVisibleInMenu(true);
+    genAndPrintAddressesAction = new QAction(QIcon(":/icons/cash_icon"), tr("&Print ilixomtests..."), this);
+    genAndPrintAddressesAction->setIconViiltleInMenu(true);
     genAndPrintAddressesAction->setStatusTip(tr("Generate address and print"));
 
-    loadFromPaperAction = new QAction(QIcon(":/icons/import"), tr("&Load sibcoins..."), this);
-    loadFromPaperAction->setIconVisibleInMenu(true);
-    loadFromPaperAction->setStatusTip(tr("Load sibcoins from paper"));
+    loadFromPaperAction = new QAction(QIcon(":/icons/import"), tr("&Load ilixomtests..."), this);
+    loadFromPaperAction->setIconViiltleInMenu(true);
+    loadFromPaperAction->setStatusTip(tr("Load ilixomtests from paper"));
     
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_DirOpenIcon), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a sibcoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a ilixomtest: URI or payment request"));
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the Sibcoin Core help message to get a list with possible Sibcoin Core command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the Ilixomtest Core help message to get a list with posiltle Ilixomtest Core command-line options"));
 
     showPrivateSendHelpAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&PrivateSend information"), this);
     showPrivateSendHelpAction->setMenuRole(QAction::NoRole);
     showPrivateSendHelpAction->setStatusTip(tr("Show the PrivateSend basic information"));
 
-    showHelpSibcoinAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Howto"), this);
-    showHelpSibcoinAction->setStatusTip(tr("How to use Sibcoins"));
+    showHelpIlixomtestAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Howto"), this);
+    showHelpIlixomtestAction->setStatusTip(tr("How to use Ilixomtests"));
 
     
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
@@ -485,7 +485,7 @@ void BitcoinGUI::createActions()
     // prevents an open debug window from becoming stuck/unusable on client shutdown
     connect(quitAction, SIGNAL(triggered()), rpcConsole, SLOT(hide()));
 
-    connect(showHelpSibcoinAction, SIGNAL(triggered()), this, SLOT(showHelpSibcoinClicked()));
+    connect(showHelpIlixomtestAction, SIGNAL(triggered()), this, SLOT(showHelpIlixomtestClicked()));
 #ifdef ENABLE_WALLET
     if(walletFrame)
     {
@@ -564,7 +564,7 @@ void BitcoinGUI::createMenuBar()
     }
 
     QMenu *help = appMenuBar->addMenu(tr("&Help"));
-    help->addAction(showHelpSibcoinAction);
+    help->addAction(showHelpIlixomtestAction);
     help->addAction(showHelpMessageAction);
     help->addAction(showPrivateSendHelpAction);
     help->addSeparator();
@@ -658,7 +658,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif // ENABLE_WALLET
         unitDisplayControl->setOptionsModel(clientModel->getOptionsModel());
     } else {
-        // Disable possibility to show main window via action
+        // Disable posiltility to show main window via action
         toggleHideAction->setEnabled(false);
         if(trayIconMenu)
         {
@@ -676,9 +676,9 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 }
 
 
-void BitcoinGUI::setSibModel(SibModel *sibModel)
+void BitcoinGUI::setSibModel(SibModel *iltModel)
 {
-    this->sibModel = sibModel;
+    this->iltModel = iltModel;
 }
 
 #ifdef ENABLE_WALLET
@@ -687,7 +687,7 @@ bool BitcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
     if(!walletFrame)
         return false;
     setWalletActionsEnabled(true);
-    walletFrame->setSibModel(sibModel);
+    walletFrame->setSibModel(iltModel);
     return walletFrame->addWallet(name, walletModel);
 }
 
@@ -735,7 +735,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
 void BitcoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
 {
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("Sibcoin Core client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("Ilixomtest Core client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getTrayAndWindowIcon());
     trayIcon->show();
@@ -866,9 +866,9 @@ void BitcoinGUI::showPrivateSendHelpClicked()
     dlg.exec();
 }
 
-void BitcoinGUI::showHelpSibcoinClicked()
+void BitcoinGUI::showHelpIlixomtestClicked()
 {
-    HelpSibcoinDialog *help = new HelpSibcoinDialog(this);
+    HelpIlixomtestDialog *help = new HelpIlixomtestDialog(this);
     help->setAttribute(Qt::WA_DeleteOnClose);
     help->show();
 }
@@ -948,7 +948,7 @@ void BitcoinGUI::setNumConnections(int count)
     }
     QIcon connectionItem = QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE);
     labelConnectionsIcon->setIcon(connectionItem);
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Sibcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Ilixomtest network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
@@ -1024,11 +1024,11 @@ void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
             timeBehindText = tr("%1 and %2").arg(tr("%n year(s)", "", years)).arg(tr("%n week(s)","", remainder/WEEK_IN_SECONDS));
         }
 
-        progressBarLabel->setVisible(true);
+        progressBarLabel->setViiltle(true);
         progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
         progressBar->setMaximum(1000000000);
         progressBar->setValue(nVerificationProgress * 1000000000.0 + 0.5);
-        progressBar->setVisible(true);
+        progressBar->setViiltle(true);
 
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
         if(count != prevBlocks)
@@ -1048,7 +1048,7 @@ void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
         tooltip += QString("<br>");
         tooltip += tr("Last received block was generated %1 ago.").arg(timeBehindText);
         tooltip += QString("<br>");
-        tooltip += tr("Transactions after this will not yet be visible.");
+        tooltip += tr("Transactions after this will not yet be viiltle.");
     }
 
     // Don't word-wrap this (fixed-width) tooltip
@@ -1080,8 +1080,8 @@ void BitcoinGUI::setAdditionalDataSyncProgress(double nSyncProgress)
     tooltip = tr("Up to date") + QString(".<br>") + tooltip;
 
     if(masternodeSync.IsSynced()) {
-        progressBarLabel->setVisible(false);
-        progressBar->setVisible(false);
+        progressBarLabel->setViiltle(false);
+        progressBar->setViiltle(false);
         labelBlocksIcon->setPixmap(QIcon(":/icons/" + theme + "/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
     } else {
 
@@ -1114,7 +1114,7 @@ void BitcoinGUI::setAdditionalDataSyncProgress(double nSyncProgress)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Sibcoin Core"); // default title
+    QString strTitle = tr("Ilixomtest Core"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -1140,7 +1140,7 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
             break;
         }
     }
-    // Append title to "Sibcoin - "
+    // Append title to "Ilixomtest - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 
@@ -1260,7 +1260,7 @@ bool BitcoinGUI::eventFilter(QObject *object, QEvent *event)
     if (event->type() == QEvent::StatusTip)
     {
         // Prevent adding text from setStatusTip(), if we currently use the status bar for displaying other stuff
-        if (progressBarLabel->isVisible() || progressBar->isVisible())
+        if (progressBarLabel->isViiltle() || progressBar->isViiltle())
             return true;
     }
     return QMainWindow::eventFilter(object, event);
@@ -1288,8 +1288,8 @@ void BitcoinGUI::setEncryptionStatus(int status)
         labelEncryptionIcon->hide();
         encryptWalletAction->setChecked(false);
         changePassphraseAction->setEnabled(false);
-        unlockWalletAction->setVisible(false);
-        lockWalletAction->setVisible(false);
+        unlockWalletAction->setViiltle(false);
+        lockWalletAction->setViiltle(false);
         encryptWalletAction->setEnabled(true);
         break;
     case WalletModel::Unlocked:
@@ -1298,8 +1298,8 @@ void BitcoinGUI::setEncryptionStatus(int status)
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        unlockWalletAction->setVisible(false);
-        lockWalletAction->setVisible(true);
+        unlockWalletAction->setViiltle(false);
+        lockWalletAction->setViiltle(true);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
         break;
     case WalletModel::UnlockedForMixingOnly:
@@ -1308,8 +1308,8 @@ void BitcoinGUI::setEncryptionStatus(int status)
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b> for mixing only"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        unlockWalletAction->setVisible(true);
-        lockWalletAction->setVisible(true);
+        unlockWalletAction->setViiltle(true);
+        lockWalletAction->setViiltle(true);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
         break;
     case WalletModel::Locked:
@@ -1318,8 +1318,8 @@ void BitcoinGUI::setEncryptionStatus(int status)
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        unlockWalletAction->setVisible(true);
-        lockWalletAction->setVisible(false);
+        unlockWalletAction->setViiltle(true);
+        lockWalletAction->setViiltle(false);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
         break;
     }

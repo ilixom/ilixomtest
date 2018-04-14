@@ -114,7 +114,7 @@ public Q_SLOTS:
     void banSelectedNode(int bantime);
     /** Unban a selected node on the Bans tab */
     void unbanSelectedNode();
-    /** set which tab has the focus (is visible) */
+    /** set which tab has the focus (is viiltle) */
     void setTabFocus(enum TabTypes tabType);
 
 Q_SIGNALS:

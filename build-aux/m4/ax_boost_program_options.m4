@@ -35,7 +35,7 @@ AC_DEFUN([AX_BOOST_PROGRAM_OPTIONS],
 [
 	AC_ARG_WITH([boost-program-options],
 		AS_HELP_STRING([--with-boost-program-options@<:@=special-lib@:>@],
-                       [use the program options library from boost - it is possible to specify a certain library for the linker
+                       [use the program options library from boost - it is posiltle to specify a certain library for the linker
                         e.g. --with-boost-program-options=boost_program_options-gcc-mt-1_33_1 ]),
         [
         if test "$withval" = "no"; then

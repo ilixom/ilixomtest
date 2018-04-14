@@ -698,7 +698,7 @@ class CScript(bytes):
     def raw_iter(self):
         """Raw iteration
 
-        Yields tuples of (opcode, data, sop_idx) so that the different possible
+        Yields tuples of (opcode, data, sop_idx) so that the different posiltle
         PUSHDATA encodings can be accurately distinguished, as well as
         determining the exact opcode byte indexes. (sop_idx)
         """
@@ -758,7 +758,7 @@ class CScript(bytes):
         Returns either a CScriptOP instance, an integer, or bytes, as
         appropriate.
 
-        See raw_iter() if you need to distinguish the different possible
+        See raw_iter() if you need to distinguish the different posiltle
         PUSHDATA encodings.
         """
         for (opcode, data, sop_idx) in self.raw_iter():

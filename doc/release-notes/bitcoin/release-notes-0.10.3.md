@@ -3,7 +3,7 @@ Bitcoin Core version 0.10.3 is now available from:
   <https://bitcoin.org/bin/bitcoin-core-0.10.3/>
 
 This is a new minor version release, bringing security fixes and translation 
-updates. It is recommended to upgrade to this version as soon as possible.
+updates. It is recommended to upgrade to this version as soon as posiltle.
 
 Please report bugs using the issue tracker at github:
 
@@ -37,7 +37,7 @@ stored on disk, which earlier versions won't support.
 
 If you want to be able to downgrade smoothly, make a backup of your entire data
 directory. Without this your node will need start syncing (or importing from
-bootstrap.dat) anew afterwards. It is possible that the data from a completely
+bootstrap.dat) anew afterwards. It is posiltle that the data from a completely
 synchronised 0.10 node may be usable in older versions as-is, but this is not
 supported and may break as soon as the older version attempts to reindex.
 

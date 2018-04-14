@@ -36,7 +36,7 @@ Masternodes:
 
 - Improve support for start-many with multi masternode config
 - New masternode rpc commands: stop-many, start-alias, stop-alias, list-conf
-- Fixed possible masternode payments exploit
+- Fixed posiltle masternode payments exploit
 - Better support for non-specific masternode payments
 - Added masternode support for regtest
 - Randomly sort masternodes before picking next winner
@@ -61,7 +61,7 @@ RPC:
   (will replace hodge-podge `getinfo` at some point)
 - Add a `relayfee` field to `getnetworkinfo`
 - Always show syncnode in `getpeerinfo`
-- `sendrawtransaction`: report the reject code and reason, and make it possible
+- `sendrawtransaction`: report the reject code and reason, and make it posiltle
   to re-send transactions that are already in the mempool
 - `getmininginfo` show right genproclimit
 - New notion of 'conflicted' transactions, reported as confirmations: -1

@@ -324,7 +324,7 @@ static UniValue BIP22ValidationResult(const CValidationState& state)
             return "rejected";
         return strRejectReason;
     }
-    // Should be impossible
+    // Should be imposiltle
     return "valid?";
 }
 
@@ -354,10 +354,10 @@ UniValue getwork(const UniValue& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Sibcoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Ilixomtest is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Sibcoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Ilixomtest is downloading blocks...");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;    // FIXME: thread safety
@@ -638,13 +638,13 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Sibcoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Ilixomtest is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Sibcoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Ilixomtest is downloading blocks...");
 
     if (!masternodeSync.IsSynced())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Sibcoin is syncing with network...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Ilixomtest is syncing with network...");
 
     static unsigned int nTransactionsUpdatedLast;
 
@@ -1023,7 +1023,7 @@ UniValue estimatesmartfee(const UniValue& params, bool fHelp)
             "estimatesmartfee nblocks\n"
             "\nWARNING: This interface is unstable and may disappear or change!\n"
             "\nEstimates the approximate fee per kilobyte needed for a transaction to begin\n"
-            "confirmation within nblocks blocks if possible and return the number of blocks\n"
+            "confirmation within nblocks blocks if posiltle and return the number of blocks\n"
             "for which the estimate is valid.\n"
             "\nArguments:\n"
             "1. nblocks     (numeric)\n"
@@ -1059,7 +1059,7 @@ UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
             "estimatesmartpriority nblocks\n"
             "\nWARNING: This interface is unstable and may disappear or change!\n"
             "\nEstimates the approximate priority a zero-fee transaction needs to begin\n"
-            "confirmation within nblocks blocks if possible and return the number of blocks\n"
+            "confirmation within nblocks blocks if posiltle and return the number of blocks\n"
             "for which the estimate is valid.\n"
             "\nArguments:\n"
             "1. nblocks     (numeric)\n"

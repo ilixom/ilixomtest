@@ -5,45 +5,45 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = sibcoin-qt
+bin_PROGRAMS = ilixomtest-qt
 noinst_LIBRARIES = libdashqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# sibcoin qt core #
+# ilixomtest qt core #
 #QT_TS = \
-#  locale/sibcoin_bar.ts \
-#  locale/sibcoin_bg.ts \
-#  locale/sibcoin_ca.ts \
-#  locale/sibcoin_cmn.ts \
-#  locale/sibcoin_cs.ts \
-#  locale/sibcoin_da.ts \
-#  locale/sibcoin_de.ts \
-#  locale/sibcoin_el.ts \
-#  locale/sibcoin_en.ts \
-#  locale/sibcoin_eo.ts \
-#  locale/sibcoin_es.ts \
-#  locale/sibcoin_fi.ts \
-#  locale/sibcoin_fr.ts \
-#  locale/sibcoin_hu_HU.ts \
-#  locale/sibcoin_it.ts \
-#  locale/sibcoin_lv_LV.ts \
-#  locale/sibcoin_nb.ts \
-#  locale/sibcoin_nl.ts \
-#  locale/sibcoin_pl.ts \
-#  locale/sibcoin_pt.ts \
-#  locale/sibcoin_pt_BR.ts \
-#  locale/sibcoin_ru.ts \
-#  locale/sibcoin_sk.ts \
-#  locale/sibcoin_sv.ts \
-#  locale/sibcoin_tr.ts \
-#  locale/sibcoin_vi.ts \
-#  locale/sibcoin_zh_CN.ts \
-#  locale/sibcoin_zh_HK.ts
+#  locale/ilixomtest_bar.ts \
+#  locale/ilixomtest_bg.ts \
+#  locale/ilixomtest_ca.ts \
+#  locale/ilixomtest_cmn.ts \
+#  locale/ilixomtest_cs.ts \
+#  locale/ilixomtest_da.ts \
+#  locale/ilixomtest_de.ts \
+#  locale/ilixomtest_el.ts \
+#  locale/ilixomtest_en.ts \
+#  locale/ilixomtest_eo.ts \
+#  locale/ilixomtest_es.ts \
+#  locale/ilixomtest_fi.ts \
+#  locale/ilixomtest_fr.ts \
+#  locale/ilixomtest_hu_HU.ts \
+#  locale/ilixomtest_it.ts \
+#  locale/ilixomtest_lv_LV.ts \
+#  locale/ilixomtest_nb.ts \
+#  locale/ilixomtest_nl.ts \
+#  locale/ilixomtest_pl.ts \
+#  locale/ilixomtest_pt.ts \
+#  locale/ilixomtest_pt_BR.ts \
+#  locale/ilixomtest_ru.ts \
+#  locale/ilixomtest_sk.ts \
+#  locale/ilixomtest_sv.ts \
+#  locale/ilixomtest_tr.ts \
+#  locale/ilixomtest_vi.ts \
+#  locale/ilixomtest_zh_CN.ts \
+#  locale/ilixomtest_zh_HK.ts
 
 QT_TS = \
-  locale/sibcoin_en.ts \
-  locale/sibcoin_ru.ts
+  locale/ilixomtest_en.ts \
+  locale/ilixomtest_ru.ts
 
 
 
@@ -103,7 +103,7 @@ QT_MOC_CPP = \
   moc_rpcconsole.cpp \
   moc_sendcoinsdialog.cpp \
   moc_sendcoinsentry.cpp \
-  moc_sibmodel.cpp \
+  moc_iltmodel.cpp \
   moc_signverifymessagedialog.cpp \
   moc_splashscreen.cpp \
   moc_trafficgraphwidget.cpp \
@@ -122,13 +122,13 @@ BITCOIN_MM = \
   macnotificationhandler.mm
 
 QT_MOC = \
-  sibcoin.moc \
+  ilixomtest.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_sibcoin.cpp
-QT_QRC = sibcoin.qrc
+QT_QRC_CPP = qrc_ilixomtest.cpp
+QT_QRC = ilixomtest.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
@@ -170,7 +170,7 @@ BITCOIN_QT_H = \
   rpcconsole.h \
   sendcoinsdialog.h \
   sendcoinsentry.h \
-  sibmodel.h \
+  iltmodel.h \
   signverifymessagedialog.h \
   splashscreen.h \
   trafficgraphwidget.h \
@@ -239,7 +239,7 @@ RES_ICONS = \
 
 
 BITCOIN_QT_CPP = \
-  sibcoin.cpp \
+  ilixomtest.cpp \
   bitcoinaddressvalidator.cpp \
   bitcoinamountfield.cpp \
   bitcoingui.cpp \
@@ -278,7 +278,7 @@ BITCOIN_QT_CPP += \
   receivecoinsdialog.cpp \
   receiverequestdialog.cpp \
   recentrequeststablemodel.cpp \
-  sibmodel.cpp \
+  iltmodel.cpp \
   sendcoinsdialog.cpp \
   sendcoinsentry.cpp \
   signverifymessagedialog.cpp \
@@ -313,7 +313,7 @@ RES_CSS = \
   
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-SIBCOIN_RC = res/sibcoin-qt-res.rc
+ILTCOIN_RC = res/ilixomtest-qt-res.rc
 
 libdashqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
@@ -330,23 +330,23 @@ BUILT_SOURCES = $(nodist_libdashqt_a_SOURCES)
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# sibcoin-qt binary #
-sibcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# ilixomtest-qt binary #
+ilixomtest_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-sibcoin_qt_SOURCES = sibcoin.cpp
+ilixomtest_qt_SOURCES = ilixomtest.cpp
 if TARGET_DARWIN
-  sibcoin_qt_SOURCES += $(BITCOIN_MM)
+  ilixomtest_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  sibcoin_qt_SOURCES += $(SIBCOIN_RC)
+  ilixomtest_qt_SOURCES += $(ILTCOIN_RC)
 endif
-sibcoin_qt_LDADD = libdashqt.a $(LIBBITCOIN_SERVER)
+ilixomtest_qt_LDADD = libdashqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-sibcoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+ilixomtest_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-sibcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+ilixomtest_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-sibcoin_qt_LDFLAGS = $(QT_LDFLAGS)
+ilixomtest_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -357,15 +357,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-sibcoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/sibcoinstrings.cpp
+ilixomteststrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/ilixomteststrings.cpp
 
-translate: sibcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: ilixomteststrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/sibcoi_en.ts  
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/iltcoi_en.ts  
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name sibcoin -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name ilixomtest -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
 	$(SED) -e '/^\*\*.*by:/d' $@  > $@.n && mv $@{.n,}

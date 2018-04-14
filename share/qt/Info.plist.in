@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers,2015-@COPYRIGHT_YEAR@ The Sibcoin Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers,2015-@COPYRIGHT_YEAR@ The Ilixomtest Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Sibcoin-Qt</string>
+  <string>Ilixomtest-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Sibcoin-Qt</string>
+  <string>Ilixomtest-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.sibcoin.Sibcoin-Qt</string>
+  <string>org.ilixomtest.Ilixomtest-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.sibcoin.SibcoinPayment</string>
+      <string>org.ilixomtest.IlixomtestPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>sibcoin</string>
+        <string>ilixomtest</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.sibcoin.paymentrequest</string>
+      <string>org.ilixomtest.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Sibcoin payment request</string>
+      <string>Ilixomtest payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-sibcoin-payment-request</string>
+        <string>application/x-ilixomtest-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>sibcoinpaymentrequest</string>
+          <string>ilixomtestpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.sibcoin.paymentrequest</string>
+        <string>org.ilixomtest.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

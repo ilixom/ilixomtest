@@ -123,7 +123,7 @@ public:
 };
 
 /**
- * Sibcoin RPC command dispatcher.
+ * Ilixomtest RPC command dispatcher.
  */
 class CRPCTable
 {

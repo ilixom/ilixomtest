@@ -247,7 +247,7 @@
                   <number>0</number>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -276,7 +276,7 @@
                   <string notr="true">0</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -324,10 +324,10 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 SIB</string>
+                  <string notr="true">0.00 ILT</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -356,7 +356,7 @@
                   <string>medium</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -404,10 +404,10 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 SIB</string>
+                  <string notr="true">0.00 ILT</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -436,7 +436,7 @@
                   <string>no</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -484,10 +484,10 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 SIB</string>
+                  <string notr="true">0.00 ILT</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -513,10 +513,10 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 SIB</string>
+                  <string notr="true">0.00 ILT</string>
                  </property>
                  <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                  </property>
                 </widget>
                </item>
@@ -904,7 +904,7 @@
                  <item>
                   <widget class="QCheckBox" name="checkBoxMinimumFee">
                    <property name="toolTip">
-                    <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for sibcoin transactions than the network can process.</string>
+                    <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ilixomtest transactions than the network can process.</string>
                    </property>
                    <property name="text">
                     <string/>
@@ -917,7 +917,7 @@
                     <bool>true</bool>
                    </property>
                    <property name="toolTip">
-                    <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for sibcoin transactions than the network can process.</string>
+                    <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ilixomtest transactions than the network can process.</string>
                    </property>
                    <property name="text">
                     <string>(read the tooltip)</string>
@@ -1178,7 +1178,7 @@
              <item>
               <widget class="QCheckBox" name="checkBoxFreeTx">
                <property name="text">
-                <string>Send as zero-fee transaction if possible</string>
+                <string>Send as zero-fee transaction if posiltle</string>
                </property>
               </widget>
              </item>
@@ -1258,7 +1258,7 @@
         <string>S&amp;end</string>
        </property>
        <property name="icon">
-        <iconset resource="../sibcoin.qrc">
+        <iconset resource="../ilixomtest.qrc">
          <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
        </property>
        <property name="autoDefault">
@@ -1284,7 +1284,7 @@
         <string>Clear &amp;All</string>
        </property>
        <property name="icon">
-        <iconset resource="../sibcoin.qrc">
+        <iconset resource="../ilixomtest.qrc">
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
        <property name="autoDefault">
@@ -1301,7 +1301,7 @@
         <string>Add &amp;Recipient</string>
        </property>
        <property name="icon">
-        <iconset resource="../sibcoin.qrc">
+        <iconset resource="../ilixomtest.qrc">
          <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
        </property>
        <property name="autoDefault">
@@ -1378,10 +1378,10 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string notr="true">123.456 SIB</string>
+          <string notr="true">123.456 ILT</string>
          </property>
          <property name="textInteractionFlags">
-          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+          <set>Qt::LinksAccesiltleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
          </property>
         </widget>
        </item>
@@ -1405,7 +1405,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../sibcoin.qrc"/>
+  <include location="../ilixomtest.qrc"/>
  </resources>
  <connections/>
  <buttongroups>

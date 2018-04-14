@@ -58,7 +58,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Sibcoin cannot be compiled without assertions."
+# error "Ilixomtest cannot be compiled without assertions."
 #endif
 
 /**
@@ -276,7 +276,7 @@ struct CNodeState {
     int nBlocksInFlightValidHeaders;
     //! Whether we consider this a preferred download peer.
     bool fPreferredDownload;
-    //! Whether this peer wants invs or headers (when possible) for block announcements.
+    //! Whether this peer wants invs or headers (when posiltle) for block announcements.
     bool fPreferHeaders;
 
     CNodeState() {
@@ -890,7 +890,7 @@ bool CheckSequenceLocks(const CTransaction &tx, int flags, LockPoints* lp, bool 
             // all the blocks which have sequence locked prevouts.
             // This hash needs to still be on the chain
             // for these LockPoint calculations to be valid
-            // Note: It is impossible to correctly calculate a maxInputBlock
+            // Note: It is imposiltle to correctly calculate a maxInputBlock
             // if any of the sequence locked inputs depend on unconfirmed txs,
             // except in the special case where the relative lock time/height
             // is 0, which is equivalent to no sequence lock. Since we assume
@@ -1257,7 +1257,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CValidationState &state, const C
         unsigned int nSize = entry.GetTxSize();
 
         // Check that the transaction doesn't have an excessive number of
-        // sigops, making it impossible to mine. Since the coinbase transaction
+        // sigops, making it imposiltle to mine. Since the coinbase transaction
         // itself can contain sigops MAX_STANDARD_TX_SIGOPS is less than
         // MAX_BLOCK_SIGOPS; we still consider this an invalid rather than
         // merely non-standard transaction.
@@ -1983,7 +1983,7 @@ void static InvalidBlockFound(CBlockIndex *pindex, const CValidationState &state
                 Misbehaving(it->second, nDoS);
         }
     }
-    if (!state.CorruptionPossible()) {
+    if (!state.CorruptionPosiltle()) {
         pindex->nStatus |= BLOCK_FAILED_VALID;
         setDirtyBlockIndex.insert(pindex);
         setBlockIndexCandidates.erase(pindex);
@@ -2433,7 +2433,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("sibcoin-scriptch");
+    RenameThread("ilixomtest-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2544,17 +2544,17 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // This logic is not necessary for memory pool transactions, as AcceptToMemoryPool
     // already refuses previously-known transaction ids entirely.
     // This rule was originally applied to all blocks with a timestamp after March 15, 2012, 0:00 UTC.
-    // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
+    // Now that the whole chain is irreveriltly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes during their
     // initial block download.
     bool fEnforceBIP30 = (!pindex->phashBlock) || // Enforce on CreateNewBlock invocations which don't have a hash.
                           !((pindex->nHeight==91842 && pindex->GetBlockHash() == uint256S("0x00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec")) ||
                            (pindex->nHeight==91880 && pindex->GetBlockHash() == uint256S("0x00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721")));
 
-    // Once BIP34 activated it was not possible to create new duplicate coinbases and thus other than starting
-    // with the 2 existing duplicate coinbase pairs, not possible to create overwriting txs.  But by the
+    // Once BIP34 activated it was not posiltle to create new duplicate coinbases and thus other than starting
+    // with the 2 existing duplicate coinbase pairs, not posiltle to create overwriting txs.  But by the
     // time BIP34 activated, in each of the existing pairs the duplicate coinbase had overwritten the first
-    // before the first had been spent.  Since those coinbases are sufficiently buried its no longer possible to create further
+    // before the first had been spent.  Since those coinbases are sufficiently buried its no longer posiltle to create further
     // duplicate transactions descending from the known pairs either.
     // If we're on the known chain at height greater than where BIP34 activated, we can save the db accesses needed for the BIP30 check.
     CBlockIndex *pindexBIP34height = pindex->pprev->GetAncestor(chainparams.GetConsensus().BIP34Height);
@@ -2745,7 +2745,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     // DASH : MODIFIED TO CHECK MASTERNODE PAYMENTS AND SUPERBLOCKS
 
-    // It's possible that we simply don't have enough data and this could fail
+    // It's posiltle that we simply don't have enough data and this could fail
     // (i.e. block itself could be a correct one and we need to store it),
     // that's why this is in ConnectBlock. Could be the other way around however -
     // the peer who sent us this block is missing some data and wasn't able
@@ -3000,7 +3000,7 @@ void static UpdateTip(CBlockIndex *pindexNew) {
         if (nUpgraded > 100/2)
         {
             // strMiscWarning is read by GetWarnings(), called by Qt and the JSON-RPC code to warn the user:
-            strMiscWarning = _("Warning: Unknown block versions being mined! It's possible unknown rules are in effect");
+            strMiscWarning = _("Warning: Unknown block versions being mined! It's posiltle unknown rules are in effect");
             if (!fWarned) {
                 CAlert::Notify(strMiscWarning, true);
                 fWarned = true;
@@ -3279,7 +3279,7 @@ static bool ActivateBestChainStep(CValidationState& state, const CChainParams& c
             if (!ConnectTip(state, chainparams, pindexConnect, pindexConnect == pindexMostWork ? pblock : NULL)) {
                 if (state.IsInvalid()) {
                     // The block violates a consensus rule.
-                    if (!state.CorruptionPossible())
+                    if (!state.CorruptionPosiltle())
                         InvalidChainFound(vpindexToConnect.back());
                     state = CValidationState();
                     fInvalidFound = true;
@@ -3962,7 +3962,7 @@ static bool AcceptBlock(const CBlock& block, CValidationState& state, const CCha
     if (fNewBlock) *fNewBlock = true;
 
     if ((!CheckBlock(block, state)) || !ContextualCheckBlock(block, state, pindex->pprev)) {
-        if (state.IsInvalid() && !state.CorruptionPossible()) {
+        if (state.IsInvalid() && !state.CorruptionPosiltle()) {
             pindex->nStatus |= BLOCK_FAILED_VALID;
             setDirtyBlockIndex.insert(pindex);
         }
@@ -4806,7 +4806,7 @@ void static CheckBlockIndex(const Consensus::Params& consensusParams)
         // This is a leaf node.
         // Move upwards until we reach a node of which we have not yet visited the last child.
         while (pindex) {
-            // We are going to either move to a parent or a sibling of pindex.
+            // We are going to either move to a parent or a iltling of pindex.
             // If pindex was the first with a certain property, unset the corresponding variable.
             if (pindex == pindexFirstInvalid) pindexFirstInvalid = NULL;
             if (pindex == pindexFirstMissing) pindexFirstMissing = NULL;
@@ -4826,7 +4826,7 @@ void static CheckBlockIndex(const Consensus::Params& consensusParams)
             // Proceed to the next one.
             rangePar.first++;
             if (rangePar.first != rangePar.second) {
-                // Move to the sibling.
+                // Move to the iltling.
                 pindex = rangePar.first->second;
                 break;
             } else {
@@ -6037,7 +6037,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         bool fCanDirectFetch = CanDirectFetch(chainparams.GetConsensus());
         CNodeState *nodestate = State(pfrom->GetId());
         // If this set of headers is valid and ends in a block with at least as
-        // much work as our tip, download as much as possible.
+        // much work as our tip, download as much as posiltle.
         if (fCanDirectFetch && pindexLast->IsValid(BLOCK_VALID_TREE) && chainActive.Tip()->nChainWork <= pindexLast->nChainWork) {
             vector<CBlockIndex *> vToFetch;
             CBlockIndex *pindexWalk = pindexLast;
@@ -6060,7 +6060,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                         pindexLast->nHeight);
             } else {
                 vector<CInv> vGetData;
-                // Download as much as possible, from earliest to latest.
+                // Download as much as posiltle, from earliest to latest.
                 BOOST_REVERSE_FOREACH(CBlockIndex *pindex, vToFetch) {
                     if (nodestate->nBlocksInFlight >= MAX_BLOCKS_IN_TRANSIT_PER_PEER) {
                         // Can't download any more from this peer
@@ -6381,7 +6381,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         }
         else
         {
-            // Ignore unknown commands for extensibility
+            // Ignore unknown commands for exteniltility
             LogPrint("net", "Unknown command \"%s\" from peer=%d\n", SanitizeString(strCommand), pfrom->id);
         }
     }
@@ -6615,11 +6615,11 @@ bool SendMessages(CNode* pto)
                 state.fSyncStarted = true;
                 nSyncStarted++;
                 const CBlockIndex *pindexStart = pindexBestHeader;
-                /* If possible, start at the block preceding the currently
+                /* If posiltle, start at the block preceding the currently
                    best known header.  This ensures that we always get a
                    non-empty list of headers back as long as the peer
                    is up-to-date.  With a non-empty response, we can initialise
-                   the peer's known best block.  This wouldn't be possible
+                   the peer's known best block.  This wouldn't be posiltle
                    if we requested starting at pindexBestHeader and
                    got back an empty response.  */
                 if (pindexStart->pprev)
@@ -6671,7 +6671,7 @@ bool SendMessages(CNode* pto)
                     if (pBestIndex != NULL && pindex->pprev != pBestIndex) {
                         // This means that the list of blocks to announce don't
                         // connect to each other.
-                        // This shouldn't really be possible to hit during
+                        // This shouldn't really be posiltle to hit during
                         // regular operation (because reorgs should take us to
                         // a chain that has some block not on the prior chain,
                         // which should be caught by the prior check), but one

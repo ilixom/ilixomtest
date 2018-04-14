@@ -10,7 +10,7 @@ CHANGE SUMMARY
 
 Fixed a serious denial-of-service attack that could cause the
 bitcoin process to become unresponsive. Thanks to Sergio Lerner
-for finding and responsibly reporting the problem. (CVE-2012-3789)
+for finding and responiltly reporting the problem. (CVE-2012-3789)
 
 Optimized the process of checking transaction signatures, to
 speed up processing of new block messages and make propagating

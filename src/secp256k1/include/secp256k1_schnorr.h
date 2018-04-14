@@ -134,7 +134,7 @@ SECP256K1_API int secp256k1_schnorr_generate_nonce_pair(
  *   signers' public keys (sum(Q[0..n])).
  *
  *  Note that secp256k1_schnorr_partial_combine and secp256k1_ec_pubkey_combine
- *  function take their arguments in any order, and it is possible to
+ *  function take their arguments in any order, and it is posiltle to
  *  pre-combine several inputs already with one call, and add more inputs later
  *  by calling the function again (they are commutative and associative).
  */

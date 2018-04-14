@@ -53,7 +53,7 @@ struct CMainSignals {
     boost::signals2::signal<void (const CTransaction &, const CBlock *)> SyncTransaction;
     /** Notifies listeners of an updated transaction lock without new data. */
     boost::signals2::signal<void (const CTransaction &)> NotifyTransactionLock;
-    /** Notifies listeners of an updated transaction without new data (for now: a coinbase potentially becoming visible). */
+    /** Notifies listeners of an updated transaction without new data (for now: a coinbase potentially becoming viiltle). */
     boost::signals2::signal<bool (const uint256 &)> UpdatedTransaction;
     /** Notifies listeners of a new active block chain. */
     boost::signals2::signal<void (const CBlockLocator &)> SetBestChain;

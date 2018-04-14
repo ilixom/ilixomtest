@@ -19,9 +19,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(SIB);
-    unitlist.append(mSIB);
-    unitlist.append(uSIB);
+    unitlist.append(ILT);
+    unitlist.append(mILT);
+    unitlist.append(uILT);
     unitlist.append(ivans);
     return unitlist;
 }
@@ -30,9 +30,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case SIB:
-    case mSIB:
-    case uSIB:
+    case ILT:
+    case mILT:
+    case uILT:
     case ivans:
         return true;
     default:
@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("SIB");
-            case mSIB: return QString("mSIB");
-            case uSIB: return QString::fromUtf8("μSIB");
+            case ILT: return QString("ILT");
+            case mILT: return QString("mILT");
+            case uILT: return QString::fromUtf8("μILT");
             case ivans: return QString::fromUtf8("ivans");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("tSIB");
-            case mSIB: return QString("mtSIB");
-            case uSIB: return QString::fromUtf8("μtSIB");
+            case ILT: return QString("tILT");
+            case mILT: return QString("mtILT");
+            case uILT: return QString::fromUtf8("μtILT");
             case ivans: return QString::fromUtf8("tivans");
             default: return QString("???");
         }
@@ -72,9 +72,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("Sib");
-            case mSIB: return QString("Milli-Sib (1 / 1,000)");
-            case uSIB: return QString("Micro-Sib (1 / 1,000,000)");
+            case ILT: return QString("Sib");
+            case mILT: return QString("Milli-Sib (1 / 1,000)");
+            case uILT: return QString("Micro-Sib (1 / 1,000,000)");
             case ivans: return QString("Ten Nano-Sib (1 / 100,000,000)");
             default: return QString("???");
         }
@@ -83,9 +83,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("TestSibs");
-            case mSIB: return QString("Milli-TestSib (1 / 1,000)");
-            case uSIB: return QString("Micro-TestSib (1 / 1,000,000)");
+            case ILT: return QString("TestSibs");
+            case mILT: return QString("Milli-TestSib (1 / 1,000)");
+            case uILT: return QString("Micro-TestSib (1 / 1,000,000)");
             case ivans: return QString("Ten Nano-TestSib (1 / 100,000,000)");
             default: return QString("???");
         }
@@ -96,9 +96,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case SIB:  return 100000000;
-    case mSIB: return 100000;
-    case uSIB: return 100;
+    case ILT:  return 100000000;
+    case mILT: return 100000;
+    case uILT: return 100;
     case ivans: return 1;
     default:   return 100000000;
     }
@@ -108,9 +108,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case SIB: return 8;
-    case mSIB: return 5;
-    case uSIB: return 2;
+    case ILT: return 8;
+    case mILT: return 5;
+    case uILT: return 2;
     case ivans: return 0;
     default: return 0;
     }

@@ -167,7 +167,7 @@ public:
             break;
         case CT_UPDATED:
             // Miscellaneous updates -- nothing to do, status update will take care of this, and is only computed for
-            // visible transactions.
+            // viiltle transactions.
             break;
         }
     }
@@ -275,9 +275,9 @@ void TransactionTableModel::updateTransaction(const QString &hash, int status, b
 void TransactionTableModel::updateConfirmations()
 {
     // Blocks came in since last poll.
-    // Invalidate status (number of confirmations) and (possibly) description
+    // Invalidate status (number of confirmations) and (posiltly) description
     //  for all rows. Qt is smart enough to only actually request the data for the
-    //  visible rows.
+    //  viiltle rows.
     Q_EMIT dataChanged(index(0, Status), index(priv->size()-1, Status));
     Q_EMIT dataChanged(index(0, ToAddress), index(priv->size()-1, ToAddress));
 }
@@ -443,7 +443,7 @@ QString TransactionTableModel::formatTxToAddress(const TransactionRecord *wtx, b
 
 QVariant TransactionTableModel::addressColor(const TransactionRecord *wtx) const
 {
-    // Show addresses without label in a less visible color
+    // Show addresses without label in a less viiltle color
     switch(wtx->type)
     {
     case TransactionRecord::RecvWithAddress:

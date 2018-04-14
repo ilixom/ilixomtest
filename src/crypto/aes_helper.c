@@ -12,7 +12,7 @@
  * when this file is included, then the tables and macros for big-endian
  * processing are defined instead. The big-endian tables and macros have
  * names distinct from the little-endian tables and macros, hence it is
- * possible to have both simultaneously, by including this file twice
+ * posiltle to have both simultaneously, by including this file twice
  * (with and without the AES_BIG_ENDIAN macro).
  *
  * ==========================(LICENSE BEGIN)============================

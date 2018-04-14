@@ -105,7 +105,7 @@ void FreespaceChecker::check()
         }
     } catch (const fs::filesystem_error&)
     {
-        /* Parent directory does not exist or is not accessible */
+        /* Parent directory does not exist or is not accesiltle */
         replyStatus = ST_ERROR;
         replyMessage = tr("Cannot create data directory here.");
     }
@@ -195,7 +195,7 @@ void Intro::pickDataDirectory()
                 TryCreateDirectory(GUIUtil::qstringToBoostPath(dataDir));
                 break;
             } catch (const fs::filesystem_error&) {
-                QMessageBox::critical(0, tr("Sibcoin Core"),
+                QMessageBox::critical(0, tr("Ilixomtest Core"),
                     tr("Error: Specified data directory \"%1\" cannot be created.").arg(dataDir));
                 /* fall through, back to choosing screen */
             }
@@ -204,9 +204,9 @@ void Intro::pickDataDirectory()
         settings.setValue("strDataDir", dataDir);
         settings.setValue("strDataDirDefault", dataDirDefaultCurrent);
     }
-    /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the sibcoin.conf file in the default data directory
-     * (to be consistent with sibcoind behavior)
+    /* Only override -datadir if different from the default, to make it posiltle to
+     * override -datadir in the ilixomtest.conf file in the default data directory
+     * (to be consistent with ilixomtestd behavior)
      */
     if(dataDir != dataDirDefaultCurrent)
         SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

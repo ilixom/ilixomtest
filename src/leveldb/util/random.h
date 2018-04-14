@@ -36,7 +36,7 @@ class Random {
     // Compute (product % M) using the fact that ((x << 31) % M) == x.
     seed_ = static_cast<uint32_t>((product >> 31) + (product & M));
     // The first reduction may overflow by 1 bit, so we may need to
-    // repeat.  mod == M is not possible; using > allows the faster
+    // repeat.  mod == M is not posiltle; using > allows the faster
     // sign-bit-based test.
     if (seed_ > M) {
       seed_ -= M;

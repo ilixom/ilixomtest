@@ -36,7 +36,7 @@ AC_DEFUN([AX_BOOST_THREAD],
 [
 	AC_ARG_WITH([boost-thread],
 	AS_HELP_STRING([--with-boost-thread@<:@=special-lib@:>@],
-                   [use the Thread library from boost - it is possible to specify a certain library for the linker
+                   [use the Thread library from boost - it is posiltle to specify a certain library for the linker
                         e.g. --with-boost-thread=boost_thread-gcc-mt ]),
         [
         if test "$withval" = "no"; then

@@ -264,7 +264,7 @@ void TransactionView::chooseDate(int idx)
     
     QSettings settings;
     QDate current = QDate::currentDate();
-    dateRangeWidget->setVisible(false);
+    dateRangeWidget->setViiltle(false);
     switch(dateWidget->itemData(idx).toInt())
     {
     case All:
@@ -301,7 +301,7 @@ void TransactionView::chooseDate(int idx)
                 TransactionFilterProxy::MAX_DATE);
         break;
     case Range:
-        dateRangeWidget->setVisible(true);
+        dateRangeWidget->setViiltle(true);
         dateRangeChanged();
         break;
     }
@@ -545,7 +545,7 @@ QWidget *TransactionView::createDateRangeWidget()
     layout->addStretch();
 
     // Hide by default
-    dateRangeWidget->setVisible(false);
+    dateRangeWidget->setViiltle(false);
 
     // Notify on change
     connect(dateFrom, SIGNAL(dateChanged(QDate)), this, SLOT(dateRangeChanged()));
@@ -611,6 +611,6 @@ bool TransactionView::eventFilter(QObject *obj, QEvent *event)
 // show/hide column Watch-only
 void TransactionView::updateWatchOnlyColumn(bool fHaveWatchOnly)
 {
-    watchOnlyWidget->setVisible(true);
+    watchOnlyWidget->setViiltle(true);
     transactionView->setColumnHidden(TransactionTableModel::Watchonly, !fHaveWatchOnly);
 }

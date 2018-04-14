@@ -72,7 +72,7 @@
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/mnt/D/program/1.project/_build_L-sibcoin-debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/mnt/D/program/1.project/_build_L-ilixomtest-debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="AutotoolsProjectManager.AutogenStep.AdditionalArguments"></value>
@@ -164,7 +164,7 @@
     <value type="bool" key="Analyzer.Valgrind.ShowReachable">false</value>
     <value type="bool" key="Analyzer.Valgrind.TrackOrigins">true</value>
     <value type="QString" key="Analyzer.Valgrind.ValgrindExecutable">valgrind</value>
-    <valuelist type="QVariantList" key="Analyzer.Valgrind.VisibleErrorKinds">
+    <valuelist type="QVariantList" key="Analyzer.Valgrind.ViiltleErrorKinds">
      <value type="int">0</value>
      <value type="int">1</value>
      <value type="int">2</value>
@@ -183,10 +183,10 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Arguments">-testnet -datadir=/home/trikrista/.sibcoinTestnet</value>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/mnt/D/program/1.project/_build_L-sibcoin-debug/src/qt/sibcoin-qt</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Arguments">-testnet -datadir=/home/trikrista/.ilixomtestTestnet</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/mnt/D/program/1.project/_build_L-ilixomtest-debug/src/qt/ilixomtest-qt</value>
     <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.WorkingDirectory">%{buildDir}</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run /mnt/D/program/1.project/_build_L-sibcoin-debug/src/qt/sibcoin-qt</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run /mnt/D/program/1.project/_build_L-ilixomtest-debug/src/qt/ilixomtest-qt</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
@@ -219,7 +219,7 @@
     <value type="bool" key="Analyzer.Valgrind.ShowReachable">false</value>
     <value type="bool" key="Analyzer.Valgrind.TrackOrigins">true</value>
     <value type="QString" key="Analyzer.Valgrind.ValgrindExecutable">valgrind</value>
-    <valuelist type="QVariantList" key="Analyzer.Valgrind.VisibleErrorKinds">
+    <valuelist type="QVariantList" key="Analyzer.Valgrind.ViiltleErrorKinds">
      <value type="int">0</value>
      <value type="int">1</value>
      <value type="int">2</value>
@@ -238,10 +238,10 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Arguments">-testnet -datadir=/home/trikrista/.sibcoinTestnet</value>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/mnt/D/program/1.project/_build_L-sibcoin-debug/src/test/test_sibcoin</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Arguments">-testnet -datadir=/home/trikrista/.ilixomtestTestnet</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/mnt/D/program/1.project/_build_L-ilixomtest-debug/src/test/test_ilixomtest</value>
     <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.WorkingDirectory">%{buildDir}</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run /mnt/D/program/1.project/_build_L-sibcoin-debug/src/test/test_sibcoin</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run /mnt/D/program/1.project/_build_L-ilixomtest-debug/src/test/test_ilixomtest</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>

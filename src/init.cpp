@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "init.h"
@@ -42,7 +42,7 @@
 #include "wallet/db.h"
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
-#include "sibdb.h"
+#include "iltdb.h"
 #endif
 
 #include "activemasternode.h"
@@ -89,7 +89,7 @@ extern void ThreadSendAlert();
 
 #ifdef ENABLE_WALLET
 CWallet* pwalletMain = NULL;
-CSibDB *psibDB = NULL;
+CSibDB *piltDB = NULL;
 #endif
 bool fFeeEstimatesInitialized = false;
 bool fRestartRequested = false;  // true: restart false: shutdown
@@ -214,7 +214,7 @@ void PrepareShutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("sibcoin-shutoff");
+    RenameThread("ilixomtest-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopHTTPRPC();
     StopREST();
@@ -223,8 +223,8 @@ void PrepareShutdown()
 #ifdef ENABLE_WALLET
     if (pwalletMain)
         pwalletMain->Flush(false);
-    if (psibDB)
-        psibDB->Close();
+    if (piltDB)
+        piltDB->Close();
     //GenerateBitcoins(false, NULL, 0);
 #endif
     GenerateBitcoins(false, 0, Params());
@@ -477,7 +477,7 @@ std::string HelpMessage(HelpMessageMode mode)
         CURRENCY_UNIT, FormatMoney(payTxFee.GetFeePerK())));
     strUsage += HelpMessageOpt("-rescan", _("Rescan the block chain for missing wallet transactions on startup"));
     strUsage += HelpMessageOpt("-salvagewallet", _("Attempt to recover private keys from a corrupt wallet.dat on startup"));
-    strUsage += HelpMessageOpt("-sendfreetransactions", strprintf(_("Send transactions as zero-fee transactions if possible (default: %u)"), DEFAULT_SEND_FREE_TRANSACTIONS));
+    strUsage += HelpMessageOpt("-sendfreetransactions", strprintf(_("Send transactions as zero-fee transactions if posiltle (default: %u)"), DEFAULT_SEND_FREE_TRANSACTIONS));
     strUsage += HelpMessageOpt("-spendzeroconfchange", strprintf(_("Spend unconfirmed change when sending transactions (default: %u)"), DEFAULT_SPEND_ZEROCONF_CHANGE));
     strUsage += HelpMessageOpt("-txconfirmtarget=<n>", strprintf(_("If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)"), DEFAULT_TX_CONFIRM_TARGET));
     strUsage += HelpMessageOpt("-maxtxfee=<amt>", strprintf(_("Maximum total fees (in %s) to use in a single wallet transaction; setting this too low may abort large transactions (default: %s)"),
@@ -579,7 +579,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-enableprivatesend=<n>", strprintf(_("Enable use of automated PrivateSend for funds stored in this wallet (0-1, default: %u)"), 0));
     strUsage += HelpMessageOpt("-privatesendmultisession=<n>", strprintf(_("Enable multiple PrivateSend mixing sessions per block, experimental (0-1, default: %u)"), DEFAULT_PRIVATESEND_MULTISESSION));
     strUsage += HelpMessageOpt("-privatesendrounds=<n>", strprintf(_("Use N separate masternodes for each denominated input to mix funds (2-16, default: %u)"), DEFAULT_PRIVATESEND_ROUNDS));
-    strUsage += HelpMessageOpt("-privatesendamount=<n>", strprintf(_("Keep N SIB anonymized (default: %u)"), DEFAULT_PRIVATESEND_AMOUNT));
+    strUsage += HelpMessageOpt("-privatesendamount=<n>", strprintf(_("Keep N ILT anonymized (default: %u)"), DEFAULT_PRIVATESEND_AMOUNT));
     strUsage += HelpMessageOpt("-liquidityprovider=<n>", strprintf(_("Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)"), DEFAULT_PRIVATESEND_LIQUIDITY));
 
     strUsage += HelpMessageGroup(_("InstantSend options:"));
@@ -629,7 +629,7 @@ std::string LicenseInfo()
            "\n" +
            FormatParagraph(strprintf(_("Copyright (C) 2014-%i The Dash Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
-           FormatParagraph(strprintf(_("Copyright (C) 2015-%i The Sibcoin Core Developers"), COPYRIGHT_YEAR)) + "\n" +            
+           FormatParagraph(strprintf(_("Copyright (C) 2015-%i The Ilixomtest Core Developers"), COPYRIGHT_YEAR)) + "\n" +            
            "\n" +
            FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +
@@ -709,7 +709,7 @@ void CleanupBlockRevFiles()
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
     const CChainParams& chainparams = Params();
-    RenameThread("sibcoin-loadblk");
+    RenameThread("ilixomtest-loadblk");
     CImportingNow imp;
     // -reindex
     if (fReindex) {
@@ -771,7 +771,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 }
 
 /** Sanity checks
- *  Ensure that Sibcoin is running in a usable environment with all
+ *  Ensure that Ilixomtest is running in a usable environment with all
  *  necessary library support.
  */
 bool InitSanityCheck(void)
@@ -916,10 +916,10 @@ void InitLogging()
     fLogIPs = GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Sibcoin Core version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
+    LogPrintf("Ilixomtest Core version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
 }
 
-/** Initialize Sibcoin Core.
+/** Initialize Ilixomtest Core.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
@@ -991,7 +991,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
             return InitError(_("Prune mode is incompatible with -txindex."));
 #ifdef ENABLE_WALLET
         if (GetBoolArg("-rescan", false)) {
-            return InitError(_("Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again."));
+            return InitError(_("Rescans are not posiltle in pruned mode. You will need to use -reindex which will download the whole blockchain again."));
         }
 #endif
     }
@@ -1024,7 +1024,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         InitWarning(_("Unsupported argument -debugnet ignored, use -debug=net."));
     // Check for -socks - as this is a privacy risk to continue, exit here
     if (mapArgs.count("-socks"))
-        return InitError(_("Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported."));
+        return InitError(_("Unsupported argument -socks found. Setting SOCKS version isn't posiltle anymore, only SOCKS5 proxies are supported."));
     // Check for -tor - as this is a privacy risk to continue, exit here
     if (GetBoolArg("-tor", false))
         return InitError(_("Unsupported argument -tor found, use -onion."));
@@ -1153,7 +1153,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     fSendFreeTransactions = GetBoolArg("-sendfreetransactions", DEFAULT_SEND_FREE_TRANSACTIONS);
 
     std::string strWalletFile = GetArg("-wallet", "wallet.dat");
-    std::string strSibFile = GetArg("-sibstore", "sib.dat");
+    std::string strSibFile = GetArg("-iltstore", "ilt.dat");
 #endif // ENABLE_WALLET
 
     fIsBareMultisigStd = GetBoolArg("-permitbaremultisig", DEFAULT_PERMIT_BAREMULTISIG);
@@ -1171,7 +1171,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     fEnableReplacement = GetBoolArg("-mempoolreplacement", DEFAULT_ENABLE_REPLACEMENT);
     if ((!fEnableReplacement) && mapArgs.count("-mempoolreplacement")) {
         // Minimal effort at forwards compatibility
-        std::string strReplacementModeList = GetArg("-mempoolreplacement", "");  // default is impossible
+        std::string strReplacementModeList = GetArg("-mempoolreplacement", "");  // default is imposiltle
         std::vector<std::string> vstrReplacementModes;
         boost::split(vstrReplacementModes, strReplacementModeList, boost::is_any_of(","));
         fEnableReplacement = (std::find(vstrReplacementModes.begin(), vstrReplacementModes.end(), "fee") != vstrReplacementModes.end());
@@ -1188,7 +1188,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // Sanity check
     if (!InitSanityCheck())
-        return InitError(_("Initialization sanity check failed. Sibcoin Core is shutting down."));
+        return InitError(_("Initialization sanity check failed. Ilixomtest Core is shutting down."));
 
     std::string strDataDir = GetDataDir().string();
 #ifdef ENABLE_WALLET
@@ -1196,7 +1196,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     if (strWalletFile != boost::filesystem::basename(strWalletFile) + boost::filesystem::extension(strWalletFile))
         return InitError(strprintf(_("Wallet %s resides outside data directory %s"), strWalletFile, strDataDir));
 #endif
-    // Make sure only a single Sibcoin process is using the data directory.
+    // Make sure only a single Ilixomtest process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
@@ -1205,9 +1205,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
         // Wait maximum 10 seconds if an old wallet is still running. Avoids lockup during restart
         if (!lock.timed_lock(boost::get_system_time() + boost::posix_time::seconds(10)))
-            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running."), strDataDir));
+            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Ilixomtest Core is probably already running."), strDataDir));
     } catch(const boost::interprocess::interprocess_exception& e) {
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.") + " %s.", strDataDir, e.what()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Ilixomtest Core is probably already running.") + " %s.", strDataDir, e.what()));
     }
 
 #ifndef WIN32
@@ -1589,9 +1589,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         }
     }
 
-    // As LoadBlockIndex can take several minutes, it's possible the user
+    // As LoadBlockIndex can take several minutes, it's posiltle the user
     // requested to kill the GUI during the last operation. If so, exit.
-    // As the program has not fully started yet, Shutdown() is possibly overkill.
+    // As the program has not fully started yet, Shutdown() is posiltly overkill.
     if (fRequestShutdown)
     {
         LogPrintf("Shutdown requested. Exiting.\n");
@@ -1646,10 +1646,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                              " or address book entries might be missing or incorrect."));
             }
             else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Sibcoin Core") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Ilixomtest Core") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE)
             {
-                strErrors << _("Wallet needed to be rewritten: restart Sibcoin Core to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart Ilixomtest Core to complete") << "\n";
                 LogPrintf("%s", strErrors.str());
                 return InitError(strErrors.str());
             }
@@ -1657,7 +1657,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                 strErrors << _("Error loading wallet.dat") << "\n";
         }
         
-        psibDB = new CSibDB(strSibFile, "cr+");
+        piltDB = new CSibDB(strSibFile, "cr+");
 
         if (GetBoolArg("-upgradewallet", fFirstRun))
         {

@@ -374,7 +374,7 @@ public:
     }
 
     /** Get wrapped FILE* with transfer of ownership.
-     * @note This will invalidate the CAutoFile object, and makes it the responsibility of the caller
+     * @note This will invalidate the CAutoFile object, and makes it the responiltility of the caller
      * of this function to clean up the returned FILE*.
      */
     FILE* release()             { FILE* ret = file; file = NULL; return ret; }

@@ -1,11 +1,11 @@
-// Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2015 The Ilixomtest developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SIBMODEL_H
-#define	SIBMODEL_H
+#ifndef ILTMODEL_H
+#define	ILTMODEL_H
 
-#include "sibdb.h"
+#include "iltdb.h"
 
 #include <QObject>
 
@@ -15,13 +15,13 @@ class QNetworkAccessManager;
 class QResource;
 
 
-/** Interface to Sibcoin DB from Qt view code. */
+/** Interface to Ilixomtest DB from Qt view code. */
 class SibModel : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit SibModel(CSibDB *sibdb, QObject *parent = 0);
+    explicit SibModel(CSibDB *iltdb, QObject *parent = 0);
     ~SibModel();
 
     void fetch(); 
@@ -39,7 +39,7 @@ private:
     };
     
     QString res_prefix;
-    CSibDB *sibDB;    
+    CSibDB *iltDB;    
     QNetworkAccessManager* net_manager;
     QByteArray rccData;
     QString rccMD5;
@@ -61,5 +61,5 @@ private:
         
 };
 
-#endif	/* SIBMODEL_H */
+#endif	/* ILTMODEL_H */
 

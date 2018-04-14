@@ -71,7 +71,7 @@
  *  ============================================================
  *
  *   -- Each of the implementable classes use their own serializers
- *   -- Each class is responsible for it's own unique values
+ *   -- Each class is responiltle for it's own unique values
  *   -- Most of the values in these classes can be overriden 
  *
  *  CGovernanceNode (base)

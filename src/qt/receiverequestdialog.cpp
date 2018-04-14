@@ -22,7 +22,7 @@
 #endif
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h" /* for USE_QRCODE */
+#include "config/ilixomtest-config.h" /* for USE_QRCODE */
 #endif
 
 #ifdef USE_QRCODE
@@ -97,8 +97,8 @@ ReceiveRequestDialog::ReceiveRequestDialog(QWidget *parent) :
     ui->setupUi(this);
 
 #ifndef USE_QRCODE
-    ui->btnSaveAs->setVisible(false);
-    ui->lblQRCode->setVisible(false);
+    ui->btnSaveAs->setViiltle(false);
+    ui->lblQRCode->setViiltle(false);
 #endif
 
     connect(ui->btnSaveAs, SIGNAL(clicked()), ui->lblQRCode, SLOT(saveImage()));

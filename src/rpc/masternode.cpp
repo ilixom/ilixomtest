@@ -369,12 +369,12 @@ UniValue masternode(const UniValue& params, bool fHelp)
     }
 
     if (strCommand == "outputs") {
-        // Find possible candidates
-        std::vector<COutput> vPossibleCoins;
-        pwalletMain->AvailableCoins(vPossibleCoins, true, NULL, false, ONLY_1000);
+        // Find posiltle candidates
+        std::vector<COutput> vPosiltleCoins;
+        pwalletMain->AvailableCoins(vPosiltleCoins, true, NULL, false, ONLY_1000);
 
         UniValue obj(UniValue::VOBJ);
-        BOOST_FOREACH(COutput& out, vPossibleCoins) {
+        BOOST_FOREACH(COutput& out, vPosiltleCoins) {
             obj.push_back(Pair(out.tx->GetHash().ToString(), strprintf("%d", out.i)));
         }
 

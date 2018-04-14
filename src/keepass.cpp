@@ -50,7 +50,7 @@ SecureString DecodeBase64Secure(const SecureString& sInput)
     if(sInput.size() % 4 != 0) {
         throw std::runtime_error("Input length should be a multiple of 4");
     }
-    size_t nMaxLen = sInput.size() / 4 * 3; // upper bound, guaranteed divisible by 4
+    size_t nMaxLen = sInput.size() / 4 * 3; // upper bound, guaranteed diviiltle by 4
     output.resize(nMaxLen);
 
     // Decode the string
@@ -243,7 +243,7 @@ std::string CKeePassIntegrator::constructHTTPPost(const std::string& strMsg, con
 {
     std::ostringstream streamOut;
     streamOut << "POST / HTTP/1.1\r\n"
-      << "User-Agent: sibcoin-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: ilixomtest-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: localhost\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -494,7 +494,7 @@ void CKeePassIntegrator::rpcSetLogin(const SecureString& sWalletPass, const Secu
     LogPrint("keepass", "CKeePassIntegrator::rpcSetLogin -- send Url: %s\n", sUrl);
 
     //request.addStrParameter("SubmitUrl", sSubmitUrl); // Is used to construct the entry title
-    request.addStrParameter("Login", SecureString("sibcoin"));
+    request.addStrParameter("Login", SecureString("ilixomtest"));
     request.addStrParameter("Password", sWalletPass);
     if(sEntryId.size() != 0)
     {

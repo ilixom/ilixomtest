@@ -88,12 +88,12 @@ CAmount WalletModelTransaction::getTotalTransactionAmount()
     return totalTransactionAmount;
 }
 
-void WalletModelTransaction::newPossibleKeyChange(CWallet *wallet)
+void WalletModelTransaction::newPosiltleKeyChange(CWallet *wallet)
 {
     keyChange = new CReserveKey(wallet);
 }
 
-CReserveKey *WalletModelTransaction::getPossibleKeyChange()
+CReserveKey *WalletModelTransaction::getPosiltleKeyChange()
 {
     return keyChange;
 }

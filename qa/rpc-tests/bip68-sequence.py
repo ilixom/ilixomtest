@@ -345,7 +345,7 @@ class BIP68Test(BitcoinTestFramework):
 
     # Make sure that BIP68 isn't being used to validate blocks, prior to
     # versionbits activation.  If more blocks are mined prior to this test
-    # being run, then it's possible the test has activated the soft fork, and
+    # being run, then it's posiltle the test has activated the soft fork, and
     # this test should be moved to run earlier, or deleted.
     def test_bip68_not_consensus(self):
         assert(get_bip9_status(self.nodes[0], 'csv')['status'] != 'active')

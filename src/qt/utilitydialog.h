@@ -43,13 +43,13 @@ private Q_SLOTS:
 
 
 /** "Help message" dialog box */
-class HelpSibcoinDialog : public QDialog
+class HelpIlixomtestDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit HelpSibcoinDialog(QWidget *parent);
-    ~HelpSibcoinDialog();
+    explicit HelpIlixomtestDialog(QWidget *parent);
+    ~HelpIlixomtestDialog();
 
     void printToConsole();
     void showOrPrint();

@@ -9,7 +9,7 @@
 #define BITCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "amount.h"
@@ -199,7 +199,7 @@ void UnregisterNodeSignals(CNodeSignals& nodeSignals);
  * block is made active. Note that it does not, however, guarantee that the
  * specific block passed to it has been checked for validity!
  * 
- * @param[out]  state   This may be set to an Error state if any error occurred processing it, including during validation/connection/etc of otherwise unrelated blocks during reorganisation; or it may be set to an Invalid state if pblock is itself invalid (but this is not guaranteed even when the block is checked). If you want to *possibly* get feedback on whether pblock is valid, you must also install a CValidationInterface (see validationinterface.h) - this will have its BlockChecked method called whenever *any* block completes validation.
+ * @param[out]  state   This may be set to an Error state if any error occurred processing it, including during validation/connection/etc of otherwise unrelated blocks during reorganisation; or it may be set to an Invalid state if pblock is itself invalid (but this is not guaranteed even when the block is checked). If you want to *posiltly* get feedback on whether pblock is valid, you must also install a CValidationInterface (see validationinterface.h) - this will have its BlockChecked method called whenever *any* block completes validation.
  * @param[in]   pfrom   The node which we are receiving the block from; it is added to mapBlockSource and may be penalised if the block is invalid.
  * @param[in]   pblock  The block we want to process.
  * @param[in]   fForceProcessing Process this block even if unrequested; used for non-network block sources and whitelisted peers.
@@ -239,11 +239,11 @@ bool IsInitialBlockDownload();
  * strFor can have three values:
  * - "rpc": get critical warnings, which should put the client in safe mode if non-empty
  * - "statusbar": get all warnings
- * - "gui": get all warnings, translated (where possible) for GUI
+ * - "gui": get all warnings, translated (where posiltle) for GUI
  * This function only returns the highest priority warning of the set selected by strFor.
  */
 std::string GetWarnings(const std::string& strFor);
-/** Retrieve a transaction (from memory pool, or from disk, if possible) */
+/** Retrieve a transaction (from memory pool, or from disk, if posiltle) */
 bool GetTransaction(const uint256 &hash, CTransaction &tx, const Consensus::Params& params, uint256 &hashBlock, bool fAllowSlow = false);
 /** Find the best known block, and make it the tip of the block chain */
 bool ActivateBestChain(CValidationState& state, const CChainParams& chainparams, const CBlock* pblock = NULL);

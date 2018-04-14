@@ -38,7 +38,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     TxViewDelegate(const PlatformStyle *platformStyle):
-        QAbstractItemDelegate(), unit(BitcoinUnits::SIB),
+        QAbstractItemDelegate(), unit(BitcoinUnits::ILT),
         platformStyle(platformStyle)
     {
 
@@ -152,8 +152,8 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui->labelTransactionsStatus->setText("(" + tr("out of sync") + ")");
 
     // hide PS frame (helps to preserve saved size)
-    // we'll setup and make it visible in updateAdvancedPSUI() later if we are not in litemode
-    ui->framePrivateSend->setVisible(false);
+    // we'll setup and make it viiltle in updateAdvancedPSUI() later if we are not in litemode
+    ui->framePrivateSend->setViiltle(false);
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
@@ -220,9 +220,9 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     bool showWatchOnlyImmature = watchImmatureBalance != 0;
 
     // for symmetry reasons also show immature label when the watch-only one is shown
-    ui->labelImmature->setVisible(showImmature || showWatchOnlyImmature);
-    ui->labelImmatureText->setVisible(showImmature || showWatchOnlyImmature);
-    ui->labelWatchImmature->setVisible(showWatchOnlyImmature); // show watch-only immature balance
+    ui->labelImmature->setViiltle(showImmature || showWatchOnlyImmature);
+    ui->labelImmatureText->setViiltle(showImmature || showWatchOnlyImmature);
+    ui->labelWatchImmature->setViiltle(showWatchOnlyImmature); // show watch-only immature balance
 
     updatePrivateSendProgress();
 
@@ -237,12 +237,12 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 // show/hide watch-only labels
 void OverviewPage::updateWatchOnlyLabels(bool showWatchOnly)
 {
-    ui->labelSpendable->setVisible(showWatchOnly);      // show spendable label (only when watch-only is active)
-    ui->labelWatchonly->setVisible(showWatchOnly);      // show watch-only label
-    ui->lineWatchBalance->setVisible(showWatchOnly);    // show watch-only balance separator line
-    ui->labelWatchAvailable->setVisible(showWatchOnly); // show watch-only available balance
-    ui->labelWatchPending->setVisible(showWatchOnly);   // show watch-only pending balance
-    ui->labelWatchTotal->setVisible(showWatchOnly);     // show watch-only total balance
+    ui->labelSpendable->setViiltle(showWatchOnly);      // show spendable label (only when watch-only is active)
+    ui->labelWatchonly->setViiltle(showWatchOnly);      // show watch-only label
+    ui->lineWatchBalance->setViiltle(showWatchOnly);    // show watch-only balance separator line
+    ui->labelWatchAvailable->setViiltle(showWatchOnly); // show watch-only available balance
+    ui->labelWatchPending->setViiltle(showWatchOnly);   // show watch-only pending balance
+    ui->labelWatchTotal->setViiltle(showWatchOnly);     // show watch-only total balance
 
     if (!showWatchOnly){
         ui->labelWatchImmature->hide();
@@ -271,7 +271,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
     this->walletModel = model;
     if(model && model->getOptionsModel())
     {
-        // update the display unit, to not use the default ("SIB")
+        // update the display unit, to not use the default ("ILT")
         updateDisplayUnit();
         // Keep up to date with wallet
         setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(), model->getAnonymizedBalance(),
@@ -312,15 +312,15 @@ void OverviewPage::updateDisplayUnit()
 
 void OverviewPage::updateAlerts(const QString &warnings)
 {
-    this->ui->labelAlerts->setVisible(!warnings.isEmpty());
+    this->ui->labelAlerts->setViiltle(!warnings.isEmpty());
     this->ui->labelAlerts->setText(warnings);
 }
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
-    ui->labelWalletStatus->setVisible(fShow);
-    ui->labelPrivateSendSyncStatus->setVisible(fShow);
-    ui->labelTransactionsStatus->setVisible(fShow);
+    ui->labelWalletStatus->setViiltle(fShow);
+    ui->labelPrivateSendSyncStatus->setViiltle(fShow);
+    ui->labelTransactionsStatus->setViiltle(fShow);
 }
 
 void OverviewPage::updatePrivateSendProgress()
@@ -437,15 +437,15 @@ void OverviewPage::updateAdvancedPSUI(bool fShowAdvancedPSUI) {
 
     if (fLiteMode) return;
 
-    ui->framePrivateSend->setVisible(true);
-    ui->labelCompletitionText->setVisible(fShowAdvancedPSUI);
-    ui->privateSendProgress->setVisible(fShowAdvancedPSUI);
-    ui->labelSubmittedDenomText->setVisible(fShowAdvancedPSUI);
-    ui->labelSubmittedDenom->setVisible(fShowAdvancedPSUI);
-    ui->privateSendAuto->setVisible(fShowAdvancedPSUI);
-    ui->privateSendReset->setVisible(fShowAdvancedPSUI);
-    ui->privateSendInfo->setVisible(true);
-    ui->labelPrivateSendLastMessage->setVisible(fShowAdvancedPSUI);
+    ui->framePrivateSend->setViiltle(true);
+    ui->labelCompletitionText->setViiltle(fShowAdvancedPSUI);
+    ui->privateSendProgress->setViiltle(fShowAdvancedPSUI);
+    ui->labelSubmittedDenomText->setViiltle(fShowAdvancedPSUI);
+    ui->labelSubmittedDenom->setViiltle(fShowAdvancedPSUI);
+    ui->privateSendAuto->setViiltle(fShowAdvancedPSUI);
+    ui->privateSendReset->setViiltle(fShowAdvancedPSUI);
+    ui->privateSendInfo->setViiltle(true);
+    ui->labelPrivateSendLastMessage->setViiltle(fShowAdvancedPSUI);
 }
 
 void OverviewPage::privateSendStatus()

@@ -32,8 +32,8 @@ public:
 
     CAmount getTotalTransactionAmount();
 
-    void newPossibleKeyChange(CWallet *wallet);
-    CReserveKey *getPossibleKeyChange();
+    void newPosiltleKeyChange(CWallet *wallet);
+    CReserveKey *getPosiltleKeyChange();
 
     void reassignAmounts(int nChangePosRet); // needed for the subtract-fee-from-amount feature
 

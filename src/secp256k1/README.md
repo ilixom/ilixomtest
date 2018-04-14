@@ -35,7 +35,7 @@ Implementation details
     * Using 8 32-bit limbs.
 * Group operations
   * Point addition formula specifically simplified for the curve equation (y^2 = x^3 + 7).
-  * Use addition between points in Jacobian and affine coordinates where possible.
+  * Use addition between points in Jacobian and affine coordinates where posiltle.
   * Use a unified addition/doubling formula where necessary to avoid data-dependent branches.
   * Point/x comparison without a field inversion by comparison in the Jacobian coordinate space.
 * Point multiplication for verification (a*P + b*G).

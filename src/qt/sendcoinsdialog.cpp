@@ -76,8 +76,8 @@ SendCoinsDialog::SendCoinsDialog(const PlatformStyle *platformStyle, QWidget *pa
     bool fUseInstantSend = settings.value("bUseInstantX").toBool();
     if(fLiteMode) {
         ui->checkUsePrivateSend->setChecked(false);
-        ui->checkUsePrivateSend->setVisible(false);
-        ui->checkUseInstantSend->setVisible(false);
+        ui->checkUsePrivateSend->setViiltle(false);
+        ui->checkUseInstantSend->setViiltle(false);
         CoinControlDialog::coinControl->fUsePrivateSend = false;
         CoinControlDialog::coinControl->fUseInstantSend = false;
     }
@@ -183,7 +183,7 @@ void SendCoinsDialog::setModel(WalletModel *model)
         // Coin Control
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(coinControlUpdateLabels()));
         connect(model->getOptionsModel(), SIGNAL(coinControlFeaturesChanged(bool)), this, SLOT(coinControlFeatureChanged(bool)));
-        ui->frameCoinControl->setVisible(model->getOptionsModel()->getCoinControlFeatures());
+        ui->frameCoinControl->setViiltle(model->getOptionsModel()->getCoinControlFeatures());
         coinControlUpdateLabels();
 
         // fee section
@@ -662,10 +662,10 @@ void SendCoinsDialog::processSendCoinsReturn(const WalletModel::SendCoinsReturn 
 
 void SendCoinsDialog::minimizeFeeSection(bool fMinimize)
 {
-    ui->labelFeeMinimized->setVisible(fMinimize);
-    ui->buttonChooseFee  ->setVisible(fMinimize);
-    ui->buttonMinimizeFee->setVisible(!fMinimize);
-    ui->frameFeeSelection->setVisible(!fMinimize);
+    ui->labelFeeMinimized->setViiltle(fMinimize);
+    ui->buttonChooseFee  ->setViiltle(fMinimize);
+    ui->buttonMinimizeFee->setViiltle(!fMinimize);
+    ui->frameFeeSelection->setViiltle(!fMinimize);
     ui->horizontalLayoutSmartFee->setContentsMargins(0, (fMinimize ? 0 : 6), 0, 0);
     fFeeMinimized = fMinimize;
 }
@@ -821,7 +821,7 @@ void SendCoinsDialog::coinControlClipboardChange()
 // Coin Control: settings menu - coin control enabled/disabled by user
 void SendCoinsDialog::coinControlFeatureChanged(bool checked)
 {
-    ui->frameCoinControl->setVisible(checked);
+    ui->frameCoinControl->setViiltle(checked);
 
     if (!checked && model) // coin control features disabled
         CoinControlDialog::coinControl->SetNull();
@@ -870,7 +870,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
         }
         else if (!addr.IsValid()) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Sibcoin address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Ilixomtest address"));
         }
         else // Valid address
         {
@@ -906,7 +906,7 @@ void SendCoinsDialog::coinControlUpdateLabels()
     if (model->getOptionsModel()->getCoinControlFeatures())
     {
         // enable minium absolute fee UI controls
-        ui->radioCustomAtLeast->setVisible(true);
+        ui->radioCustomAtLeast->setViiltle(true);
 
         // only enable the feature if inputs are selected
         ui->radioCustomAtLeast->setEnabled(CoinControlDialog::coinControl->HasSelected());
@@ -914,7 +914,7 @@ void SendCoinsDialog::coinControlUpdateLabels()
     else
     {
         // in case coin control is disabled (=default), hide minimum absolute fee UI controls
-        ui->radioCustomAtLeast->setVisible(false);
+        ui->radioCustomAtLeast->setViiltle(false);
         return;
     }
 

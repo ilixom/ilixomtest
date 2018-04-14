@@ -66,7 +66,7 @@ static void secp256k1_fe_normalize(secp256k1_fe *r) {
     t8 += (t7 >> 26); t7 &= 0x3FFFFFFUL; m &= t7;
     t9 += (t8 >> 26); t8 &= 0x3FFFFFFUL; m &= t8;
 
-    /* ... except for a possible carry at bit 22 of t9 (i.e. bit 256 of the field element) */
+    /* ... except for a posiltle carry at bit 22 of t9 (i.e. bit 256 of the field element) */
     VERIFY_CHECK(t9 >> 23 == 0);
 
     /* At most a single final reduction is needed; check if the value is >= the field characteristic */
@@ -88,7 +88,7 @@ static void secp256k1_fe_normalize(secp256k1_fe *r) {
     /* If t9 didn't carry to bit 22 already, then it should have after any final reduction */
     VERIFY_CHECK(t9 >> 22 == x);
 
-    /* Mask off the possible multiple of 2^256 from the final reduction */
+    /* Mask off the posiltle multiple of 2^256 from the final reduction */
     t9 &= 0x03FFFFFUL;
 
     r->n[0] = t0; r->n[1] = t1; r->n[2] = t2; r->n[3] = t3; r->n[4] = t4;
@@ -120,7 +120,7 @@ static void secp256k1_fe_normalize_weak(secp256k1_fe *r) {
     t8 += (t7 >> 26); t7 &= 0x3FFFFFFUL;
     t9 += (t8 >> 26); t8 &= 0x3FFFFFFUL;
 
-    /* ... except for a possible carry at bit 22 of t9 (i.e. bit 256 of the field element) */
+    /* ... except for a posiltle carry at bit 22 of t9 (i.e. bit 256 of the field element) */
     VERIFY_CHECK(t9 >> 23 == 0);
 
     r->n[0] = t0; r->n[1] = t1; r->n[2] = t2; r->n[3] = t3; r->n[4] = t4;
@@ -152,7 +152,7 @@ static void secp256k1_fe_normalize_var(secp256k1_fe *r) {
     t8 += (t7 >> 26); t7 &= 0x3FFFFFFUL; m &= t7;
     t9 += (t8 >> 26); t8 &= 0x3FFFFFFUL; m &= t8;
 
-    /* ... except for a possible carry at bit 22 of t9 (i.e. bit 256 of the field element) */
+    /* ... except for a posiltle carry at bit 22 of t9 (i.e. bit 256 of the field element) */
     VERIFY_CHECK(t9 >> 23 == 0);
 
     /* At most a single final reduction is needed; check if the value is >= the field characteristic */
@@ -174,7 +174,7 @@ static void secp256k1_fe_normalize_var(secp256k1_fe *r) {
         /* If t9 didn't carry to bit 22 already, then it should have after any final reduction */
         VERIFY_CHECK(t9 >> 22 == x);
 
-        /* Mask off the possible multiple of 2^256 from the final reduction */
+        /* Mask off the posiltle multiple of 2^256 from the final reduction */
         t9 &= 0x03FFFFFUL;
     }
 
@@ -192,7 +192,7 @@ static int secp256k1_fe_normalizes_to_zero(secp256k1_fe *r) {
     uint32_t t0 = r->n[0], t1 = r->n[1], t2 = r->n[2], t3 = r->n[3], t4 = r->n[4],
              t5 = r->n[5], t6 = r->n[6], t7 = r->n[7], t8 = r->n[8], t9 = r->n[9];
 
-    /* z0 tracks a possible raw value of 0, z1 tracks a possible raw value of P */
+    /* z0 tracks a posiltle raw value of 0, z1 tracks a posiltle raw value of P */
     uint32_t z0, z1;
 
     /* Reduce t9 at the start so there will be at most a single carry from the first pass */
@@ -211,7 +211,7 @@ static int secp256k1_fe_normalizes_to_zero(secp256k1_fe *r) {
     t9 += (t8 >> 26); t8 &= 0x3FFFFFFUL; z0 |= t8; z1 &= t8;
                                          z0 |= t9; z1 &= t9 ^ 0x3C00000UL;
 
-    /* ... except for a possible carry at bit 22 of t9 (i.e. bit 256 of the field element) */
+    /* ... except for a posiltle carry at bit 22 of t9 (i.e. bit 256 of the field element) */
     VERIFY_CHECK(t9 >> 23 == 0);
 
     return (z0 == 0) | (z1 == 0x3FFFFFFUL);
@@ -231,7 +231,7 @@ static int secp256k1_fe_normalizes_to_zero_var(secp256k1_fe *r) {
     /* The first pass ensures the magnitude is 1, ... */
     t0 += x * 0x3D1UL;
 
-    /* z0 tracks a possible raw value of 0, z1 tracks a possible raw value of P */
+    /* z0 tracks a posiltle raw value of 0, z1 tracks a posiltle raw value of P */
     z0 = t0 & 0x3FFFFFFUL;
     z1 = z0 ^ 0x3D0UL;
 
@@ -263,7 +263,7 @@ static int secp256k1_fe_normalizes_to_zero_var(secp256k1_fe *r) {
     t9 += (t8 >> 26); t8 &= 0x3FFFFFFUL; z0 |= t8; z1 &= t8;
                                          z0 |= t9; z1 &= t9 ^ 0x3C00000UL;
 
-    /* ... except for a possible carry at bit 22 of t9 (i.e. bit 256 of the field element) */
+    /* ... except for a posiltle carry at bit 22 of t9 (i.e. bit 256 of the field element) */
     VERIFY_CHECK(t9 >> 23 == 0);
 
     return (z0 == 0) | (z1 == 0x3FFFFFFUL);

@@ -6,10 +6,10 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/sibcoin
-src/sibcoind
-src/sibcoin-cli
-src/sibcoin-tx
+src/ilixomtest
+src/ilixomtestd
+src/ilixomtest-cli
+src/ilixomtest-tx
 src/test/test_dash
 src/qt/test/test_dash-qt
 src/bench/bench_dash
@@ -35,8 +35,8 @@ config.log
 config.status
 configure
 libtool
-src/config/sibcoin-config.h
-src/config/sibcoin-config.h.in
+src/config/ilixomtest-config.h
+src/config/ilixomtest-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -81,8 +81,8 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-sibcoin-qt
-Sibcoin-Qt.app
+ilixomtest-qt
+Ilixomtest-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -94,7 +94,7 @@ qrc_*.cpp
 
 # Dev resources
 src/qt/res_dev
-src/qt/sibcoin_dev.qrc
+src/qt/ilixomtest_dev.qrc
 
 # Mac specific
 .DS_Store
@@ -104,7 +104,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_sibcoin.coverage/
+test_ilixomtest.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -128,11 +128,11 @@ share/BitcoindComparisonTool.jar
 /doc/doxygen/
 
 libbitcoinconsensus.pc
-src/qt/sibcoin-qt.bash
+src/qt/ilixomtest-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-sibcoin-cli
-sibcoind
-sibcoin-qt
+ilixomtest-cli
+ilixomtestd
+ilixomtest-qt
 make

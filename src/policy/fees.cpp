@@ -405,7 +405,7 @@ void CBlockPolicyEstimator::processBlockTx(unsigned int nBlockHeight, const CTxM
 
     // How many blocks did it take for miners to include this transaction?
     // blocksToConfirm is 1-based, so a transaction included in the earliest
-    // possible block has confirmation count of 1
+    // posiltle block has confirmation count of 1
     int blocksToConfirm = nBlockHeight - entry.GetHeight();
     if (blocksToConfirm <= 0) {
         // This can't happen because we don't process transactions from a block with a height

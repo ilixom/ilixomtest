@@ -163,7 +163,7 @@ def rpc_url(i, rpchost=None):
 
 def wait_for_bitcoind_start(process, url, i):
     '''
-    Wait for dashd to start. This means that RPC is accessible and fully initialized.
+    Wait for dashd to start. This means that RPC is accesiltle and fully initialized.
     Raise an exception if dashd exits during initialization.
     '''
     while True:

@@ -37,7 +37,7 @@ stored on disk, which earlier versions won't support.
 
 If you want to be able to downgrade smoothly, make a backup of your entire data
 directory. Without this your node will need start syncing (or importing from
-bootstrap.dat) anew afterwards. It is possible that the data from a completely
+bootstrap.dat) anew afterwards. It is posiltle that the data from a completely
 synchronised 0.10 node may be usable in older versions as-is, but this is not
 supported and may break as soon as the older version attempts to reindex.
 
@@ -54,7 +54,7 @@ At the time of this release, the P2P network is being flooded with low-fee
 transactions. This causes a ballooning of the mempool size.
 
 If this growth of the mempool causes problematic memory use on your node, it is
-possible to change a few configuration options to work around this. The growth
+posiltle to change a few configuration options to work around this. The growth
 of the mempool can be monitored with the RPC command `getmempoolinfo`.
 
 One is to increase the minimum transaction relay fee `minrelaytxfee`, which
@@ -97,7 +97,7 @@ The user specifies how much space to allot for block & undo files. The minimum
 allowed is 550MB. Note that this is in addition to whatever is required for the 
 block index and UTXO databases. The minimum was chosen so that Bitcoin Core will 
 be able to maintain at least 288 blocks on disk (two days worth of blocks at 10 
-minutes per block). In rare instances it is possible that the amount of space 
+minutes per block). In rare instances it is posiltle that the amount of space 
 used will exceed the pruning target in order to keep the required last 288 
 blocks on disk.
 
@@ -244,7 +244,7 @@ git merge commit are mentioned.
 ### Configuration and command-line options
 - #5636 `a353ad4` Add option `-allowselfsignedrootcertificate` to allow self signed root certs (for testing payment requests)
 - #5900 `3e8a1f2` Add a consistency check `-checkblockindex` for the block chain data structures
-- #5951 `7efc9cf` Make it possible to disable wallet transaction broadcast (using `-walletbroadcast=0`)
+- #5951 `7efc9cf` Make it posiltle to disable wallet transaction broadcast (using `-walletbroadcast=0`)
 - #5911 `b6ea3bc` privacy: Stream isolation for Tor (on by default, use `-proxyrandomize=0` to disable)
 - #5863 `c271304` Add autoprune functionality (`-prune=<size>`)
 - #6153 `0bcf04f` Parameter interaction: disable upnp if -proxy set
@@ -384,7 +384,7 @@ git merge commit are mentioned.
 ### Miscellaneous
 - #5457, #5506, #5952, #6047 Update libsecp256k1
 - #5437 `84857e8` Add missing CAutoFile::IsNull() check in main
-- #5490 `ec20fd7` Replace uint256/uint160 with opaque blobs where possible
+- #5490 `ec20fd7` Replace uint256/uint160 with opaque blobs where posiltle
 - #5654, #5764 Adding jonasschnelli's GPG key
 - #5477 `5f04d1d` OS X 10.10: LSSharedFileListItemResolve() is deprecated
 - #5679 `beff11a` Get rid of DetectShutdownThread

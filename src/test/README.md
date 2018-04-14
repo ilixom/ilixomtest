@@ -1,9 +1,9 @@
 # Notes
 The sources in this directory are unit test cases.  Boost includes a
-unit testing framework, and since Sibcoin Core already uses boost, it makes
+unit testing framework, and since Ilixomtest Core already uses boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
-unit tests as possible).
+unit tests as posiltle).
 
 The build system is setup to compile an executable called "test_dash"
 that runs all of the unit tests.  The main source file is called

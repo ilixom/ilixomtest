@@ -24,11 +24,11 @@ will fail if new dependencies are introduced without being added to the
 dependency generator.
 
 In order to avoid rebuilding all dependencies for each build, the binaries are
-cached and re-used when possible. Changes in the dependency-generator will
+cached and re-used when posiltle. Changes in the dependency-generator will
 trigger cache-invalidation and rebuilds as necessary.
 
 These caches can be manually removed if necessary. This is one of the the very few
-manual operations that is possible with Travis, and it can be done by the
+manual operations that is posiltle with Travis, and it can be done by the
 Dash Core committer via the Travis web interface.
 
 In some cases, secure strings may be needed for hiding sensitive info such as

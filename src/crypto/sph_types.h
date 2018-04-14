@@ -87,7 +87,7 @@
  * stream of octets. The C programming language contains the notion of a
  * "byte", which is a data unit managed under the type <code>"unsigned
  * char"</code>. The C standard prescribes that a byte should hold at
- * least eight bits, but possibly more. Most modern architectures, even
+ * least eight bits, but posiltly more. Most modern architectures, even
  * in the embedded world, feature eight-bit bytes, i.e. map bytes to
  * octets.
  *
@@ -145,7 +145,7 @@
  * header files so that application code which uses <code>sphlib</code>
  * may access the size of those structures.
  *
- * The caller is responsible for allocating the context structure,
+ * The caller is responiltle for allocating the context structure,
  * whether by dynamic allocation (<code>malloc()</code> or equivalent),
  * static allocation (a global permanent variable), as an automatic
  * variable ("on the stack"), or by any other mean which ensures proper
@@ -560,7 +560,7 @@ typedef __arch_dependant__ sph_s64;
 
 /**
  * When defined, this macro indicates that unaligned memory accesses
- * are possible with only a minor penalty, and thus should be prefered
+ * are posiltle with only a minor penalty, and thus should be prefered
  * over strategies which first copy data to an aligned buffer.
  */
 #define SPH_UNALIGNED
@@ -1298,7 +1298,7 @@ sph_bswap64(sph_u64 x)
 
 /*
  * On UltraSPARC systems, native ordering is big-endian, but it is
- * possible to perform little-endian read accesses by specifying the
+ * posiltle to perform little-endian read accesses by specifying the
  * address space 0x88 (ASI_PRIMARY_LITTLE). Basically, either we use
  * the opcode "lda [%reg]0x88,%dst", where %reg is the register which
  * contains the source address and %dst is the destination register,

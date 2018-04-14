@@ -64,7 +64,7 @@ def gen_valid_vectors():
             yield (rv, b2a_hex(payload), metadata)
 
 def gen_invalid_vector(template, corrupt_prefix, randomize_payload_size, corrupt_suffix):
-    '''Generate possibly invalid vector'''
+    '''Generate posiltly invalid vector'''
     if corrupt_prefix:
         prefix = os.urandom(1)
     else:

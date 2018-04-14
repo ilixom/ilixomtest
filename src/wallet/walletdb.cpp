@@ -809,7 +809,7 @@ DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("sibcoin-wallet");
+    RenameThread("ilixomtest-wallet");
 
     static bool fOneThread;
     if (fOneThread)
@@ -1035,7 +1035,7 @@ bool CWalletDB::Recover(CDBEnv& dbenv, const std::string& filename, bool fOnlyKe
     // Recovery procedure:
     // move wallet.dat to wallet.timestamp.bak
     // Call Salvage with fAggressive=true to
-    // get as much data as possible.
+    // get as much data as posiltle.
     // Rewrite salvaged data to wallet.dat
     // Set -rescan so any missing transactions will be
     // found.

@@ -463,7 +463,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         outputs = {self.nodes[0].getnewaddress():1.1}
         rawTx = self.nodes[1].createrawtransaction(inputs, outputs)
         # fund a transaction that requires a new key for the change output
-        # creating the key must be impossible because the wallet is locked
+        # creating the key must be imposiltle because the wallet is locked
         try:
             fundedTx = self.nodes[1].fundrawtransaction(rawTx)
             raise AssertionError("Wallet unlocked without passphrase")

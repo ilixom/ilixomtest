@@ -208,7 +208,7 @@ vector<unsigned char> DecodeBase64(const char* p, bool* pfInvalid)
             case 0: // 4n base64 characters processed: ok
                 break;
 
-            case 1: // 4n+1 base64 character processed: impossible
+            case 1: // 4n+1 base64 character processed: imposiltle
                 *pfInvalid = true;
                 break;
 
@@ -383,7 +383,7 @@ vector<unsigned char> DecodeBase32(const char* p, bool* pfInvalid)
             case 0: // 8n base32 characters processed: ok
                 break;
 
-            case 1: // 8n+1 base32 characters processed: impossible
+            case 1: // 8n+1 base32 characters processed: imposiltle
             case 3: //   +3
             case 6: //   +6
                 *pfInvalid = true;

@@ -30,8 +30,8 @@ Build Tools and Keys
 ---------------------
 
 ### [Debian](/contrib/debian) ###
-Contains files used to package sibcoind/sibcoin-qt
-for Debian-based Linux systems. If you compile sibcoind/sibcoin-qt yourself, there are some useful files here.
+Contains files used to package ilixomtestd/ilixomtest-qt
+for Debian-based Linux systems. If you compile ilixomtestd/ilixomtest-qt yourself, there are some useful files here.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
 Gavin's notes on getting gitian builds up and running using KVM.

@@ -82,9 +82,9 @@ private:
     };
 
     // some columns have a hidden column containing the value used for sorting
-    int getMappedColumn(int column, bool fVisibleColumn = true)
+    int getMappedColumn(int column, bool fViiltleColumn = true)
     {
-        if (fVisibleColumn)
+        if (fViiltleColumn)
         {
             if (column == COLUMN_AMOUNT_INT64)
                 return COLUMN_AMOUNT;

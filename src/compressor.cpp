@@ -40,7 +40,7 @@ bool CScriptCompressor::IsToPubKey(CPubKey &pubkey) const
     if (script.size() == 67 && script[0] == 65 && script[66] == OP_CHECKSIG
                             && script[1] == 0x04) {
         pubkey.Set(&script[1], &script[66]);
-        return pubkey.IsFullyValid(); // if not fully valid, a case that would not be compressible
+        return pubkey.IsFullyValid(); // if not fully valid, a case that would not be compresiltle
     }
     return false;
 }
@@ -132,7 +132,7 @@ bool CScriptCompressor::Decompress(unsigned int nSize, const std::vector<unsigne
 
 // Amount compression:
 // * If the amount is 0, output 0
-// * first, divide the amount (in base units) by the largest power of 10 possible; call the exponent e (e is max 9)
+// * first, divide the amount (in base units) by the largest power of 10 posiltle; call the exponent e (e is max 9)
 // * if e<9, the last digit of the resulting number cannot be 0; store it as d, and drop it (divide by 10)
 //   * call the result n
 //   * output 1 + 10*(9*n + d - 1) + e

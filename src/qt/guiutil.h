@@ -114,7 +114,7 @@ namespace GUIUtil
     // Open debug.log
     void openDebugLogfile();
 	
-    // Open sibcoin.conf
+    // Open ilixomtest.conf
     void openConfigfile();	
 
     // Open masternode.conf

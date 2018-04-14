@@ -319,7 +319,7 @@ public:
  * These happen in UpdateForRemoveFromMempool().  (Note that when removing a
  * transaction along with its descendants, we must calculate that set of
  * transactions to be removed before doing the removal, or else the mempool can
- * be in an inconsistent state where it's impossible to walk the ancestors of
+ * be in an inconsistent state where it's imposiltle to walk the ancestors of
  * a transaction.)
  *
  * In the event of a reorg, the assumption that a newly added tx has no

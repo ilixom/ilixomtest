@@ -120,9 +120,9 @@ class RandomGenerator {
     Random rnd(301);
     std::string piece;
     while (data_.size() < 1048576) {
-      // Add a short fragment that is as compressible as specified
+      // Add a short fragment that is as compresiltle as specified
       // by FLAGS_compression_ratio.
-      test::CompressibleString(&rnd, FLAGS_compression_ratio, 100, &piece);
+      test::CompresiltleString(&rnd, FLAGS_compression_ratio, 100, &piece);
       data_.append(piece);
     }
     pos_ = 0;
@@ -340,7 +340,7 @@ class Benchmark {
             "WARNING: Assertions are enabled; benchmarks unnecessarily slow\n");
 #endif
 
-    // See if snappy is working by attempting to compress a compressible string
+    // See if snappy is working by attempting to compress a compresiltle string
     const char text[] = "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
     std::string compressed;
     if (!port::Snappy_Compress(text, sizeof(text), &compressed)) {

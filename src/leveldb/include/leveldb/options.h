@@ -124,7 +124,7 @@ struct Options {
   // Note that these speeds are significantly faster than most
   // persistent storage speeds, and therefore it is typically never
   // worth switching to kNoCompression.  Even if the input data is
-  // incompressible, the kSnappyCompression implementation will
+  // incompresiltle, the kSnappyCompression implementation will
   // efficiently detect that and will switch to uncompressed mode.
   CompressionType compression;
 

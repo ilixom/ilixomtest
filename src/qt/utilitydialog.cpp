@@ -36,7 +36,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, HelpMode helpMode) :
 {
     ui->setupUi(this);
 
-    QString version = tr("Sibcoin Core") + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
+    QString version = tr("Ilixomtest Core") + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
     /* On x86 add a bit specifier to the version so that users can distinguish between
      * 32 and 64 bit builds. On other architectures, 32/64 bit may be more ambigious.
      */
@@ -48,7 +48,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, HelpMode helpMode) :
 
     if (helpMode == about)
     {
-        setWindowTitle(tr("About Sibcoin Core"));
+        setWindowTitle(tr("About Ilixomtest Core"));
 
         /// HTML-format the license message from the core
         QString licenseInfo = QString::fromStdString(LicenseInfo());
@@ -66,11 +66,11 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, HelpMode helpMode) :
         text = version + "\n" + licenseInfo;
         ui->aboutMessage->setText(version + "<br><br>" + licenseInfoHTML);
         ui->aboutMessage->setWordWrap(true);
-        ui->helpMessage->setVisible(false);
+        ui->helpMessage->setViiltle(false);
     } else if (helpMode == cmdline) {
         setWindowTitle(tr("Command-line options"));
         QString header = tr("Usage:") + "\n" +
-            "  sibcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+            "  ilixomtest-qt [" + tr("command-line options") + "]                     " + "\n";
         QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();
@@ -127,8 +127,8 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, HelpMode helpMode) :
         }
 
         ui->helpMessage->moveCursor(QTextCursor::Start);
-        ui->scrollArea->setVisible(false);
-        ui->aboutLogo->setVisible(false);
+        ui->scrollArea->setViiltle(false);
+        ui->aboutLogo->setViiltle(false);
     } else if (helpMode == pshelp) {
         setWindowTitle(tr("PrivateSend information"));
 
@@ -137,13 +137,13 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, HelpMode helpMode) :
         ui->aboutMessage->setText(tr("\
 <h3>PrivateSend Basics</h3> \
 PrivateSend gives you true financial privacy by obscuring the origins of your funds. \
-All the Sibcoin in your wallet is comprised of different \"inputs\" which you can think of as separate, discrete coins.<br> \
+All the Ilixomtest in your wallet is comprised of different \"inputs\" which you can think of as separate, discrete coins.<br> \
 PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. \
 You retain control of your money at all times..<hr> \
 <b>The PrivateSend process works like this:</b>\
 <ol type=\"1\"> \
 <li>PrivateSend begins by breaking your transaction inputs down into standard denominations. \
-These denominations are 0.1 SIB, 1 SIB, 10 SIB and 100 SIB -- sort of like the paper money you use every day.</li> \
+These denominations are 0.1 ILT, 1 ILT, 10 ILT and 100 ILT -- sort of like the paper money you use every day.</li> \
 <li>Your wallet then sends requests to specially configured software nodes on the network, called \"masternodes.\" \
 These masternodes are informed then that you are interested in mixing a certain denomination. \
 No identifiable information is sent to the masternodes, so they never know \"who\" you are.</li> \
@@ -159,11 +159,11 @@ your funds will already be anonymized. No additional waiting is required.</li> \
 This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. \
 It can only do this, however, if you have automatic backups enabled.<br> \
 Consequently, users who have backups disabled will also have PrivateSend disabled. <hr>\
-For more info see <a href=\"http://sibcoin.org/privatesend\">http://sibcoin.org/privatesend</a> \
+For more info see <a href=\"http://ilixomtest.org/privatesend\">http://ilixomtest.org/privatesend</a> \
         "));
         ui->aboutMessage->setWordWrap(true);
-        ui->helpMessage->setVisible(false);
-        ui->aboutLogo->setVisible(false);
+        ui->helpMessage->setViiltle(false);
+        ui->aboutLogo->setViiltle(false);
     }
     // Theme dependent Gfx in About popup
     QString helpMessageGfx = ":/images/" + GUIUtil::getThemeName() + "/about";
@@ -200,14 +200,14 @@ void HelpMessageDialog::on_okButton_accepted()
 
 
 /** "Help message" dialog box */
-HelpSibcoinDialog::HelpSibcoinDialog(QWidget *parent) :
+HelpIlixomtestDialog::HelpIlixomtestDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::HelpMessageDialog)
 {
     ui->setupUi(this);
     GUIUtil::restoreWindowGeometry("nHelpMessageDialogWindow", this->size(), this);
     
-    QString res_name = ":/html/sibcoindesc";
+    QString res_name = ":/html/ilixomtestdesc";
     QString htmlContent;
     
     QFile  htmlFile(res_name);
@@ -223,20 +223,20 @@ HelpSibcoinDialog::HelpSibcoinDialog(QWidget *parent) :
     ui->aboutMessage->setText(htmlContent);
 }
 
-HelpSibcoinDialog::~HelpSibcoinDialog()
+HelpIlixomtestDialog::~HelpIlixomtestDialog()
 {
     GUIUtil::saveWindowGeometry("nHelpMessageDialogWindow", this);
     delete ui;
 }
 
-void HelpSibcoinDialog::printToConsole()
+void HelpIlixomtestDialog::printToConsole()
 {
     // On other operating systems, the expected action is to print the message to the console.
     QString strUsage = header + "\n" + coreOptions + "\n" + uiOptions + "\n";
     fprintf(stdout, "%s", strUsage.toStdString().c_str());
 }
 
-void HelpSibcoinDialog::showOrPrint()
+void HelpIlixomtestDialog::showOrPrint()
 {
 #if defined(WIN32)
         // On Windows, show a message box, as there is no stderr/stdout in windowed applications
@@ -247,7 +247,7 @@ void HelpSibcoinDialog::showOrPrint()
 #endif
 }
 
-void HelpSibcoinDialog::on_okButton_accepted()
+void HelpIlixomtestDialog::on_okButton_accepted()
 {
     close();
 }
@@ -259,7 +259,7 @@ ShutdownWindow::ShutdownWindow(QWidget *parent, Qt::WindowFlags f):
 {
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(new QLabel(
-        tr("Sibcoin Core is shutting down...") + "<br /><br />" +
+        tr("Ilixomtest Core is shutting down...") + "<br /><br />" +
         tr("Do not shut down the computer until this window disappears.")));
     setLayout(layout);
 }

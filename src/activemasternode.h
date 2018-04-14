@@ -19,7 +19,7 @@ static const int ACTIVE_MASTERNODE_STARTED          = 4;
 
 extern CActiveMasternode activeMasternode;
 
-// Responsible for activating the Masternode and pinging the network
+// Responiltle for activating the Masternode and pinging the network
 class CActiveMasternode
 {
 public:

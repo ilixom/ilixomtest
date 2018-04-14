@@ -215,8 +215,8 @@ void SendCoinsEntry::setValue(const SendCoinsRecipient &value)
     {
         // message
         ui->messageTextLabel->setText(recipient.message);
-        ui->messageTextLabel->setVisible(!recipient.message.isEmpty());
-        ui->messageLabel->setVisible(!recipient.message.isEmpty());
+        ui->messageTextLabel->setViiltle(!recipient.message.isEmpty());
+        ui->messageLabel->setViiltle(!recipient.message.isEmpty());
 
         ui->addAsLabel->clear();
         ui->payTo->setText(recipient.address); // this may set a label from addressbook

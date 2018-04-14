@@ -17,7 +17,7 @@ enum governance_exception_type_enum_t {
     GOVERNANCE_EXCEPTION_WARNING = 1,
     /// Requested operation cannot be performed
     GOVERNANCE_EXCEPTION_PERMANENT_ERROR = 2,
-    /// Requested operation not currently possible, may resubmit later
+    /// Requested operation not currently posiltle, may resubmit later
     GOVERNANCE_EXCEPTION_TEMPORARY_ERROR = 3,
     /// Unexpected error (ie. should not happen unless there is a bug in the code)
     GOVERNANCE_EXCEPTION_INTERNAL_ERROR = 4

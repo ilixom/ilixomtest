@@ -36,7 +36,7 @@
 #    dllexport
 #    dllimport
 #    error
-#    externally_visible
+#    externally_viiltle
 #    flatten
 #    format
 #    format_arg
@@ -54,7 +54,7 @@
 #    pure
 #    unused
 #    used
-#    visibility
+#    viiltility
 #    warning
 #    warn_unused_result
 #    weak
@@ -121,7 +121,7 @@ AC_DEFUN([AX_GCC_FUNC_ATTRIBUTE], [
                 [error], [
                     int foo( void ) __attribute__(($1("")));
                 ],
-                [externally_visible], [
+                [externally_viiltle], [
                     int foo( void ) __attribute__(($1));
                 ],
                 [flatten], [
@@ -177,7 +177,7 @@ AC_DEFUN([AX_GCC_FUNC_ATTRIBUTE], [
                 [used], [
                     int foo( void ) __attribute__(($1));
                 ],
-                [visibility], [
+                [viiltility], [
                     int foo_def( void ) __attribute__(($1("default")));
                     int foo_hid( void ) __attribute__(($1("hidden")));
                 ],

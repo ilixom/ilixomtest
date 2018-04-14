@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "util.h"
@@ -90,7 +90,7 @@
 #include <openssl/conf.h>
 
 // Work around clang compilation problem in Boost 1.46:
-// /usr/include/boost/program_options/detail/config_file.hpp:163:17: error: call to function 'to_internal' that is neither visible in the template definition nor found by argument-dependent lookup
+// /usr/include/boost/program_options/detail/config_file.hpp:163:17: error: call to function 'to_internal' that is neither viiltle in the template definition nor found by argument-dependent lookup
 // See also: http://stackoverflow.com/questions/10020179/compilation-fail-in-boost-librairies-program-options
 //           http://clang.debian.net/status.php?version=3.0&key=CANNOT_FIND_FUNCTION
 namespace boost {
@@ -115,8 +115,8 @@ bool fLiteMode = false;
 */
 int nWalletBackups = 10;
 
-const char * const BITCOIN_CONF_FILENAME = "sibcoin.conf";
-const char * const BITCOIN_PID_FILENAME = "sibcoind.pid";
+const char * const BITCOIN_CONF_FILENAME = "ilixomtest.conf";
+const char * const BITCOIN_PID_FILENAME = "ilixomtestd.pid";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
@@ -158,7 +158,7 @@ public:
 
         // OpenSSL can optionally load a config file which lists optional loadable modules and engines.
         // We don't use them so we don't require the config. However some of our libs may call functions
-        // which attempt to load the config file, possibly resulting in an exit() or crash if it is missing
+        // which attempt to load the config file, posiltly resulting in an exit() or crash if it is missing
         // or corrupt. Explicitly tell OpenSSL not to try to load the file. The result for our libs will be
         // that the config appears to have been loaded and there are no modules/engines available.
         OPENSSL_no_config();
@@ -495,7 +495,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "sibcoin";
+    const char* pszModule = "ilixomtest";
 #endif
     if (pex)
         return strprintf(
@@ -515,13 +515,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Sibcoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Sibcoin
-    // Mac: ~/Library/Application Support/Sibcoin
-    // Unix: ~/.sibcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Ilixomtest
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Ilixomtest
+    // Mac: ~/Library/Application Support/Ilixomtest
+    // Unix: ~/.ilixomtest
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Sibcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Ilixomtest";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -531,10 +531,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Sibcoin";
+    return pathRet / "Library/Application Support/Ilixomtest";
 #else
     // Unix
-    return pathRet / ".sibcoin";
+    return pathRet / ".ilixomtest";
 #endif
 #endif
 }
@@ -628,7 +628,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty sibcoin.conf if it does not exist
+        // Create empty ilixomtest.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -640,7 +640,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override sibcoin.conf
+        // Don't overwrite existing settings so command line settings override ilixomtest.conf
         string strKey = string("-") + it->string_key;
         string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);
@@ -684,7 +684,7 @@ bool RenameOver(boost::filesystem::path src, boost::filesystem::path dest)
 
 /**
  * Ignores exceptions thrown by Boost's create_directory if the requested directory exists.
- * Specifically handles case where path p exists, but it wasn't possible for the user to
+ * Specifically handles case where path p exists, but it wasn't posiltle for the user to
  * write to the parent directory.
  */
 bool TryCreateDirectory(const boost::filesystem::path& p)

@@ -1164,7 +1164,7 @@ bool CDarksendPool::CheckPoolStateUpdate(PoolState nStateNew, int nEntriesCountN
 //
 // After we receive the finalized transaction from the Masternode, we must
 // check it to make sure it's what we want, then sign it if we agree.
-// If we refuse to sign, it's possible we'll be charged collateral
+// If we refuse to sign, it's posiltle we'll be charged collateral
 //
 bool CDarksendPool::SignFinalTransaction(const CTransaction& finalTransactionNew, CNode* pnode)
 {
@@ -1210,7 +1210,7 @@ bool CDarksendPool::SignFinalTransaction(const CTransaction& finalTransactionNew
 
                 int nTargetOuputsCount = entry.vecTxDSOut.size();
                 if(nFoundOutputsCount < nTargetOuputsCount || nValue1 != nValue2) {
-                    // in this case, something went wrong and we'll refuse to sign. It's possible we'll be charged collateral. But that's
+                    // in this case, something went wrong and we'll refuse to sign. It's posiltle we'll be charged collateral. But that's
                     // better then signing if the transaction doesn't look like what we wanted.
                     LogPrintf("CDarksendPool::SignFinalTransaction -- My entries are not correct! Refusing to sign: nFoundOutputsCount: %d, nTargetOuputsCount: %d\n", nFoundOutputsCount, nTargetOuputsCount);
                     UnlockCoins();
@@ -1507,7 +1507,7 @@ bool CDarksendPool::DoAutomaticDenominating(bool fDryRun)
             std::vector<CTxIn> vecTxInTmp;
             std::vector<COutput> vCoinsTmp;
 
-            // Try to match their denominations if possible, select at least 1 denominations
+            // Try to match their denominations if posiltle, select at least 1 denominations
             if(!pwalletMain->SelectCoinsByDenominations(dsq.nDenom, vecPrivateSendDenominations[vecBits.front()], nBalanceNeedsAnonymized, vecTxInTmp, vCoinsTmp, nValueInTmp, 0, nPrivateSendRounds)) {
                 LogPrintf("CDarksendPool::DoAutomaticDenominating -- Couldn't match denominations %d %d (%s)\n", vecBits.front(), dsq.nDenom, GetDenominationsToString(dsq.nDenom));
                 continue;
@@ -1642,7 +1642,7 @@ bool CDarksendPool::SubmitDenominate()
     std::vector<CTxOut> vecTxOutRet;
 
     // Submit transaction to the pool if we get here
-    // Try to use only inputs with the same number of rounds starting from lowest number of rounds possible
+    // Try to use only inputs with the same number of rounds starting from lowest number of rounds posiltle
     for(int i = 0; i < nPrivateSendRounds; i++) {
         if(PrepareDenominate(i, i+1, strError, vecTxInRet, vecTxOutRet)) {
             LogPrintf("CDarksendPool::SubmitDenominate -- Running PrivateSend denominate for %d rounds, success\n", i);
@@ -2469,7 +2469,7 @@ void ThreadCheckDarkSendPool()
     fOneThread = true;
 
     // Make this thread recognisable as the PrivateSend thread
-    RenameThread("sibcoin-privatesend");
+    RenameThread("ilixomtest-privatesend");
 
     unsigned int nTick = 0;
     unsigned int nDoAutoNextRun = nTick + PRIVATESEND_AUTO_TIMEOUT_MIN;

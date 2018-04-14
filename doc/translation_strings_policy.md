@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the Sibcoin Core software.
+This document provides guidelines for internationalization of the Ilixomtest Core software.
 
 How to translate?
 ------------------
@@ -85,14 +85,14 @@ In Qt code use tr's third argument for optional plurality. For example:
 This adds `<numerusform>`s to the respective `.ts` file, which can be translated separately depending on the language. In English, this is simply:
 
     <message numerus="yes">
-        <source>%n active connection(s) to Sibcoin network</source>
+        <source>%n active connection(s) to Ilixomtest network</source>
         <translation>
-            <numerusform>%n active connection to Sibcoin network</numerusform>
-            <numerusform>%n active connections to Sibcoin network</numerusform>
+            <numerusform>%n active connection to Ilixomtest network</numerusform>
+            <numerusform>%n active connections to Ilixomtest network</numerusform>
         </translation>
     </message>
 
-Where it is possible try to avoid embedding numbers into the flow of the string at all. e.g.
+Where it is posiltle try to avoid embedding numbers into the flow of the string at all. e.g.
 
     WARNING: check your network connection, %d blocks received in the last %d hours (%d expected)
 
@@ -100,7 +100,7 @@ versus
 
     WARNING: check your network connection, less blocks (%d) were received in the last %n hours than expected (%d).
 
-The second example reduces the number of pluralized words that translators have to handle from three to one, at no cost to comprehensibility of the sentence.
+The second example reduces the number of pluralized words that translators have to handle from three to one, at no cost to compreheniltility of the sentence.
 
 ### String freezes
 

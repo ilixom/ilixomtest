@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start Sibcoin after logging in to the system.</string>
+          <string>Automatically start Ilixomtest after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start Sibcoin on system login</string>
+          <string>&amp;Start Ilixomtest on system login</string>
          </property>
         </widget>
        </item>
@@ -246,14 +246,14 @@
            <property name="whatsThis">
             <string notr="true"/>
            </property>
-           <property name="accessibleName">
+           <property name="accesiltleName">
             <string notr="true"/>
            </property>
-           <property name="accessibleDescription">
+           <property name="accesiltleDescription">
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Amount of Sibcoin to keep anonymized</string>
+            <string>Amount of Ilixomtest to keep anonymized</string>
            </property>
           </widget>
          </item>
@@ -298,7 +298,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Ilixomtest client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -318,7 +318,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Sibcoin network through a SOCKS5 proxy.</string>
+          <string>Connect to the Ilixomtest network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -505,7 +505,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocksTor">
          <property name="toolTip">
-          <string>Connect to the Sibcoin network through a separate SOCKS5 proxy for Tor hidden services.</string>
+          <string>Connect to the Ilixomtest network through a separate SOCKS5 proxy for Tor hidden services.</string>
          </property>
          <property name="text">
           <string>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</string>
@@ -671,7 +671,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Ilixomtest.</string>
            </property>
           </widget>
          </item>
@@ -688,12 +688,12 @@
          <property name="whatsThis">
           <string notr="true"/>
          </property>
-         <property name="accessibleName">
+         <property name="accesiltleName">
           <string notr="true"/>
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</string>
+https://www.transifex.com/projects/p/ilixomtest/</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>

@@ -28,8 +28,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Sibcoin (http://www.sibcoin.org/),
- * which enables instant payments to anyone, anywhere in the world. Sibcoin uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Ilixomtest (http://www.ilixomtest.org/),
+ * which enables instant payments to anyone, anywhere in the world. Ilixomtest uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -70,13 +70,13 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/sibcoin.conf are parsed in qt/sibcoin.cpp's main()
+    // If Qt is used, parameters/ilixomtest.conf are parsed in qt/ilixomtest.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
     if (mapArgs.count("-?") || mapArgs.count("-h") ||  mapArgs.count("-help") || mapArgs.count("-version"))
     {
-        std::string strUsage = _("Sibcoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Ilixomtest Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (mapArgs.count("-version"))
         {
@@ -85,7 +85,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  sibcoind [options]                     " + _("Start Sibcoin Core Daemon") + "\n";
+                  "  ilixomtestd [options]                     " + _("Start Ilixomtest Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -126,19 +126,19 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "sibcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "ilixomtest:"))
                 fCommandLine = true;
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in sibcoind anymore. Use the sibcoin-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in ilixomtestd anymore. Use the ilixomtest-cli utility instead.\n");
             exit(EXIT_FAILURE);
         }
 #ifndef WIN32
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Sibcoin server starting\n");
+            fprintf(stdout, "Ilixomtest server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -189,7 +189,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect sibcoind signal handlers
+    // Connect ilixomtestd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

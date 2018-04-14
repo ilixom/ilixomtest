@@ -151,7 +151,7 @@ public:
 
     // This function should be used in a different combinations to determine
     // if CCryptoKeyStore is fully locked so that no operations requiring access
-    // to private keys are possible:
+    // to private keys are posiltle:
     //      IsLocked(true)
     // or if CCryptoKeyStore's private keys are available for mixing only:
     //      !IsLocked(true) && IsLocked()

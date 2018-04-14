@@ -126,23 +126,23 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000c492bf73490420868bc577680bfc4c60116e7e85343bc624787c21efa4c"));
         assert(genesis.hashMerkleRoot == uint256S("0x6a35812a1d2dd4ec413b7de5870c56455110ad6395ef00962e58f812da7cb4b9"));
 
-        vSeeds.push_back(CDNSSeedData("sibcoin.net", "dnsseed.sibcoin.net"));
+        vSeeds.push_back(CDNSSeedData("ilixomtest.net", "dnsseed.ilixomtest.net"));
         vSeeds.push_back(CDNSSeedData("chervonec.info", "dnsseed.chervonec.info"));
         vSeeds.push_back(CDNSSeedData("darknode1", "dnsseed1.darknode.ru"));
         vSeeds.push_back(CDNSSeedData("darknode2", "dnsseed2.darknode.ru"));
         vSeeds.push_back(CDNSSeedData("darknode3", "dnsseed3.darknode.ru"));
 
-        // Sibcoin addresses start with 'S'
+        // Ilixomtest addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
-        // Sibcoin script addresses start with 'H'
+        // Ilixomtest script addresses start with 'H'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,40);
-        // Sibcoin private keys start with '5'
+        // Ilixomtest private keys start with '5'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
-        // Sibcoin BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Ilixomtest BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Sibcoin BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Ilixomtest BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // Sibcoin BIP44 coin type is '45'
+        // Ilixomtest BIP44 coin type is '45'
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x2D).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
@@ -252,17 +252,17 @@ public:
         //vSeeds.push_back(CDNSSeedData("dashdot.io",  "testnet-seed.dashdot.io"));
         //vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
 
-        // Testnet Sibcoin addresses start with 's'
+        // Testnet Ilixomtest addresses start with 's'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,125);
-        // Testnet Sibcoin script addresses start with 'h'
+        // Testnet Ilixomtest script addresses start with 'h'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,100);
         // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Testnet Sibcoin BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Ilixomtest BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Sibcoin BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Ilixomtest BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Sibcoin BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet Ilixomtest BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
@@ -369,17 +369,17 @@ public:
             0,
             0
         };
-        // Regtest Sibcoin addresses start with 's'
+        // Regtest Ilixomtest addresses start with 's'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,125);
-        // Regtest Sibcoin script addresses start with 'h'
+        // Regtest Ilixomtest script addresses start with 'h'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,100);
         // Regtest private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Regtest Sibcoin BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Regtest Ilixomtest BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Sibcoin BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Regtest Ilixomtest BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Sibcoin BIP44 coin type is '1' (All coin's testnet default)
+        // Regtest Ilixomtest BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
    }
 };

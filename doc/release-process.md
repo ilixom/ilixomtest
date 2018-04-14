@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/ivansib/sibcoin/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Update translations, see [translation_process.md](https://github.com/ivanilt/ilixomtest/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -10,14 +10,14 @@ Release Process
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/ivansib/gitian.sigs.git
-	git clone https://github.com/ivansib/sibcoin-detached-sigs.git
+	git clone https://github.com/ivanilt/gitian.sigs.git
+	git clone https://github.com/ivanilt/ilixomtest-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/ivansib/sibcoin.git
+	git clone https://github.com/ivanilt/ilixomtest.git
 
-###Sibcoin Core maintainers/release engineers, update (commit) version in sources
+###Ilixomtest Core maintainers/release engineers, update (commit) version in sources
 
-	pushd ./sibcoin
+	pushd ./ilixomtest
 	contrib/verifysfbinaries/verify.sh
 	configure.ac
 	doc/README*
@@ -40,7 +40,7 @@ Check out the source code in the following directory hierarchy.
 
  Setup Gitian descriptors:
 
-	pushd ./sibcoin
+	pushd ./ilixomtest
 	export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
 	git fetch
@@ -76,52 +76,52 @@ Check out the source code in the following directory hierarchy.
 
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
-	make -C ../sibcoin/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../ilixomtest/depends download SOURCES_PATH=`pwd`/cache/common
 
 Only missing files will be fetched, so this is safe to re-run for each build.
 
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 ```
-./bin/gbuild --url sibcoin=/path/to/sibcoin,signature=/path/to/sigs {rest of arguments}
+./bin/gbuild --url ilixomtest=/path/to/ilixomtest,signature=/path/to/sigs {rest of arguments}
 ```
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-###Build and sign Sibcoin Core for Linux, Windows, and OS X:
+###Build and sign Ilixomtest Core for Linux, Windows, and OS X:
 
-	./bin/gbuild --commit sibcoin=v${VERSION} ../sibcoin/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../sibcoin/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/sibcoin-*.tar.gz build/out/src/sibcoin-*.tar.gz ../
+	./bin/gbuild --commit ilixomtest=v${VERSION} ../ilixomtest/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../ilixomtest/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/ilixomtest-*.tar.gz build/out/src/ilixomtest-*.tar.gz ../
 
-	./bin/gbuild --commit sibcoin=v${VERSION} ../sibcoin/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../sibcoin/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/sibcoin-*-win-unsigned.tar.gz inputs/sibcoin-win-unsigned.tar.gz
-	mv build/out/sibcoin-*.zip build/out/sibcoin-*.exe ../
+	./bin/gbuild --commit ilixomtest=v${VERSION} ../ilixomtest/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../ilixomtest/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/ilixomtest-*-win-unsigned.tar.gz inputs/ilixomtest-win-unsigned.tar.gz
+	mv build/out/ilixomtest-*.zip build/out/ilixomtest-*.exe ../
 
-	./bin/gbuild --commit sibcoin=v${VERSION} ../sibcoin/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../sibcoin/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/sibcoin-*-osx-unsigned.tar.gz inputs/sibcoin-osx-unsigned.tar.gz
-	mv build/out/sibcoin-*.tar.gz build/out/sibcoin-*.dmg ../
+	./bin/gbuild --commit ilixomtest=v${VERSION} ../ilixomtest/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../ilixomtest/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/ilixomtest-*-osx-unsigned.tar.gz inputs/ilixomtest-osx-unsigned.tar.gz
+	mv build/out/ilixomtest-*.tar.gz build/out/ilixomtest-*.dmg ../
 	popd
 
   Build output expected:
 
-  1. source tarball (sibcoin-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit dist tarballs (sibcoin-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (sibcoin-${VERSION}-win[32|64]-setup-unsigned.exe, sibcoin-${VERSION}-win[32|64].zip)
-  4. OS X unsigned installer and dist tarball (sibcoin-${VERSION}-osx-unsigned.dmg, sibcoin-${VERSION}-osx64.tar.gz)
+  1. source tarball (ilixomtest-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit dist tarballs (ilixomtest-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (ilixomtest-${VERSION}-win[32|64]-setup-unsigned.exe, ilixomtest-${VERSION}-win[32|64].zip)
+  4. OS X unsigned installer and dist tarball (ilixomtest-${VERSION}-osx-unsigned.dmg, ilixomtest-${VERSION}-osx64.tar.gz)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/
 
 ###Verify other gitian builders signatures to your own. (Optional)
 
   Add other gitian builders keys to your gpg keyring
 
-	gpg --import ../sibcoin/contrib/gitian-downloader/*.pgp
+	gpg --import ../ilixomtest/contrib/gitian-downloader/*.pgp
 
   Verify the signatures
 
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../sibcoin/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../sibcoin/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../sibcoin/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../ilixomtest/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../ilixomtest/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../ilixomtest/contrib/gitian-descriptors/gitian-osx.yml
 
 	popd
 
@@ -139,25 +139,25 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [sibcoin-detached-sigs](https://github.com/ivansib/sibcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [ilixomtest-detached-sigs](https://github.com/ivanilt/ilixomtest-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../sibcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../sibcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../sibcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/sibcoin-osx-signed.dmg ../sibcoin-${VERSION}-osx.dmg
+	./bin/gbuild -i --commit signature=v${VERSION} ../ilixomtest/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../ilixomtest/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../ilixomtest/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/ilixomtest-osx-signed.dmg ../ilixomtest-${VERSION}-osx.dmg
 	popd
 
   Create (and optionally verify) the signed Windows binaries:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../sibcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../sibcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../sibcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	mv build/out/sibcoin-*win64-setup.exe ../sibcoin-${VERSION}-win64-setup.exe
-	mv build/out/sibcoin-*win32-setup.exe ../sibcoin-${VERSION}-win32-setup.exe
+	./bin/gbuild -i --commit signature=v${VERSION} ../ilixomtest/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../ilixomtest/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../ilixomtest/contrib/gitian-descriptors/gitian-win-signer.yml
+	mv build/out/ilixomtest-*win64-setup.exe ../ilixomtest-${VERSION}-win64-setup.exe
+	mv build/out/ilixomtest-*win32-setup.exe ../ilixomtest-${VERSION}-win32-setup.exe
 	popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -182,17 +182,17 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the sibcoin.org server
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the ilixomtest.org server
 
-- Update sibcoin.org
+- Update ilixomtest.org
 
 - Announce the release:
 
-  - Release on Sibcoin forum: https://www.sibcoin.org/forum/topic/official-announcements.54/
+  - Release on Ilixomtest forum: https://www.ilixomtest.org/forum/topic/official-announcements.54/
 
-  - Sibcoin-development mailing list
+  - Ilixomtest-development mailing list
 
-  - Update title of #sibcoin on Freenode IRC
+  - Update title of #ilixomtest on Freenode IRC
 
   - Optionally reddit /r/Dashpay, ... but this will usually sort out itself
 

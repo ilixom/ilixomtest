@@ -6,7 +6,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "amount.h"
@@ -66,7 +66,7 @@ public:
         The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
-    void setSibModel(SibModel *sibModel);
+    void setSibModel(SibModel *iltModel);
     bool addWallet(const QString& name, WalletModel *walletModel);
     bool setCurrentWallet(const QString& name);
     void removeAllWallets();
@@ -83,7 +83,7 @@ protected:
 
 private:
     ClientModel *clientModel;
-    SibModel *sibModel;
+    SibModel *iltModel;
     WalletFrame *walletFrame;
 
     UnitDisplayStatusBarControl *unitDisplayControl;
@@ -131,7 +131,7 @@ private:
     QAction *showHelpMessageAction;
     QAction *showPrivateSendHelpAction;
 
-    QAction *showHelpSibcoinAction;
+    QAction *showHelpIlixomtestAction;
     
     QSystemTrayIcon *trayIcon;
     QMenu *trayIconMenu;
@@ -251,7 +251,7 @@ private Q_SLOTS:
     void showHelpMessageClicked();
     /** Show PrivateSend help message dialog */
     void showPrivateSendHelpClicked();
-    void showHelpSibcoinClicked();
+    void showHelpIlixomtestClicked();
 #ifndef Q_OS_MAC
     /** Handle tray icon clicked */
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);

@@ -2120,7 +2120,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 continue;
 
             // We should not consider coins which aren't at least in our mempool
-            // It's possible for these to be conflicted via ancestors which we may never be able to detect
+            // It's posiltle for these to be conflicted via ancestors which we may never be able to detect
             if (nDepth == 0 && !pcoin->InMempool())
                 continue;
 
@@ -2304,7 +2304,7 @@ bool CWallet::SelectCoinsMinConf(const CAmount& nTargetValue, int nConfMine, int
                     // we didn't look at denom yet, let's do it
                     continue;
                 else
-                    // we looked at everything possible and didn't find anything, no luck
+                    // we looked at everything posiltle and didn't find anything, no luck
                     return false;
             }
             setCoinsRet.insert(coinLowestLarger.second);
@@ -2436,7 +2436,7 @@ bool CWallet::SelectCoins(const CAmount& nTargetValue, set<pair<const CWalletTx*
         SelectCoinsMinConf(nTargetValue - nValueFromPresetInputs, 1, 1, vCoins, setCoinsRet, nValueRet) ||
         (bSpendZeroConfChange && SelectCoinsMinConf(nTargetValue - nValueFromPresetInputs, 0, 1, vCoins, setCoinsRet, nValueRet));
 
-    // because SelectCoinsMinConf clears the setCoinsRet, we now add the possible inputs to the coinset
+    // because SelectCoinsMinConf clears the setCoinsRet, we now add the posiltle inputs to the coinset
     setCoinsRet.insert(setPresetCoins.begin(), setPresetCoins.end());
 
     // add preset inputs to the total value selected
@@ -2510,10 +2510,10 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
     std::random_shuffle(vCoins.rbegin(), vCoins.rend(), GetRandInt);
 
     // ( bit on if present )
-    // bit 0 - 100SIB+1
-    // bit 1 - 10SIB+1
-    // bit 2 - 1SIB+1
-    // bit 3 - .1SIB+1
+    // bit 0 - 100ILT+1
+    // bit 1 - 10ILT+1
+    // bit 2 - 1ILT+1
+    // bit 3 - .1ILT+1
 
     std::vector<int> vecBits;
     if (!darkSendPool.GetDenominationsBits(nDenom, vecBits)) {
@@ -2715,22 +2715,22 @@ bool CWallet::GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& 
     // wait for reindex and/or import to finish
     if (fImporting || fReindex) return false;
 
-    // Find possible candidates
-    std::vector<COutput> vPossibleCoins;
-    AvailableCoins(vPossibleCoins, true, NULL, false, ONLY_1000);
-    if(vPossibleCoins.empty()) {
+    // Find posiltle candidates
+    std::vector<COutput> vPosiltleCoins;
+    AvailableCoins(vPosiltleCoins, true, NULL, false, ONLY_1000);
+    if(vPosiltleCoins.empty()) {
         LogPrintf("CWallet::GetMasternodeVinAndKeys -- Could not locate any valid masternode vin\n");
         return false;
     }
 
     if(strTxHash.empty()) // No output specified, select the first one
-        return GetVinAndKeysFromOutput(vPossibleCoins[0], txinRet, pubKeyRet, keyRet);
+        return GetVinAndKeysFromOutput(vPosiltleCoins[0], txinRet, pubKeyRet, keyRet);
 
     // Find specific vin
     uint256 txHash = uint256S(strTxHash);
     int nOutputIndex = atoi(strOutputIndex.c_str());
 
-    BOOST_FOREACH(COutput& out, vPossibleCoins)
+    BOOST_FOREACH(COutput& out, vPosiltleCoins)
         if(out.tx->GetHash() == txHash && out.i == nOutputIndex) // found it!
             return GetVinAndKeysFromOutput(out, txinRet, pubKeyRet, keyRet);
 
@@ -2985,7 +2985,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     {
                         txout.nValue -= nFeeRet / nSubtractFeeFromAmount; // Subtract fee equally from each selected recipient
 
-                        if (fFirst) // first receiver pays the remainder not divisible by output count
+                        if (fFirst) // first receiver pays the remainder not diviiltle by output count
                         {
                             fFirst = false;
                             txout.nValue -= nFeeRet % nSubtractFeeFromAmount;
@@ -3015,9 +3015,9 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 if (!SelectCoins(nValueToSelect, setCoins, nValueIn, coinControl, nCoinType, fUseInstantSend))
                 {
                     if (nCoinType == ONLY_NOT1000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 1000 SIB.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 1000 ILT.");
                     } else if (nCoinType == ONLY_NONDENOMINATED_NOT1000IFMN) {
-                        strFailReason = _("Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 SIB.");
+                        strFailReason = _("Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 ILT.");
                     } else if (nCoinType == ONLY_DENOMINATED) {
                         strFailReason = _("Unable to locate enough PrivateSend denominated funds for this transaction.");
                         strFailReason += " " + _("PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
@@ -3026,7 +3026,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     }
                     if (fUseInstantSend) {
                         if (nValueIn > sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE)*COIN) {
-                            strFailReason += " " + strprintf(_("InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SIB."), sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE));
+                            strFailReason += " " + strprintf(_("InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 ILT."), sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE));
                         } else {
                             // could be not true but most likely that's the reason
                             strFailReason += " " + strprintf(_("InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again."), INSTANTSEND_CONFIRMATIONS_REQUIRED);
@@ -3080,7 +3080,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                             // Note: We use a new key here to keep it from being obvious which side is the change.
                             //  The drawback is that by not reusing a previous key, the change may be lost if a
                             //  backup is restored, if the backup doesn't have the new private key for the change.
-                            //  If we reused the old key, it would be possible to add code to look for and
+                            //  If we reused the old key, it would be posiltle to add code to look for and
                             //  rediscover unknown transactions that were written with keys of ours to recover
                             //  post-backup change.
 

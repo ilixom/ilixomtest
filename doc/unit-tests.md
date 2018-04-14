@@ -6,13 +6,13 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the sibcoind tests manually, launch src/test/test_sibcoin .
+To run the ilixomtestd tests manually, launch src/test/test_ilixomtest .
 
-To add more sibcoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more ilixomtestd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the sibcoin-qt tests manually, launch `src/qt/test/test_sibcoin-qt`
+To run the ilixomtest-qt tests manually, launch `src/qt/test/test_ilixomtest-qt`
 
-To add more sibcoin-qt tests, add them to the `src/qt/test/` directory and
+To add more ilixomtest-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

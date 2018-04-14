@@ -19,7 +19,7 @@ FORMS += \
     ../src/qt/forms/signverifymessagedialog.ui \
     ../src/qt/forms/transactiondescdialog.ui
 
-RESOURCES += ../src/qt/sibcoin.qrc ../src/qt/sibcoin_locale.qrc
+RESOURCES += ../src/qt/ilixomtest.qrc ../src/qt/ilixomtest_locale.qrc
 
 QT += \
     printsupport

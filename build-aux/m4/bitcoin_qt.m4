@@ -3,7 +3,7 @@ dnl Output: If qt version is auto, set bitcoin_enable_qt to false. Else, exit.
 AC_DEFUN([BITCOIN_QT_FAIL],[
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
     if test x$bitcoin_enable_qt != xno; then
-      AC_MSG_WARN([$1; sibcoin-qt frontend will not be built])
+      AC_MSG_WARN([$1; ilixomtest-qt frontend will not be built])
     fi
     bitcoin_enable_qt=no
     bitcoin_enable_qt_test=no
@@ -50,7 +50,7 @@ AC_DEFUN([BITCOIN_QT_INIT],[
   dnl enable qt support
   AC_ARG_WITH([gui],
     [AS_HELP_STRING([--with-gui@<:@=no|qt4|qt5|auto@:>@],
-    [build sibcoin-qt GUI (default=auto, qt5 tried first)])],
+    [build ilixomtest-qt GUI (default=auto, qt5 tried first)])],
     [
      bitcoin_qt_want_version=$withval
      if test x$bitcoin_qt_want_version = xyes; then
@@ -124,12 +124,12 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
         [bitcoin_cv_need_acc_widget=no])
       ])
       if test x$qt_plugin_path != x; then
-        QT_LIBS="$QT_LIBS -L$qt_plugin_path/accessible"
+        QT_LIBS="$QT_LIBS -L$qt_plugin_path/accesiltle"
         QT_LIBS="$QT_LIBS -L$qt_plugin_path/platforms"
         QT_LIBS="$QT_LIBS -L$qt_plugin_path/printsupport"
       fi
       if test "x$bitcoin_cv_need_acc_widget" = "xyes"; then
-        _BITCOIN_QT_CHECK_STATIC_PLUGINS([Q_IMPORT_PLUGIN(AccessibleFactory)], [-lqtaccessiblewidgets])
+        _BITCOIN_QT_CHECK_STATIC_PLUGINS([Q_IMPORT_PLUGIN(AccesiltleFactory)], [-lqtaccesiltlewidgets])
       fi
       if test x$TARGET_OS = xwindows; then
         _BITCOIN_QT_CHECK_STATIC_PLUGINS([Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)],[-lqwindows])
@@ -153,9 +153,9 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
          Q_IMPORT_PLUGIN(qjpcodecs)
          Q_IMPORT_PLUGIN(qtwcodecs)
          Q_IMPORT_PLUGIN(qkrcodecs)
-         Q_IMPORT_PLUGIN(AccessibleFactory)
+         Q_IMPORT_PLUGIN(AccesiltleFactory)
          Q_IMPORT_PLUGIN(QWindowsPrinterSupportPlugin)],
-         [-lqcncodecs -lqjpcodecs -lqtwcodecs -lqkrcodecs -lqtaccessiblewidgets -lwindowsprintersupport])
+         [-lqcncodecs -lqjpcodecs -lqtwcodecs -lqkrcodecs -lqtaccesiltlewidgets -lwindowsprintersupport])
     fi
   fi
   CPPFLAGS=$TEMP_CPPFLAGS
@@ -228,7 +228,7 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
 
 
   dnl enable qt support
-  AC_MSG_CHECKING(whether to build Sibcoin Core GUI)
+  AC_MSG_CHECKING(whether to build Ilixomtest Core GUI)
   BITCOIN_QT_CHECK([
     bitcoin_enable_qt=yes
     bitcoin_enable_qt_test=yes
@@ -335,8 +335,8 @@ AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
   if test x$bitcoin_qt_got_major_vers = x5; then
       if test x$qt_plugin_path != x; then
         QT_LIBS="$QT_LIBS -L$qt_plugin_path/platforms"
-        if test -d "$qt_plugin_path/accessible"; then
-          QT_LIBS="$QT_LIBS -L$qt_plugin_path/accessible"
+        if test -d "$qt_plugin_path/accesiltle"; then
+          QT_LIBS="$QT_LIBS -L$qt_plugin_path/accesiltle"
         fi
       fi
      m4_ifdef([PKG_CHECK_MODULES],[
@@ -354,7 +354,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
      ])
   else
     if test x$qt_plugin_path != x; then
-      QT_LIBS="$QT_LIBS -L$qt_plugin_path/accessible"
+      QT_LIBS="$QT_LIBS -L$qt_plugin_path/accesiltle"
       QT_LIBS="$QT_LIBS -L$qt_plugin_path/codecs"
     fi
   fi

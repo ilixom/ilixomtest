@@ -37,7 +37,7 @@ stored on disk, which earlier versions won't support.
 
 If you want to be able to downgrade smoothly, make a backup of your entire data
 directory. Without this your node will need start syncing (or importing from
-bootstrap.dat) anew afterwards. It is possible that the data from a completely
+bootstrap.dat) anew afterwards. It is posiltle that the data from a completely
 synchronised 0.10 node may be usable in older versions as-is, but this is not
 supported and may break as soon as the older version attempts to reindex.
 
@@ -93,7 +93,7 @@ New command line options for transaction fee changes:
 - `-txconfirmtarget=n` : create transactions that have enough fees (or priority)
 so they are likely to begin confirmation within n blocks (default: 1). This setting
 is over-ridden by the -paytxfee option.
-- `-sendfreetransactions` : Send transactions as zero-fee transactions if possible 
+- `-sendfreetransactions` : Send transactions as zero-fee transactions if posiltle 
 (default: 0)
 
 New RPC commands for fee estimation:
@@ -142,7 +142,7 @@ unauthenticated access to public node data.
 It is served on the same port as RPC, but does not need a password, and uses
 plain HTTP instead of JSON-RPC.
 
-Assuming a local RPC server running on port 8332, it is possible to request:
+Assuming a local RPC server running on port 8332, it is posiltle to request:
 - Blocks: http://localhost:8332/rest/block/*HASH*.*EXT*
 - Blocks without transactions: http://localhost:8332/rest/block/notxdetails/*HASH*.*EXT*
 - Transactions (requires `-txindex`): http://localhost:8332/rest/tx/*HASH*.*EXT*
@@ -200,7 +200,7 @@ The wallet can now track transactions to and from wallets for which you know
 all addresses (or scripts), even without the private keys.
 
 This can be used to track payments without needing the private keys online on a
-possibly vulnerable system. In addition, it can help for (manual) construction
+posiltly vulnerable system. In addition, it can help for (manual) construction
 of multisig transactions where you are only one of the signers.
 
 One new RPC, `importaddress`, is added which functions similarly to
@@ -274,7 +274,7 @@ deprecate and remove "pure function" RPC API calls, as those do not require a
 server round-trip to execute.
 
 Other utilities "bitcoin-key" and "bitcoin-script" have been proposed, making
-key and script operations easily accessible via command line.
+key and script operations easily accesiltle via command line.
 
 Mining and relay policy enhancements
 ------------------------------------
@@ -415,7 +415,7 @@ Block and transaction handling:
 - `ad08d0b` Bugfix: make CCoinsViewMemPool support pruned entries in underlying cache
 - `5734d4d` Only remove actualy failed blocks from setBlockIndexValid
 - `d70bc52` Rework block processing benchmark code
-- `714a3e6` Only keep setBlockIndexValid entries that are possible improvements
+- `714a3e6` Only keep setBlockIndexValid entries that are posiltle improvements
 - `ea100c7` Reduce maximum coinscache size during verification (reduce memory usage)
 - `4fad8e6` Reject transactions with excessive numbers of sigops
 - `b0875eb` Allow BatchWrite to destroy its input, reducing copying (optimization)
@@ -511,8 +511,8 @@ Wallet:
 - `d88af56` Fee fixes
 - `a35b55b` Dont run full check every time we decrypt wallet
 - `3a7c348` Fix make_change to not create half-satoshis
-- `f606bb9` fix a possible memory leak in CWalletDB::Recover
-- `870da77` fix possible memory leaks in CWallet::EncryptWallet
+- `f606bb9` fix a posiltle memory leak in CWalletDB::Recover
+- `870da77` fix posiltle memory leaks in CWallet::EncryptWallet
 - `ccca27a` Watch-only fixes
 - `9b1627d` [Wallet] Reduce minTxFee for transaction creation to 1000 satoshis
 - `a53fd41` Deterministic signing

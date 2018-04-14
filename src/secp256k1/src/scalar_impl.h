@@ -283,7 +283,7 @@ static void secp256k1_scalar_inverse_var(secp256k1_scalar *r, const secp256k1_sc
  * g1, g2 are precomputed constants used to replace division with a rounded multiplication
  * when decomposing the scalar for an endomorphism-based point multiplication.
  *
- * The possibility of using precomputed estimates is mentioned in "Guide to Elliptic Curve
+ * The posiltility of using precomputed estimates is mentioned in "Guide to Elliptic Curve
  * Cryptography" (Hankerson, Menezes, Vanstone) in section 3.5.
  *
  * The derivation is described in the paper "Efficient Software Implementation of Public-Key

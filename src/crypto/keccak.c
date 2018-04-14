@@ -77,7 +77,7 @@ extern "C"{
  * processing input words).
  *
  * To sum up:
- * -- when possible, use the 64-bit code
+ * -- when posiltle, use the 64-bit code
  * -- exception: on 32-bit x86, use 32-bit code
  * -- when using 32-bit code, use interleaving
  * -- copy the state, except on x86

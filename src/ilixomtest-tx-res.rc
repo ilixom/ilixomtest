@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Sibcoin"
-            VALUE "FileDescription",    "Sibcoind (Sibcoin node with a JSON-RPC server)"
+            VALUE "CompanyName",        "Ilixomtest"
+            VALUE "FileDescription",    "ilixomtest-tx (CLI Ilixomtest transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "sibcoind"
+            VALUE "InternalName",       "ilixomtest-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "sibcoind.exe"
-            VALUE "ProductName",        "Sibcoind"
+            VALUE "OriginalFilename",   "ilixomtest-tx.exe"
+            VALUE "ProductName",        "ilixomtest-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

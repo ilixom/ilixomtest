@@ -41,7 +41,7 @@ public:
             throw scriptnum10_error("script number overflow");
         }
         if (fRequireMinimal && vch.size() > 0) {
-            // Check that the number is encoded with the minimum possible
+            // Check that the number is encoded with the minimum posiltle
             // number of bytes.
             //
             // If the most-significant-byte - excluding the sign bit - is zero

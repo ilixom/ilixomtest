@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/ilixomtest-config.h"
 #endif
 
 #include "net.h"
@@ -426,7 +426,7 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool fConnectToMas
         }
 
         if (pszDest && addrConnect.IsValid()) {
-            // It is possible that we already have a connection to the IP/port pszDest resolved to.
+            // It is posiltle that we already have a connection to the IP/port pszDest resolved to.
             // In that case, drop the connection that was just created, and return the existing CNode instead.
             // Also store the name we used to connect in that CNode, so that future FindNode() calls to that
             // name catch this early.
@@ -1248,7 +1248,7 @@ void ThreadSocketHandler()
                 //   or there is space left in the buffer, select() for receiving data.
                 // * (if neither of the above applies, there is certainly one message
                 //   in the receiver buffer ready to be processed).
-                // Together, that means that at least one of the following is always possible,
+                // Together, that means that at least one of the following is always posiltle,
                 // so we don't deadlock:
                 // * We send some data.
                 // * We wait for data to be received (and disconnect after timeout).
@@ -1449,7 +1449,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "Sibcoin Core " + FormatFullVersion();
+        std::string strDesc = "Ilixomtest Core " + FormatFullVersion();
 
         try {
             while (true) {
@@ -2010,7 +2010,7 @@ bool BindListenPort(const CService &addrBind, std::string& strError, bool fWhite
     }
 
     // some systems don't have IPV6_V6ONLY but are always v6only; others do have the option
-    // and enable it by default or not. Try to enable it, if possible.
+    // and enable it by default or not. Try to enable it, if posiltle.
     if (addrBind.IsIPv6()) {
 #ifdef IPV6_V6ONLY
 #ifdef WIN32
@@ -2029,7 +2029,7 @@ bool BindListenPort(const CService &addrBind, std::string& strError, bool fWhite
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. Sibcoin Core is probably already running."), addrBind.ToString());
+            strError = strprintf(_("Unable to bind to %s on this computer. Ilixomtest Core is probably already running."), addrBind.ToString());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %s)"), addrBind.ToString(), NetworkErrorString(nErr));
         LogPrintf("%s\n", strError);

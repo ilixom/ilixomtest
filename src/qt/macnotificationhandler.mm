@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"net.sibcoin.Sibcoin-Qt";
+        return @"net.ilixomtest.Ilixomtest-Qt";
     } else {
         return [self __bundleIdentifier];
     }
@@ -63,10 +63,10 @@ void MacNotificationHandler::sendAppleScript(const QString &script)
 
 bool MacNotificationHandler::hasUserNotificationCenterSupport(void)
 {
-    Class possibleClass = NSClassFromString(@"NSUserNotificationCenter");
+    Class posiltleClass = NSClassFromString(@"NSUserNotificationCenter");
 
     // check if users OS has support for NSUserNotification
-    if(possibleClass!=nil) {
+    if(posiltleClass!=nil) {
         return true;
     }
     return false;
@@ -79,12 +79,12 @@ MacNotificationHandler *MacNotificationHandler::instance()
     if (!s_instance) {
         s_instance = new MacNotificationHandler();
         
-        Class aPossibleClass = objc_getClass("NSBundle");
-        if (aPossibleClass) {
+        Class aPosiltleClass = objc_getClass("NSBundle");
+        if (aPosiltleClass) {
             // change NSBundle -bundleIdentifier method to return a correct bundle identifier
             // a bundle identifier is required to use OSXs User Notification Center
-            method_exchangeImplementations(class_getInstanceMethod(aPossibleClass, @selector(bundleIdentifier)),
-                                           class_getInstanceMethod(aPossibleClass, @selector(__bundleIdentifier)));
+            method_exchangeImplementations(class_getInstanceMethod(aPosiltleClass, @selector(bundleIdentifier)),
+                                           class_getInstanceMethod(aPosiltleClass, @selector(__bundleIdentifier)));
         }
     }
     return s_instance;

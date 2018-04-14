@@ -1,8 +1,8 @@
-// Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2015 The Ilixomtest developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "sibmodel.h"
+#include "iltmodel.h"
 #include "util.h"
 
 #include <QNetworkRequest>
@@ -17,18 +17,18 @@
 const int MAX_GOODS_URLS = 2;
 
 const QString GOODS_URLS[MAX_GOODS_URLS] = {
-		"http://sibcoin.net/goods/",
+		"http://ilixomtest.net/goods/",
 		"http://chervonec.com/goods/"
 };
 
-const QString goods_data = "sibcoin.rcc";
-const QString goods_md5 = "sibcoin.md5";
+const QString goods_data = "ilixomtest.rcc";
+const QString goods_md5 = "ilixomtest.md5";
 
 
-SibModel::SibModel(CSibDB *sibdb, QObject *parent) :
+SibModel::SibModel(CSibDB *iltdb, QObject *parent) :
     QObject(parent),
     res_prefix("/dev"),
-    sibDB(sibdb),
+    iltDB(iltdb),
     net_manager(0),
     state(ST_INIT),
 	try_idx(0)
@@ -57,7 +57,7 @@ bool SibModel::registerRes() {
     file.close();
 
     if (!QResource::registerResource(file.fileName(), res_prefix)) {
-        LogPrintf("Can't load sib resource\n");
+        LogPrintf("Can't load ilt resource\n");
         return false;
     }
     return true;
@@ -134,8 +134,8 @@ void SibModel::replyFinished(QNetworkReply* p_reply)
 
 bool SibModel::saveResourceWithMD5()
 {
-    return sibDB->WriteName("res_dev", rccData.toBase64().constData())
-        && sibDB->WriteName("res_dev_md5", rccMD5.toStdString());
+    return iltDB->WriteName("res_dev", rccData.toBase64().constData())
+        && iltDB->WriteName("res_dev_md5", rccMD5.toStdString());
 }
     
 bool SibModel::readResourceWithMD5() 
@@ -143,8 +143,8 @@ bool SibModel::readResourceWithMD5()
     std::string s_rccMD5;
     std::string s_rccData;
  
-    bool b1 = sibDB->ReadName("res_dev", s_rccData);
-    bool b2 = sibDB->ReadName("res_dev_md5", s_rccMD5);
+    bool b1 = iltDB->ReadName("res_dev", s_rccData);
+    bool b2 = iltDB->ReadName("res_dev_md5", s_rccMD5);
     
     LogPrintf("read md5 from DB: %s\n", s_rccMD5.c_str());
     

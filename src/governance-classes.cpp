@@ -650,7 +650,7 @@ bool CSuperblock::IsValid(const CTransaction& txNew, int nBlockHeight, CAmount b
         return false;
     }
 
-    std::string strPayeesPossible = "";
+    std::string strPayeesPosiltle = "";
 
     // CONFIGURE SUPERBLOCK OUTPUTS
 

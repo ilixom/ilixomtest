@@ -320,7 +320,7 @@ static int nonce_function_rfc6979(unsigned char *nonce32, const unsigned char *m
     * - the private key (32 bytes) and message (32 bytes), see RFC 6979 3.2d.
     * - optionally 32 extra bytes of data, see RFC 6979 3.6 Additional Data.
     * - optionally 16 extra bytes with the algorithm name.
-    * Because the arguments have distinct fixed lengths it is not possible for
+    * Because the arguments have distinct fixed lengths it is not posiltle for
     *  different argument mixtures to emulate each other and result in the same
     *  nonces.
     */

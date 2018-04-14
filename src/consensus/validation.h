@@ -29,17 +29,17 @@ private:
     int nDoS;
     std::string strRejectReason;
     unsigned int chRejectCode;
-    bool corruptionPossible;
+    bool corruptionPosiltle;
     std::string strDebugMessage;
 public:
-    CValidationState() : mode(MODE_VALID), nDoS(0), chRejectCode(0), corruptionPossible(false) {}
+    CValidationState() : mode(MODE_VALID), nDoS(0), chRejectCode(0), corruptionPosiltle(false) {}
     bool DoS(int level, bool ret = false,
              unsigned int chRejectCodeIn=0, const std::string &strRejectReasonIn="",
              bool corruptionIn=false,
              const std::string &strDebugMessageIn="") {
         chRejectCode = chRejectCodeIn;
         strRejectReason = strRejectReasonIn;
-        corruptionPossible = corruptionIn;
+        corruptionPosiltle = corruptionIn;
         strDebugMessage = strDebugMessageIn;
         if (mode == MODE_ERROR)
             return ret;
@@ -74,8 +74,8 @@ public:
         }
         return false;
     }
-    bool CorruptionPossible() const {
-        return corruptionPossible;
+    bool CorruptionPosiltle() const {
+        return corruptionPosiltle;
     }
     unsigned int GetRejectCode() const { return chRejectCode; }
     std::string GetRejectReason() const { return strRejectReason; }

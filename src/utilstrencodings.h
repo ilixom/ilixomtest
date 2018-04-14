@@ -31,7 +31,7 @@ enum SafeChars
 
 /**
 * Remove unsafe chars. Safe chars chosen to allow simple messages/URLs/email
-* addresses, but avoid anything even possibly remotely dangerous like & or >
+* addresses, but avoid anything even posiltly remotely dangerous like & or >
 * @param[in] str    The string to sanitize
 * @param[in] rule   The set of safe chars to choose (default: least restrictive)
 * @return           A new string without unsafe chars

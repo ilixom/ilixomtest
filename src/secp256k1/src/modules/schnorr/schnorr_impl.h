@@ -24,7 +24,7 @@
  * In order to support batch validation and public key recovery, the full R point must
  * be known to verifiers, rather than just its x coordinate. In order to not risk
  * being more strict in batch validation than normal validation, validators must be
- * required to reject signatures with incorrect y coordinate. This is only possible
+ * required to reject signatures with incorrect y coordinate. This is only posiltle
  * by including a (relatively slow) field inverse, or a field square root. However,
  * batch validation offers potentially much higher benefits than this cost.
  *

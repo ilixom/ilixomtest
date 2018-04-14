@@ -232,7 +232,7 @@ class EstimateFeeTest(BitcoinTestFramework):
         min_fee = Decimal("0.0001")
         # We will now mine numblocks blocks generating on average 100 transactions between each block
         # We shuffle our confirmed txout set before each set of transactions
-        # small_txpuzzle_randfee will use the transactions that have inputs already in the chain when possible
+        # small_txpuzzle_randfee will use the transactions that have inputs already in the chain when posiltle
         # resorting to tx's that depend on the mempool when those run out
         for i in range(numblocks):
             random.shuffle(self.confutxo)

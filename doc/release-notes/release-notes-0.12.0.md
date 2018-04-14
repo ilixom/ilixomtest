@@ -38,7 +38,7 @@ stored on disk, which earlier versions won't support.
 
 If you want to be able to downgrade smoothly, make a backup of your entire data
 directory. Without this your node will need start syncing (or importing from
-bootstrap.dat) anew afterwards. It is possible that the data from a completely
+bootstrap.dat) anew afterwards. It is posiltle that the data from a completely
 synchronised 0.10 node may be usable in older versions as-is, but this is not
 supported and may break as soon as the older version attempts to reindex.
 
@@ -78,7 +78,7 @@ Reduce upload traffic
 A major part of the outbound traffic is caused by serving historic blocks to
 other nodes in initial block download state.
 
-It is now possible to reduce the total upload traffic via the `-maxuploadtarget`
+It is now posiltle to reduce the total upload traffic via the `-maxuploadtarget`
 parameter. This is *not* a hard limit but a threshold to minimize the outbound
 traffic. When the limit is about to be reached, the uploaded data is cut by not
 serving historic blocks (blocks older than one week).
@@ -136,7 +136,7 @@ arguments; see the extended help (`--help -help-debug`) for more information.
 Opt-in Replace-by-fee transactions
 ----------------------------------
 
-It is now possible to replace transactions in the transaction memory pool of
+It is now posiltle to replace transactions in the transaction memory pool of
 Bitcoin Core 0.12 nodes. Bitcoin Core will only allow replacement of
 transactions which have any of their inputs' `nSequence` number set to less
 than `0xffffffff - 1`.  Moreover, a replacement transaction may only be
@@ -227,7 +227,7 @@ set project priorities.
 Automatically use Tor hidden services
 -------------------------------------
 
-Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
+Starting with Tor version 0.2.7.1 it is posiltle, through Tor's control socket
 API, to create and destroy 'ephemeral' hidden services programmatically.
 Bitcoin Core has been updated to make use of this.
 
@@ -266,7 +266,7 @@ Based on past transaction data, floating fees approximate the fees
 required to get into the `m`th block from now. This is configurable
 with `-txconfirmtarget=<m>` (default: `2`).
 
-Sometimes, it is not possible to give good estimates, or an estimate
+Sometimes, it is not posiltle to give good estimates, or an estimate
 at all. Therefore, a fallback value can be set with `-fallbackfee=<f>`
 (default: `0.0002` BTC/kB).
 
@@ -307,7 +307,7 @@ failed checks.
 Wallet: Pruning
 ---------------
 
-With 0.12 it is possible to use wallet functionality in pruned mode.
+With 0.12 it is posiltle to use wallet functionality in pruned mode.
 This can reduce the disk usage from currently around 60 GB to
 around 2 GB.
 
@@ -717,7 +717,7 @@ git merge commit are mentioned.
 - #6390 `6a73d66` tests: Fix bitcoin-tx signing test case (Wladimir J. van der Laan)
 - #6368 `7fc25c2` CLTV: Add more tests to improve coverage (Esteban Ordano)
 - #6414 `5121c68` Fix intermittent test failure, reduce test time (Tom Harding)
-- #6417 `44fa82d` [QA] fix possible reorg issue in (fund)rawtransaction(s).py RPC test (Jonas Schnelli)
+- #6417 `44fa82d` [QA] fix posiltle reorg issue in (fund)rawtransaction(s).py RPC test (Jonas Schnelli)
 - #6398 `3d9362d` rpc: Remove chain-specific RequireRPCPassword (Wladimir J. van der Laan)
 - #6428 `bb59e78` tests: Remove old sh-based test framework (Wladimir J. van der Laan)
 - #5515 `d946e9a` RFC: Assert on probable deadlocks if the second lock isnt try_lock (Matt Corallo)

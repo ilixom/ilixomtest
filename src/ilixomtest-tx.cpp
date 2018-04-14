@@ -52,10 +52,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Sibcoin Core sibcoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Ilixomtest Core ilixomtest-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  sibcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded sibcoin transaction") + "\n" +
-              "  sibcoin-tx [options] -create [commands]   " + _("Create hex-encoded sibcoin transaction") + "\n" +
+              "  ilixomtest-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded ilixomtest transaction") + "\n" +
+              "  ilixomtest-tx [options] -create [commands]   " + _("Create hex-encoded ilixomtest transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

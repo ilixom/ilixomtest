@@ -939,7 +939,7 @@ class msg_sendheaders(object):
 # getheaders message has
 # number of entries
 # vector of hashes
-# hash_stop (hash of last desired block header, 0 to get as many as possible)
+# hash_stop (hash of last desired block header, 0 to get as many as posiltle)
 class msg_getheaders(object):
     command = b"getheaders"
 

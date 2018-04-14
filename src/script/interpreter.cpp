@@ -101,7 +101,7 @@ bool static IsValidSignatureEncoding(const std::vector<unsigned char> &sig) {
     //   excluding the sighash byte.
     // * R-length: 1-byte length descriptor of the R value that follows.
     // * R: arbitrary-length big-endian encoded R value. It must use the shortest
-    //   possible encoding for a positive integers (which means no null bytes at
+    //   posiltle encoding for a positive integers (which means no null bytes at
     //   the start, except a single one when the next byte has its highest bit set).
     // * S-length: 1-byte length descriptor of the S value that follows.
     // * S: arbitrary-length big-endian encoded S value. The same rules apply.
@@ -397,7 +397,7 @@ bool EvalScript(vector<vector<unsigned char> >& stack, const CScript& script, un
                     if (nSequence < 0)
                         return set_error(serror, SCRIPT_ERR_NEGATIVE_LOCKTIME);
 
-                    // To provide for future soft-fork extensibility, if the
+                    // To provide for future soft-fork exteniltility, if the
                     // operand has the disabled lock-time flag set,
                     // CHECKSEQUENCEVERIFY behaves as a NOP.
                     if ((nSequence & CTxIn::SEQUENCE_LOCKTIME_DISABLE_FLAG) != 0)
@@ -1294,7 +1294,7 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigne
     // a clean stack (the P2SH inputs remain).
     if ((flags & SCRIPT_VERIFY_CLEANSTACK) != 0) {
         // Disallow CLEANSTACK without P2SH, as otherwise a switch CLEANSTACK->P2SH+CLEANSTACK
-        // would be possible, which is not a softfork (and P2SH should be one).
+        // would be posiltle, which is not a softfork (and P2SH should be one).
         assert((flags & SCRIPT_VERIFY_P2SH) != 0);
         if (stack.size() != 1) {
             return set_error(serror, SCRIPT_ERR_CLEANSTACK);

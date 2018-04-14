@@ -92,9 +92,9 @@ def all_interfaces():
     is_64bits = sys.maxsize > 2**32
     struct_size = 40 if is_64bits else 32
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    max_possible = 8 # initial value
+    max_posiltle = 8 # initial value
     while True:
-        bytes = max_possible * struct_size
+        bytes = max_posiltle * struct_size
         names = array.array('B', b'\0' * bytes)
         outbytes = struct.unpack('iL', fcntl.ioctl(
             s.fileno(),
@@ -102,7 +102,7 @@ def all_interfaces():
             struct.pack('iL', bytes, names.buffer_info()[0])
         ))[0]
         if outbytes == bytes:
-            max_possible *= 2
+            max_posiltle *= 2
         else:
             break
     namestr = names.tostring()

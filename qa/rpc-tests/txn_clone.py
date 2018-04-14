@@ -137,7 +137,7 @@ class TxnMallTest(BitcoinTestFramework):
         assert_equal(tx2["confirmations"], 1)
 
         # Check node0's total balance; should be same as before the clone, + 1000 DASH for 2 matured,
-        # less possible orphaned matured subsidy
+        # less posiltle orphaned matured subsidy
         expected += 1000
         if (self.options.mine_block): 
             expected -= 500
@@ -147,7 +147,7 @@ class TxnMallTest(BitcoinTestFramework):
         # Check node0's individual account balances.
         # "foo" should have been debited by the equivalent clone of tx1
         assert_equal(self.nodes[0].getbalance("foo"), 12190 + tx1["amount"] + tx1["fee"])
-        # "bar" should have been debited by (possibly unconfirmed) tx2
+        # "bar" should have been debited by (posiltly unconfirmed) tx2
         assert_equal(self.nodes[0].getbalance("bar", 0), 290 + tx2["amount"] + tx2["fee"])
         # "" should have starting balance, less funding txes, plus subsidies
         assert_equal(self.nodes[0].getbalance("", 0), starting_balance

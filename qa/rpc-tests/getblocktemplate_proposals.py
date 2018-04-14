@@ -124,7 +124,7 @@ class GetBlockTemplateProposalTest(BitcoinTestFramework):
 
         # Test 8: Bad bits
         realbits = tmpl['bits']
-        tmpl['bits'] = '1c0000ff'  # impossible in the real world
+        tmpl['bits'] = '1c0000ff'  # imposiltle in the real world
         assert_template(node, tmpl, txlist, 'bad-diffbits')
         tmpl['bits'] = realbits
 
